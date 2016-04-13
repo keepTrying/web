@@ -1,0 +1,3 @@
+[submodule "hotel"]
+	path = hotel
+	url = https://github.com/KeepTrying/www.git
