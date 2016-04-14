@@ -503,3 +503,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 100px;
   width: 100px;
 }
+#allmap{
+	height: 300px;
+  	color: #fff;
+  	overflow: hidden;
+  	width: 100%;
+  	
+}
