@@ -1,0 +1,29 @@
+.banner{margin: 0 auto;height: 500px;text-align: center;}
+.banner_mall{ background: url(../img/mall_banner.jpg) no-repeat center 0; height: 500px; width: 100%; overflow:hidden;}
+.dis_banner{ background: url(../img/dis_banner.jpg) no-repeat center 0; height: 500px; width: 100%; overflow:hidden;}
+
+
+
+
+
+/*title*/
+.title{background-color: #3d3d3d; height:40px;  overflow: hidden;}
+.title ul{line-height: 40px;}
+.title ul li{float: left;overflow: hidden;width: 100px;margin-right: 60px;text-align: center;height: 40px;}
+.on{background: #EF4646;}
+.title ul li a{color: #FFFFFF;display: block;height: 40px;letter-spacing:2px;}
+.title ul li a:hover{background: #EF4646;}
+.search{overflow: hidden; margin-top: 5px;float: right;}
+.search .kuang{height: 30px; float: left;}
+.search .kuang input{ width: 252px; height: 30px;border:none; text-indent:20px; }
+.search .an{float: left;}
+.search .an button{ height: 30px;border:none;background-color: #EF4646;line-height: 35px;width: 40px;}
+/*mall_con*/
+.mail_con{}
+.mail_con_nav{color: #666666; font-size: 15px; height: 50px; line-height: 50px;}
+.mail_con_nav a:hover{color: #EF4646;}
+.mail_con_nav2{color: #EF4646; background-color: #f5f4f4; font-size: 16px; height: 40px; line-height: 40px;}
+.mail_con_nav2 span{ padding-left: 20px;letter-spacing:3px;}
+.mail_con_nav2 a{letter-spacing:2px; padding: 2px 7px; border: 1px solid #d7d7d7; background-color: #FFFFFF;margin: 0 5px;}
+.mail_con_nav2 a:hover{color: #FFFFFF; background-color: #EF4646;border:1px solid #EF4646; }
+.mail_con_nav2 .on{letter-spacing:2px; color: #FFFFFF;margin-left:40px ; background-color: #EF4646; border:1px solid #EF4646;}

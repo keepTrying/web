@@ -13,8 +13,8 @@
    Base Styles, Bootstrap Modifications & Fonts Import
    ========================================================================== */
 
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+/*@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);*/
 
 html,
 button,
@@ -113,6 +113,13 @@ h1, h2, h3, h4, h5, h6 {
 .nav-pills {
 	background: #1a1a1a;
 }
+.nav-pills li a:hover{
+	background: #1a1a1a;
+}
+.nav-pills li a:active{
+	background: #1a1a1a;
+}
+
 .menu h1.logo a {
 	font-family: "Oswald", sans-serif;
 	font-size: 16px;

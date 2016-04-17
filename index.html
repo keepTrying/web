@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -28,6 +28,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+  <body>
 
   <!-- Menu -->
   <nav class="menu" id="theMenu">
@@ -54,15 +55,16 @@
   </nav>
   <!-- Navbar -->
   <section id="navbar " name="navbar"></section>
-  <ul class="nav nav-pills nav-justified navbar-fixed-top">
-    <li role="presentation" class="active"><a href="#">主页</a></li>
-    <li role="presentation"><a href="#">酒店文化</a></li>
-    <li role="presentation"><a href="#">服务介绍</a></li>
-    <li role="presentation"><a href="#">查看房间</a></li>
-    <li role="presentation"><a href="#">周边服务</a></li>
-    <li role="presentation"><a href="#">联系我们</a></li>
-  </ul>
-  
+  <nav class="navbar navbar-default" role="navigation">
+	<ul class="nav nav-pills nav-justified navbar-fixed-top">
+		<li role="presentation"><a href="#home" class="smoothScroll">主页</a></li>
+	    <li role="presentation"><a href="#about" class="smoothScroll">酒店文化</a></li>
+	    <li role="presentation"><a href="#services" class="smoothScroll">服务介绍</a></li>
+	    <li role="presentation"><a href="#rooms" class="smoothScroll">查看房间</a></li>
+	    <li role="presentation"><a href="#map" class="smoothScroll">周边服务</a></li>
+	    <li role="presentation"><a href="#contact" class="smoothScroll">联系我们</a></li>
+	  </ul>
+  </nav> 
   
   <section id="home" name="home"></section>
   <div id="headerwrap">
@@ -277,7 +279,7 @@
   
   <! -- SERVICE SECTION -->
   
-  <section id="map" name="map">
+  <section id="map" name="map"></section>
   
   	<div class="container">
   		<div class="row">
@@ -293,13 +295,13 @@
   			</div>
   		</div>
   	</div>
-  </section>
-  <!-- <div class="col-lg-10" id="allmap" > -->
-  				
-  			<!-- </div> -->
+ 
+
+ 
+ 
   <! -- CONTACT SEPARATOR -->
   <!-- <div class="sep contact" data-stellar-background-ratio="0.5"></div> -->
-  
+  <section id="contact" name="contact">
   <div id="contactwrap">
   	<div class="container">
   		<div class="row">
@@ -321,15 +323,14 @@
   			</div>
   			
   			<div class="col-lg-6">
-  				<form role="form" action="mailto:hotel@abc.com?subject=反馈" method="post">
+  				<form role="form" action="mailto:hotel@abc.com?subject=反馈&bcc=你是傻逼吗操你妹&content=dfdf&body=sdfefefee&ccc=dff" method="post">
   				  <div class="form-group">
   				    <label for="exampleInputName1">Your Name</label>
-  				    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+  				    <input type="text" class="form-control" id="name" name="" placeholder="Enter name">
   				    <label for="exampleInputEmail1">Email address</label>
-  				    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+  				    <input type="email" class="form-control" id="email" name="body" placeholder="Enter email">
   				    <label for="exampleInputText1">Message</label>
-  				    <textarea class="form-control" rows="3" name="content"></textarea>
-  				    <a class="btn" href="###" onclick="javascript:gourl">test</a>
+  				    <textarea class="form-control" rows="3" name="body"></textarea>
   				  </div>
   				  <button type="submit" class="btn btn-default">Submit</button>
   				</form>
@@ -338,6 +339,7 @@
   		</div><! --/row -->
   	</div><!-- /container -->
   </div>
+  </section>
   
       <!-- Bootstrap core JavaScript
       ================================================== -->
@@ -351,7 +353,7 @@
   <script src="assets/js/main.js"></script>
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6713c5e605ec1fdcfbe108513da6cf49"></script>
   <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
-  <script>
+  <!--<script>
   	$(function(){
   		$.stellar({
   			horizontalScrolling: false,
@@ -365,9 +367,10 @@
           //    fancybox
             jQuery(".fancybox").fancybox();
         });
-  </script>
+  </script>-->
+</body>
 </html>
-<script type="text/javascript">
+<!--<script type="text/javascript">
 	// 百度地图API功能
 	var point = new BMap.Point(103.972929,30.734606);
 	var map = new BMap.Map("allmap",{minZoom:13,maxZoom:19});    // 创建Map实例
@@ -419,9 +422,6 @@
 		applyEmailNow(); 
 	}
 	
-</script>
+</script>-->
 
-<SCRIPT LANGUAGE="JavaScript">
-
-</script>
 
