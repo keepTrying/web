@@ -113,6 +113,9 @@ h1, h2, h3, h4, h5, h6 {
 .nav-pills {
 	background: #1a1a1a;
 }
+.nav-pills li a:link,a:visited{
+	background: #1a1a1a;
+}
 .nav-pills li a:hover{
 	background: #1a1a1a;
 }

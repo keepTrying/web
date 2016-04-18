@@ -1,4 +1,4 @@
-;(function(){
+;$(function () {
 
 	// Menu settings
 	$('#menuToggle, .menu-close').on('click', function(){
@@ -61,7 +61,7 @@
 
 	
 
-})(jQuery)
+})
 ;function openInfoWindow() {
 	searchInfoWindow.open(point);
 	applyEmailNow(); 
