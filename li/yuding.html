@@ -487,34 +487,9 @@ $(function(){
         num_page:"30"
       },
       function(data,status){
-        alert("Data: " + data + "\nStatus: " + status);
+        alert("Data: " + data[1] + "\nStatus: " + status);
       });
-    $.ajax({
-        url:"http://42.96.148.66/hotel/indent/query.php",
-        type:"POST",
-        dataType:"JSONP",
-        data: {
-        time_begin:"",
-        time_end:"",
-        cost_max:"",
-        cost_min:"",
-        indent_time_begin:"",
-        indent_time_end:"",
-        room_num:"",
-        indent_id:"",
-        indent_status:"2",
-        user_id:"",
-        indent_type:"1",
-        page:"0",
-        num_page:"30"
-      },
-        sucess:function(data, textStatus, jqXHR){
-            alert("Data: " + data + "\nStatus: " + textStatus);
-        },
-        error:function (XMLHttpRequest, textStatus, errorThrown){
-            alert("Request: " + XMLHttpRequest + "\nStatus: " + textStatus+"\n"+errorThrown);
-        }
-    });
+
     $("tbody#tbody").html("<tr><td>abc</td></tr>");
 });
 </script>
