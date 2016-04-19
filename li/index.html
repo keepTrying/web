@@ -6,6 +6,7 @@
 		<script type="text/javascript" src="jq/jquery-1.7.1.min.js" ></script>
 		<script type="text/javascript" src="jq/jquery.SuperSlide.2.1.1.js" ></script>
 		<script type="text/javascript" src="js/laydate.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
 		<title></title>
 	</head>
 	<body>
@@ -66,16 +67,17 @@
 		<div class="hd"><ul></ul></div>
 		<div class="banner_date"></div>
 		<div class="banner_date2">
-			<div class="w1200">	<input placeholder="入住日期" class="laydate-icon opc" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
-					<span>至<span><input placeholder="退房日期" class="laydate-icon opc" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
-					<select>
+			<div class="w1200">	<input id="input_in" placeholder="入住日期" class="laydate-icon opc" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
+					<span>至<span><input id="input_out" placeholder="退房日期" class="laydate-icon opc" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
+					<select id="select_num">
 							<option>1位房客</option><option>2位房客</option><option>3位房客</option><option>4位房客</option>
 					</select>
- 					<button >搜索</button></div>
-				</div>
+ 					<button id="find">搜索</button>
+ 			</div>
+            </div>
 		<span class="prev"></span>
 		<span class="next"></span>
-			</div>
+            </div>
 	
 	<script type="text/javascript">
 		/* 控制左右按钮显示 */

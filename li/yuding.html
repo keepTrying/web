@@ -162,7 +162,7 @@
 					<td width="200">预订</td>
 					
 				</thead>
-				<tbody>
+				<tbody id="tbody">       
 					<tr>
 						<td><span class="yu_color">精选商务房</span>（标准价）</td>
 						<td>￥299</td>
@@ -449,3 +449,68 @@
 		</div>
 	</body>
 </html>
+<script>
+$(function(){
+    var vars = [], hash;
+
+    var q = document.URL.split('?')[1];
+
+    if(q != undefined){
+
+       q = q.split('&');
+
+       for(var i = 0; i < q.length; i++){
+
+           hash = q[i].split('=');
+
+           vars.push(hash[1]);
+
+           vars[hash[0]] = hash[1];
+
+       }
+       
+    }   
+    $.post("http://42.96.148.66/hotel/indent/query.php",
+      {
+        time_begin:"",
+        time_end:"",
+        cost_max:"",
+        cost_min:"",
+        indent_time_begin:"",
+        indent_time_end:"",
+        room_num:"",
+        indent_id:"",
+        indent_status:"2",
+        user_id:"",
+        indent_type:"1"
+      },
+      function(data,status){
+        alert("Data: " + data + "\nStatus: " + status);
+      });
+    $.ajax({
+        url:"http://42.96.148.66/hotel/indent/query.php",
+        type:"POST",
+        dataType:"JSONP",
+        data: {
+        time_begin:"",
+        time_end:"",
+        cost_max:"",
+        cost_min:"",
+        indent_time_begin:"",
+        indent_time_end:"",
+        room_num:"",
+        indent_id:"",
+        indent_status:"2",
+        user_id:"",
+        indent_type:"1"
+      },
+        sucess:function(data, textStatus, jqXHR){
+            alert("Data: " + data + "\nStatus: " + textStatus);
+        },
+        error:function (XMLHttpRequest, textStatus, errorThrown){
+            alert("Request: " + XMLHttpRequest + "\nStatus: " + textStatus+"\n"+errorThrown);
+        }
+    });
+    $("tbody#tbody").html("<tr><td>abc</td></tr>");
+});
+</script>
