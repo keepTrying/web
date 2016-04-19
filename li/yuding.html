@@ -487,7 +487,8 @@ $(function(){
         num_page:"30"
       },
       function(data,status){
-        alert("Data: " + data["data"] + "\nStatus: " + status);
+        var obj = eval(data);
+        alert("Data: " + eval["data"] + "\nStatus: " + status);
       });
 
     $("tbody#tbody").html("<tr><td>abc</td></tr>");
