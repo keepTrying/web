@@ -482,7 +482,9 @@ $(function(){
         indent_id:"",
         indent_status:"2",
         user_id:"",
-        indent_type:"1"
+        indent_type:"1",
+        page:"0",
+        num_page:"30"
       },
       function(data,status){
         alert("Data: " + data + "\nStatus: " + status);
@@ -502,7 +504,9 @@ $(function(){
         indent_id:"",
         indent_status:"2",
         user_id:"",
-        indent_type:"1"
+        indent_type:"1",
+        page:"0",
+        num_page:"30"
       },
         sucess:function(data, textStatus, jqXHR){
             alert("Data: " + data + "\nStatus: " + textStatus);
