@@ -488,7 +488,7 @@ $(function(){
       },
       function(data,status){
         var obj = $.parseJSON(data);
-        alert("Data: " + obj + "\nStatus: " + status);
+        alert("Data: " + obj.data[0].room_num + "\nStatus: " + status);
       });
 
     $("tbody#tbody").html("<tr><td>abc</td></tr>");
