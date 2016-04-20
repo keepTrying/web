@@ -61,12 +61,12 @@
 					<table>
 						<tr>
 							<td width="15%" class="tr">手机号:</td>
-							<td width="40%" class="tl"><input type="tel" class="text ml_10"/></td>
-							<td width="45%" class="tl color_999" id="phone">请输入手机号</td>
+							<td width="40%" class="tl"><input type="tel" class="text ml_10" id="phone"/></td>
+							<td width="45%" class="tl color_999" >请输入手机号</td>
 						</tr>
 						<tr>
-							<td width="15%" class="tr" id="pw">密码:</td>
-							<td width="40%" class="tl"><input type="password" class="text ml_10"/></td>
+							<td width="15%" class="tr" >密码:</td>
+							<td width="40%" class="tl"><input type="password" class="text ml_10" id="pw"/></td>
 							<td width="45%" class="tl"><a href="" class="forget">忘记密码？</a></td>
 						</tr>
 						<tr>
@@ -122,7 +122,7 @@ $(function(){
                         }
                         window.history.back();
                     }else{
-                        alert("login fail!code:"+obj.status);
+                        alert("login fail! code:"+obj.status);
                     }
                 });
             }else{  
