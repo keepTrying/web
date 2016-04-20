@@ -98,3 +98,17 @@
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
+<script>
+$(function(){
+   $("#chk_num").click(function(){
+        var code_num = $("#code_num").val();  
+        $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
+            if(msg==1){  
+                alert("验证码正确！");  
+            }else{  
+                alert("验证码错误！");  
+            }  
+        }); 
+   }); 
+});
+</script>
