@@ -498,7 +498,10 @@ $(function(){
             i++;
         }
          $.post("http://42.96.148.66/hotel/room/query.php",{
-                room_type:vars["num"]
+                room_type:vars["num"],
+                room_num:"",
+                page:"0",
+                num_page:"999"
             },function(data,status){
                 var obj1=$.parseJSON(data);
                 var j=0;
