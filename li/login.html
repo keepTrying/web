@@ -62,10 +62,10 @@
 						<tr>
 							<td width="15%" class="tr">用户名:</td>
 							<td width="40%" class="tl"><input type="text" class="text ml_10"/></td>
-							<td width="45%" class="tl color_999">请输入手机号/用户名</td>
+							<td width="45%" class="tl color_999" id="phone">请输入手机号</td>
 						</tr>
 						<tr>
-							<td width="15%" class="tr">密码:</td>
+							<td width="15%" class="tr" id="pw">密码:</td>
 							<td width="40%" class="tl"><input type="text" class="text ml_10"/></td>
 							<td width="45%" class="tl"><a href="" class="forget">忘记密码？</a></td>
 						</tr>
@@ -100,11 +100,15 @@
 </html>
 <script>
 $(function(){
-   $("#chk_num").click(function(){
-        var code_num = $("#code_num").val();  
+   $("#chk_num").click(function(){  
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
-            if(msg==1){  
-                alert("验证码正确！");  
+            if(msg==1){  //验证码正确！ 
+                $.post("../hotel/user/login.php",{
+                    user_phone:$("#phone").val(),
+                    user_password:$("#pw").val()
+                },function(data,status){
+                    document.write(status);
+                });
             }else{  
                 alert("验证码错误！");  
             }  
