@@ -104,6 +104,7 @@ $(function(){
     if($.cookie("rmbUser")=="true"){
         $("#phone").val($.cookie("phone"));
         $("#pw").val($.cookie("pw"));
+        $("#autologin").prop("checked",true);
     }
    $("#chk_num").click(function(){  
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
@@ -115,11 +116,15 @@ $(function(){
                     var obj = $.parseJSON(data);
                     if(obj.status=="200"){
                         alert("login success");
-                        if($("#autologin").attr("checked")){
+                        if($("#autologin").prop("checked")){
                             $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie 
                             $.cookie("phone", $("#phone").val(), { expires: 7 }); 
                             $.cookie("pw", $("#pw").val(), { expires: 7 }); 
-                        }
+                        }else{ 
+                            $.cookie("rmbUser", "false", { expire: -1 }); 
+                            $.cookie("phone", "", { expires: -1 }); 
+                            $.cookie("pw", "", { expires: -1 }); 
+                        } 
                         window.history.back();
                     }else{
                         alert("login fail! code:"+obj.status);
