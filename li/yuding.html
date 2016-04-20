@@ -484,13 +484,46 @@ $(function(){
         user_id:"",
         indent_type:"1",
         page:"0",
-        num_page:"30"
+        num_page:"999"
       },
       function(data,status){
         var obj = $.parseJSON(data);
         alert("Data: " + obj.data[0].room_num + "\nStatus: " + status);
+        int i=0;
+        var no_rooms=new Array();
+        while(obj.data[i]){
+            if(istimeconfict(obj.data[i].time_begin,obj.data[i].time_end,vars["in"],vars["out"]){
+               no_rooms.push(obj.data[i].room_num);
+               };
+            i++;
+        }
+         $.post("http://42.96.148.66/hotel/room/query.php",{
+                room_type:vars["num"]
+            },function(data,status){
+                var obj1=$.parseJSON(data);
+                int j=0;
+                var content ="";
+                while(obj1.data[j]){
+                    content+="<tr><td>"+obj1.data[j].room_num+"</td></tr>";
+                }
+                $("tbody#tbody").html(content);
+            });
       });
 
-    $("tbody#tbody").html("<tr><td>abc</td></tr>");
+    
 });
+function strtodate(str){
+    str=str.replace(/-/g,"/");
+    return new Date(str);
+}
+function istimeconfict(time1,time2,time3,time4){
+    time1=strtodate(time1);
+    time2=strtodate(time2);
+    time3=strtodate(time3);
+    time4=strtodate(time4);
+    if((time1<=time3&&time2>=time3)||(time1>time3&&time1<time4))
+        return true;
+    else
+        return false;
+}    
 </script>
