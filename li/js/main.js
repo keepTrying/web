@@ -6,6 +6,22 @@
 		alert($in+$out+$num);
             window.location.href="yuding.html?in="+$in+"&out="+$out+"&num="+$num;
 	});
+    
+    //数字验证  
+    $("#getcode_num").click(function(){  
+        $(this).attr("src",'../hotel/code_num.php?' + Math.random());  
+    });  
+    $("#chk_num").click(function(){  
+        var code_num = $("#code_num").val();  
+        $.post("../hotel/chk_code.php?act=num",{code:code_num},function(msg){  
+            if(msg==1){  
+                alert("验证码正确！");  
+            }else{  
+                alert("验证码错误！");  
+            }  
+        });  
+    });  
+ 
 })
 ;function strtodate(str){
     str=str.replace(/-/g,"/");
