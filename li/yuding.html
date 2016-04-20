@@ -489,7 +489,7 @@ $(function(){
       function(data,status){
         var obj = $.parseJSON(data);
         alert("Data: " + obj.data[0].room_num + "\nStatus: " + status);
-        int i=0;
+        var i=0;
         var no_rooms=new Array();
         while(obj.data[i]){
             if(istimeconfict(obj.data[i].time_begin,obj.data[i].time_end,vars["in"],vars["out"]){
@@ -501,10 +501,11 @@ $(function(){
                 room_type:vars["num"]
             },function(data,status){
                 var obj1=$.parseJSON(data);
-                int j=0;
+                var j=0;
                 var content ="";
                 while(obj1.data[j]){
                     content+="<tr><td>"+obj1.data[j].room_num+"</td></tr>";
+                    j++;
                 }
                 $("tbody#tbody").html(content);
             });
