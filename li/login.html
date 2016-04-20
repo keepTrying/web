@@ -60,13 +60,13 @@
 					<p>会员登录</p>
 					<table>
 						<tr>
-							<td width="15%" class="tr">用户名:</td>
-							<td width="40%" class="tl"><input type="text" class="text ml_10"/></td>
+							<td width="15%" class="tr">手机号:</td>
+							<td width="40%" class="tl"><input type="tel" class="text ml_10"/></td>
 							<td width="45%" class="tl color_999" id="phone">请输入手机号</td>
 						</tr>
 						<tr>
 							<td width="15%" class="tr" id="pw">密码:</td>
-							<td width="40%" class="tl"><input type="text" class="text ml_10"/></td>
+							<td width="40%" class="tl"><input type="password" class="text ml_10"/></td>
 							<td width="45%" class="tl"><a href="" class="forget">忘记密码？</a></td>
 						</tr>
 						<tr>
@@ -76,7 +76,7 @@
 						</tr>
 						<tr>
 							<td width="15%">&nbsp;</td>
-							<td colspan="2" class="tl vr"><input type="checkbox" class="ml_10 vr"  />自动登录</td>
+							<td colspan="2" class="tl vr"><input type="checkbox" class="ml_10 vr"  id="autologin"/>自动登录</td>
 						</tr>
 						<tr>
 							<td width="15%">&nbsp;</td>
@@ -100,6 +100,10 @@
 </html>
 <script>
 $(function(){
+    if($.cookie("rmbUser")=="true"){
+        $("#phone").val($.cookie("username"));
+        $("#pw").val($.cookie("password"));
+    }
    $("#chk_num").click(function(){  
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
             if(msg==1){  //验证码正确！ 
@@ -107,7 +111,18 @@ $(function(){
                     user_phone:$("#phone").val(),
                     user_password:$("#pw").val()
                 },function(data,status){
-                    document.write(status);
+                    var obj = $.parseJSON(data);
+                    if(obj.status=="200"){
+                        alert("login success");
+                        if($("#autologin").attr("checked")){
+                            $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie 
+                            $.cookie("username", $("#phone").val(), { expires: 7 }); 
+                            $.cookie("password", $("#pw").val(), { expires: 7 }); 
+                        }
+                        window.history.back();
+                    }else{
+                        alert("login fail!code:"+obj.status);
+                    }
                 });
             }else{  
                 alert("验证码错误！");  
