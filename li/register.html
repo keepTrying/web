@@ -181,6 +181,7 @@ $(function(){
                         user_ans:$("#safe_ans").val()
                         
                     },function(data,status){
+                        alert(data);
                         var obj = $.parseJSON(data);
                         if(obj.status=="200"){
                             alert("register success");
