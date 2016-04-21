@@ -67,12 +67,12 @@
 		<div class="hd"><ul></ul></div>
 		<div class="banner_date"></div>
 		<div class="banner_date2">
-			<div class="w1200">	<input placeholder="入住日期" class="laydate-icon opc" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
-					<span>至<span><input placeholder="退房日期" class="laydate-icon opc" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
-					<select>
+			<div class="w1200">	<input placeholder="入住日期" class="laydate-icon opc" id="input_in" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
+					<span>至<span><input placeholder="退房日期" class="laydate-icon opc" id="input_out" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
+					<select id="select_num">
 							<option>1位房客</option><option>2位房客</option><option>3位房客</option><option>4位房客</option>
 					</select>
- 					<button >搜索</button></div>
+ 					<button id="find">搜索</button></div>
 					
 				</div>
 				
@@ -511,6 +511,14 @@ $(function(){
                 $("tbody#tbody").html(content);
             });
       });
+    
+     $("#find").click(function(){
+		 $in = $("#input_in").val();
+		 $out = $("#input_out").val();
+		 $num = $("#select_num").val().substr(0,1);
+//		alert($in+$out+$num);
+            window.location.href="yuding.html?in="+$in+"&out="+$out+"&num="+$num;
+	});
 
     
 });

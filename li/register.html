@@ -60,45 +60,84 @@
 				<table>
 					<tr>
 						<td class="w_135 tr vr"><span>*</span>姓名:</td>
-						<td class="w_195"><input type="text" class="text ml_10 mr_10"/></td>
+						<td class="w_195"><input type="text" id="name" class="text ml_10 mr_10"/></td>
 						<td class="w_370 color_999">请填写您的真实姓名</td>
 					</tr>
 					<tr>
+						<td class="w_135 tr vr"><span>*</span>昵称:</td>
+						<td class="w_195"><input type="text" class="text ml_10 mr_10" id="nick"/></td>
+						<td class="w_370 color_999">请填写您的昵称</td>
+					</tr>
+					<tr>
+						<td class="w_135 tr vr"><span>*</span>年龄:</td>
+						<td class="w_195"><input type="text" class="text ml_10 mr_10" id="years"/></td>
+						<td class="w_370 color_999">请填写您的年龄</td>
+					</tr>
+					<tr>
+						<td class="w_135 tr vr"><span>*</span>性别:</td>
+						<td class="w_radio"><input type="radio" name="gender" class="ml_10" value="男" checked="checked" id="male"/>男<input type="radio" name="gender" class="ml_10" value="女"/>女</td>
+						<td class="w_370 color_999">请选择您的性别</td>
+					</tr>
+					<tr>
 						<td class="w_135 tr vr"><span>*</span>手机号码:</td>
-						<td class="w_195"><input type="text" class="text ml_10 mr_10"/></td>
+						<td class="w_195"><input type="text" class="text ml_10 mr_10" id="phone"/></td>
 						<td class="w_370 color_999">可作为登录名使用</td>
 					</tr>
 					<tr>
+						<td class="w_135 tr vr"><span>*</span>Email:</td>
+						<td class="w_195"><input type="text" class="text ml_10 mr_10" id="email"/></td>
+						<td class="w_370 color_999">请输入您的Email</td>
+					</tr>
+					<tr>
+						<td class="w_135 tr vr"><span>*</span>身份证号码:</td>
+						<td class="w_195"><input type="text" class="text ml_10 mr_10" id="id_num"/></td>
+						<td class="w_370 color_999">请输入您的身份证号码</td>
+					</tr>
+					<tr>
 						<td class="w_135 tr vr"><span>*</span>密码:</td>
-						<td class="w_195"><input type="text" class="text ml_10 mr_10"/></td>
+						<td class="w_195"><input type="password" class="text ml_10 mr_10" id="pw"/></td>
 						<td class="w_370 color_999">6-20位字符，可使用字母、数字、符号的组合，不能含空格</td>
 					</tr>
 					<tr>
 						<td class="w_135 tr vr"><span>*</span>确认密码:</td>
-						<td class="w_195"><input type="text" class="text ml_10 mr_10"/></td>
+						<td class="w_195"><input type="password" class="text ml_10 mr_10" id="cpw"/></td>
 						<td class="w_370 color_999">&nbsp;</td>
 					</tr>
 					<tr>
-						<td class="w_135 tr vr"><span>*</span>验证码:</td>
-						<td class="w_195"><input type="text" class="text ml_10 mr_10"/></td>
-						<td class="w_370 color_999"><img src="img/login_yan.jpg"/>请输入图片中的数字</td>
+						<td class="w_135 tr vr"><span>*</span>安全问题:</td>
+						<td class="w_195"><input type="text" class="text ml_10 mr_10" id="safe_que"/></td>
+						<td class="w_370 color_999">请输入您的安全问题</td>
 					</tr>
+					<tr>
+						<td class="w_135 tr vr"><span>*</span>安全答案:</td>
+						<td class="w_195"><input type="text" class="text ml_10 mr_10" id="safe_ans"/></td>
+						<td class="w_370 color_999">请输入您的安全答案</td>
+					</tr>
+					<tr>
+						<td class="w_135 tr vr"><span>*</span>验证码:</td>
+						<td class="w_195"><input type="text" class="text mr_10 ml_10 code_num " maxlength="4" name="code_num"/></td>
+						<td class="w_370 color_999"><img src="../hotel/code_num.php" id="getcode_num" title="看不清，换一张"/>请输入图片中的数字</td>
+					</tr>
+<!--
 					<tr>
 						<td class="w_135 tr vr"><span>*</span>手机验证码:</td>
 						<td class="w_195"><input type="text" class="text ml_10 mr_10"/></td>
 						<td class="w_370 color_999"><input type="button" value="点击获取手机验证码" class="btn_get"/></td>
 					</tr>
+-->
+<!--
 					<tr>
 						<td class="w_135 tr vr"><input type="button" value="全部信息填写" class="btn_all"/></td>
 						<td colspan="2" class="color_999">(完善的信息有助于今后找回密码和享受更多会员权益。)</td>
 					</tr>
+-->
 					<tr>
 						<td class="w_135">&nbsp;</td>
-						<td colspan="2" class="color_999"><input type="checkbox"/>同意<a href=""  class="forget">《网络会员注册服务条款》</a></td>
+						<td colspan="2" class="color_999"><input type="checkbox" id="check"/>同意<a href="javascript:void(0)"  class="forget">《网络会员注册服务条款》</a></td>
 					</tr>
 					<tr>
 						<td class="w_135">&nbsp;</td>
-						<td colspan="2" class="color_999"><input type="button" value="立即注册" class="btn_register ml_10" />&nbsp;&nbsp;&nbsp;<a href="" class="forget">在线购买会员卡</a></td>
+						<td colspan="2" class="color_999"><input type="button" value="立即注册" class="btn_register ml_10" id="btn_register"/>&nbsp;&nbsp;&nbsp;</td>
 					</tr>
 				</table>
 			</div>
@@ -113,5 +152,58 @@
 		</div>
 		<script type="text/javascript" src="jq/jquery-1.7.1.min.js" ></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/layer/layer.js"></script>
 	</body>
 </html>
+<script>
+$(function(){
+       $("#btn_register").click(function(){
+           if(!$("#check").prop("checked")){
+               alert("您尚未同意我们的会员条款！");
+               return;
+           }
+           if($("#pw").val()!=$("#cpw").val()){
+               alert("两次输入的密码不一致！");
+               return;
+           }
+            $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
+                if(msg==1){  //验证码正确！ 
+                    $.post("../hotel/user/register.php",{
+                        user_phone:$("#phone").val(),
+                        user_password:$("#pw").val(),
+                        user_nick:$("#nick").val(),
+                        user_gender:$("#male").prop("checked")?"1":"2",
+                        user_years:$("#years").val(),
+                        user_email:$("#email").val(),
+                        user_id_num:$("#id_num").val(),
+                        user_name:$("#name").val(),
+                        user_que:$("#safe_que").val(),
+                        user_ans:$("#safe_ans").val()
+                        
+                    },function(data,status){
+                        var obj = $.parseJSON(data);
+                        if(obj.status=="200"){
+                            alert("register success");
+                            window.history.back();
+                        }else{
+                            alert("register fail! code:"+obj.status);
+                        }
+                    });
+                }else{  
+                    alert("验证码错误！");  
+                }  
+        }); 
+   });
+    $(".forget").click(function(){
+        layer.open({
+          type: 2,
+          title: false,
+          shadeClose: true,
+          shade: false,
+          maxmin: true, //开启最大化最小化按钮
+          area: ['893px', '600px'],
+          content: 'notify.html'
+    });
+    });
+})
+</script>
