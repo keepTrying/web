@@ -219,15 +219,15 @@ $(function(){
                     var obj = $.parseJSON(data);
                     if(obj.status=="200"){
                        $.post('../hotel/user/alter.php',{
-                            user_nick:obj.data.user_nick,
-                            user_gender:obj.data.user_gender,
-                            user_years:obj.data.user_years,
-                            user_email:obj.data.user_email,
-                            user_phone:obj.data.user_phone,
-                            user_id_num:obj.data.user_id_num,
-                            user_name:obj.data.user_name,
-                            user_point:(parseInt(obj.data.user_point)-point)+'',
-                            user_img:obj.data.user_img,
+                            user_nick:obj.data[0].user_nick,
+                            user_gender:obj.data[0].user_gender,
+                            user_years:obj.data[0].user_years,
+                            user_email:obj.data[0].user_email,
+                            user_phone:obj.data[0].user_phone,
+                            user_id_num:obj.data[0].user_id_num,
+                            user_name:obj.data[0].user_name,
+                            user_point:(parseInt(obj.data[0].user_point)-point)+'',
+                            user_img:obj.data[0].user_img,
                        },function(data,status){
                            var obj1 = $.parseJSON(data);
                             if(obj1.status=="200"){
