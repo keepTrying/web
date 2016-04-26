@@ -518,15 +518,15 @@ $(function(){
 //                        if(ojb1.data[j].room_num===room_num)
 //                            continue;
 //                    }
-//                    $(".btn_yu").each(function(index,element){
-//                        $(this).click(function(){
-//                            window.location.href="room_detail.php?room_num="+obj1.data[index].room_num;
-//                        });
-//                    });
-                    $(".btn_yu").click(function(){
-                        window.location.href="room_detail.php?room_num="+obj1.data[Number(this.id.substr(5))].room_num;
-                        
+                    $(".btn_yu").each(function(index,element){
+                        $(this).click(function(){
+                            window.location.href="room_detail.php?room_num="+obj1.data[index].room_num;
+                        });
                     });
+//                    $(".btn_yu").click(function(){
+//                        window.location.href="room_detail.php?room_num="+obj1.data[Number(this.id.substr(5))].room_num;
+//                        
+//                    });
 //                    j++;
 //                }
             });
