@@ -510,12 +510,12 @@ $(function(){
                 }
                 $("tbody#tbody").html(content);
                 for(var k=0;k<j;k++){
+                    alert(k);
                     for(var room_num in no_rooms){
                         if(ojb1.data[k].room_num===room_num)
                             continue;
                     }
                     $("input.btn_"+k).click(function(){
-                        alert(k);
                         window.location.href="room_detail.php?room_num="+obj1.data[k].room_num;
                     });
                 }
