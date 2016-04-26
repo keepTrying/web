@@ -507,30 +507,25 @@ $(function(){
                     }
                     content+="<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥"+obj1.data[j].room_cost+"</td><td>带早餐</td><td>￥<span class=\"yu_span\">"+obj1.data[j].room_cost+"</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" id=\"btn_"+j+"\" value=\"详情\"/></td></tr>";
                     
-                    $("#btn_"+j).click(function(){
-                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
-                        alert(j);
-                        alert("app");
-                    });
-                    
                     j++;
                 }
                 $("tbody#tbody").html(content);
-//                j=0;
-//                 while(obj1.data[j]){
-//                    for(var room_num in no_rooms){
-//                        alert(ojb1.data[j].room_num);
-//                        if(ojb1.data[j].room_num===room_num)
-//                            continue;
-//                    }
-//                    alert(obj1.data[j].room_num);
-//                    $("#btn_"+j).click(function(){
-//                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
-//                        alert(j);
-//                        alert("app");
-//                    });
-//                    j++;
-//                }
+                j=0;
+                 while(obj1.data[j]){
+                    for(var room_num in no_rooms){
+                        alert(ojb1.data[j].room_num);
+                        if(ojb1.data[j].room_num===room_num)
+                            continue;
+                    }
+                    alert(obj1.data[j].room_num);
+                    $("#btn_"+j).click(function(){
+                        alert(j);
+                        alert("app");
+                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
+                        
+                    });
+                    j++;
+                }
             });
       });
     
