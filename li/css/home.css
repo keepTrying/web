@@ -315,3 +315,22 @@ background-position: 7.5px 20px;text-align: center;}
     width: 70px;
     border: 2px solid #FFF;
 }
+.yuding {
+    display: block;
+    width: 150px;
+    height: 35px;
+    float: left;
+    background: url(../img/yuding.gif) no-repeat;
+    text-indent: -9999px;
+    text-decoration: none;
+    color: #656565;
+    cursor: auto;
+}
+.proo ul li {
+    width: 170px;
+    line-height: 30px;
+    color: #666;
+    font-size: 12px;
+    padding: 2px 0 2px;
+    float: left;
+}
