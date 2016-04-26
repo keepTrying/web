@@ -230,7 +230,25 @@
 	});
 
     if(<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?>){
-        $("div.header_right").html('<a href="#">'+'<?php echo $_SESSION['user']['user_nick'] ?>'+'</a>');
+        $("div.header_right").html('<a href="#">'+'<?php echo $_SESSION['user']['user_nick'] ?>'+'</a>|<a href="#">注销</a>');
+        $("a:contains('<?php echo $_SESSION['user']['user_nick'] ?>')").click(function(){
+            window.location.href="http://www.baidu.com";
+        });
+        $("a:contains('注销')").click(function(){
+            $.post("../hotel/user/login.php",{
+                    action:'logout'
+                },function(data,status){
+                    var obj = $.parseJSON(data);
+                    if(obj.status=="200"){
+                        alert("logout success");
+
+                        window.location.reload();
+                    }else{
+                        alert("logout fail!");
+                    }
+                    
+                });
+        });
     }else{
         $("div.header_right").html('<a href=\"register.php\">注册</a>|<a href=\"login.php\">登录</a>');
     }
