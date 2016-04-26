@@ -519,6 +519,8 @@ $(function(){
                     alert(obj1.data[j].room_num);
                     $("input.btn_"+j).click(function(){
 //                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
+                        alert(j);
+                        alert("app");
                     });
                     j++;
                 }
