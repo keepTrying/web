@@ -129,8 +129,8 @@ $(function(){
 //                        $.cookie("user_name", obj.data.user_name, { expires: 7 });
                         if($("#autologin").prop("checked")){
                             $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie 
-                            $.cookie("user_phone", '<?php $_SESSION['user']['user_phone'] ?>', { expires: 7 });
-                            $.cookie("user_password", '<?php $_SESSION['user']['user_password'] ?>', { expires: 7 });
+                            $.cookie("user_phone", '<?php echo $_SESSION['user']['user_phone']; ?>', { expires: 7 });
+                            $.cookie("user_password", '<?php echo $_SESSION['user']['user_password']; ?>', { expires: 7 });
                             
                         }else{ 
                             $.cookie("rmbUser", "false", { expire: -1 }); 
