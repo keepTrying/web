@@ -305,3 +305,13 @@ background-position: 7.5px 20px;text-align: center;}
     font-size: 14px;
     display: block;
 }
+
+#listsmall li .curr {
+    BORDER: 2px solid #FF8A04;
+    list-style: none;
+}
+#listsmall li img {
+    height: 53px;
+    width: 70px;
+    border: 2px solid #FFF;
+}
