@@ -512,7 +512,7 @@ $(function(){
                     j++;
                 }
                 $("tbody#tbody").html(content);
-                j=0;
+//                j=0;
 //                 while(obj1.data[j]){
 //                    for(var room_num in no_rooms){
 //                        if(ojb1.data[j].room_num===room_num)
@@ -520,7 +520,7 @@ $(function(){
 //                    }
                     $(".btn_yu").each(function(index,element){
                         $(this).click(function(){
-                            window.location.href="room_detail.php?room_num="+obj1.data[index].room_num;
+                            window.location.href="room_detail.php?room_num="+res.data[index].room_num;
                         });
                     });
 //                    $(".btn_yu").click(function(){
