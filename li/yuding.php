@@ -502,7 +502,7 @@ $(function(){
                 var content ="";
                 while(obj1.data[j]){
                     for(var room_num in no_rooms){
-                        if(ojb1.data[j].room_num==room_num)
+                        if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
                     content+="<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥"+obj1.data[j].room_cost+"</td><td>带早餐</td><td>￥<span class=\"yu_span\">"+obj1.data[j].room_cost+"</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu btn_"+j+"\" value=\"详情\"/></td></tr>";
@@ -511,11 +511,11 @@ $(function(){
                 $("tbody#tbody").html(content);
                 for(var k=0;k<j;k++){
                     for(var room_num in no_rooms){
-                        if(ojb1.data[j].room_num==room_num)
+                        if(ojb1.data[k].room_num===room_num)
                             continue;
                     }
                     $("input.btn_"+k).click(function(){
-                        window.location.href='room_detail.php?room_num'+obj1.data[j].room_num;
+                        window.location.href='room_detail.php?room_num'+obj1.data[k].room_num;
                     });
                 }
             });
