@@ -515,7 +515,8 @@ $(function(){
                             continue;
                     }
                     $("input.btn_"+k).click(function(){
-                        window.location.href='room_detail.php?room_num'+obj1.data[k].room_cost;
+                        alert(k);
+                        window.location.href="room_detail.php?room_num="+obj1.data[k].room_num;
                     });
                 }
             });
