@@ -257,10 +257,12 @@ background-position: 7.5px 20px;text-align: center;}
 .news_show_rt {
     height: 360px;
     border-bottom: 1px solid #EBEBEB;
+    display: block;
 }
 
 .prbj02 {
-    
+    display: block;
+
 }
 
 .pdto {
@@ -279,18 +281,21 @@ background-position: 7.5px 20px;text-align: center;}
     position: relative;
     padding: 0px;
     float: left;
+    display: block;
     
 }
 #listsmall {
     width: 320px;
     height: 80px;
     float: left;
+    display: block;
 }
 .proo {
     width: 355px;
     height: 290px;
     margin: 20px 0 0;
     float: left;
+    display: block;
 }
 .news_show_nr {
     line-height: 26px;
@@ -298,4 +303,5 @@ background-position: 7.5px 20px;text-align: center;}
     color: #333;
     border-bottom: 1px solid #EBEBEB;
     font-size: 14px;
+    display: block;
 }
