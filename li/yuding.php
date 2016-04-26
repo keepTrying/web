@@ -512,6 +512,7 @@ $(function(){
                 j=0;
                  while(obj1.data[j]){
                     for(var room_num in no_rooms){
+                        alert(ojb1.data[j].room_num);
                         if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
