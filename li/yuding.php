@@ -500,29 +500,35 @@ $(function(){
                 var obj1=$.parseJSON(data);
                 var j=0;
                 var content ="";
+                var res=new Array();
                 while(obj1.data[j]){
                     for(var room_num in no_rooms){
                         if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
+                    res.push(obj1.data[j]);
                     content+="<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥"+obj1.data[j].room_cost+"</td><td>带早餐</td><td>￥<span class=\"yu_span\">"+obj1.data[j].room_cost+"</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" id=\"btn_"+j+"\" value=\"详情\"/></td></tr>";
                     
                     j++;
                 }
                 $("tbody#tbody").html(content);
                 j=0;
-                 while(obj1.data[j]){
-                    for(var room_num in no_rooms){
-                        if(ojb1.data[j].room_num===room_num)
-                            continue;
-                    }
-                   
-                    $(".btn_yu").click(function(index,element){
-                        window.location.href="room_detail.php?room_num="+obj1.data[index].room_num;
+//                 while(obj1.data[j]){
+//                    for(var room_num in no_rooms){
+//                        if(ojb1.data[j].room_num===room_num)
+//                            continue;
+//                    }
+//                    $(".btn_yu").each(function(index,element){
+//                        $(this).click(function(){
+//                            window.location.href="room_detail.php?room_num="+obj1.data[index].room_num;
+//                        });
+//                    });
+                    $(".btn_yu").click(function(){
+                        window.location.href="room_detail.php?room_num="+obj1.data[Number(this.id.substr(5))].room_num;
                         
                     });
-                    j++;
-                }
+//                    j++;
+//                }
             });
       });
     
