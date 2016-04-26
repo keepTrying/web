@@ -28,8 +28,8 @@
 					</ul>
 				</div>
 				<div class="header_right">
-					<a href="register.html">注册</a>|
-					<a href="login.html">登录</a>
+					<a href="register.php">注册</a>|
+					<a href="login.php">登录</a>
 				</div>
 			</div>
 		</div>
@@ -228,5 +228,11 @@
 //		alert($in+$out+$num);
             window.location.href="yuding.html?in="+$in+"&out="+$out+"&num="+$num;
 	});
+        
+    if(<?php if(isset($_SESSION['user'])) echo 'true'?>==='true'){
+        $("div.header_right").html('<a href="#">'+<?php echo $_SESSION['user'].user_name ?>+'</a>');
+    }else{
+        $("div.header_right").html('<a href=\"register.php\">注册</a>|<a href=\"login.php\">登录</a>');
+    }
     });
 </script>
