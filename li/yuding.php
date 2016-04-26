@@ -521,7 +521,7 @@ $(function(){
                     $("#btn_"+j).click(function(){
                         alert(j);
                         alert("app");
-                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
+                        window.location.href="room_detail.php?room_num="+obj1.data[0].room_num;
                         
                     });
                     j++;
