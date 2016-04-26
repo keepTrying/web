@@ -25,8 +25,8 @@
 					</ul>
 				</div>
 				<div class="header_right">
-					<a href="register.html">注册</a>|
-					<a href="login.html">登录</a>
+					<a href="register.php">注册</a>|
+					<a href="login.php">登录</a>
 				</div>
 			</div>
 		</div>
@@ -39,17 +39,17 @@
 				</div>
 				<div class="nav_right">
 					<ul>
-						<li class="on"><a href="index.html">首   页</a></li>
-						<li ><a href="yuding.html">酒店预定</a></li>
-						<li ><a href="discount.html">优惠活动</a></li>
-						<li ><a href="mall.html">积分商城</a></li>	
+						<li class="on"><a href="index.php">首   页</a></li>
+						<li ><a href="yuding.php">酒店预定</a></li>
+						<li ><a href="discount.php">优惠活动</a></li>
+						<li ><a href="mall.php">积分商城</a></li>	
 					</ul>					
 				</div>
 			</div>
 		</div>
 		<!--banner-->
 		<div class="w1200 login">
-			<p class="login_position">当前位置:<a href="index.html">首页</a>&nbsp;>> &nbsp;会员登录</p>
+			<p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>> &nbsp;会员登录</p>
 			<img src="img/login_banner.jpg" /> 
 		</div>
 		<!--form-->
@@ -124,17 +124,18 @@ $(function(){
 //                        $.cookie("user_years", obj.data.user_years, { expires: 7 });
 //                        $.cookie("user_email", obj.data.user_email, { expires: 7 });
 //                        $.cookie("user_point", obj.data.user_point, { expires: 7 });
-//                        $.cookie("user_phone", obj.data.user_phone, { expires: 7 });
-//                        $.cookie("user_password", obj.data.user_password, { expires: 7 });
+                        
 //                        $.cookie("user_id_num", obj.data.user_id_num, { expires: 7 });
 //                        $.cookie("user_name", obj.data.user_name, { expires: 7 });
                         if($("#autologin").prop("checked")){
                             $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie 
+                            $.cookie("user_phone", '<?php $_SESSION['user']['user_phone'] ?>', { expires: 7 });
+                            $.cookie("user_password", '<?php $_SESSION['user']['user_password'] ?>', { expires: 7 });
                             
                         }else{ 
                             $.cookie("rmbUser", "false", { expire: -1 }); 
                         } 
-                        window.history.back();
+                        window.location.href='index.php';
                     }else{
                         alert("login fail! code:"+obj.status);
                     }
