@@ -509,15 +509,15 @@ $(function(){
                     j++;
                 }
                 $("tbody#tbody").html(content);
-                for(var k=0;k<j;k++){
-                    
+                j=0;
+                 while(obj1.data[j]){
                     for(var room_num in no_rooms){
-                        if(ojb1.data[k].room_num===room_num)
+                        if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
                     
-                    $("input.btn_"+k).click(function(){
-                        window.location.href="room_detail.php?room_num="+obj1.data[k].room_num;
+                    $("input.btn_"+j).click(function(){
+                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
                     });
                 }
             });
