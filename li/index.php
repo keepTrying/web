@@ -230,7 +230,7 @@
 	});
         
     if(<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?>){
-        $("div.header_right").html('<a href="#">'+<?php echo $_SESSION['user']['user_nick'] ?>+'</a>');
+        $("div.header_right").html('<a href="#">'+'<?php echo $_SESSION['user']['user_nick'] ?>'+'</a>');
     }else{
         $("div.header_right").html('<a href=\"register.php\">注册</a>|<a href=\"login.php\">登录</a>');
     }
