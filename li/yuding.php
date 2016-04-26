@@ -516,9 +516,9 @@ $(function(){
                         if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
-                    
+                    alert(obj1.data[j].room_num);
                     $("input.btn_"+j).click(function(){
-                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
+//                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
                     });
                     j++;
                 }
