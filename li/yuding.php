@@ -513,12 +513,11 @@ $(function(){
                 j=0;
                  while(obj1.data[j]){
                     for(var room_num in no_rooms){
-                        alert(ojb1.data[j].room_num);
                         if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
                    
-                    $("#btn_"+j).click(function(){
+                    $(".btn_yu").click(function(this){
                         
                         window.location.href="room_detail.php?room_num="+obj1.data[Number(this.id.substr(5))].room_num;
                         
