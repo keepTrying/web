@@ -505,7 +505,7 @@ $(function(){
                         if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
-                    content+="<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥"+obj1.data[j].room_cost+"</td><td>带早餐</td><td>￥<span class=\"yu_span\">"+obj1.data[j].room_cost+"</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu btn_"+j+"\" value=\"详情\"/></td></tr>";
+                    content+="<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥"+obj1.data[j].room_cost+"</td><td>带早餐</td><td>￥<span class=\"yu_span\">"+obj1.data[j].room_cost+"</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" id=\"btn_"+j"\" value=\"详情\"/></td></tr>";
                     j++;
                 }
                 $("tbody#tbody").html(content);
@@ -517,7 +517,7 @@ $(function(){
                             continue;
                     }
                     alert(obj1.data[j].room_num);
-                    $("input.btn_"+j).click(function(){
+                    $("#btn+"+j).click(function(){
 //                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
                         alert(j);
                         alert("app");
