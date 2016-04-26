@@ -253,3 +253,51 @@ background-position: 7.5px 20px;text-align: center;}
 .w_radio {
     width: 30px;
 }
+/*room detail*/
+.news_show_rt {
+    height: 360px;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.prbj02 {
+    
+}
+
+.pdto {
+    width: 320px;
+    height: 330px;
+    margin: 20px 25px 0 15px;
+    float: left;
+    display: inline;
+}
+#pdtok {
+    width: 320px;
+    height: 250px;
+    border: 1px solid #E4E4E2;
+}
+.jqzoom {
+    POSITION: relative;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    FLOAT: left;
+    PADDING-TOP: 0px;
+}
+#listsmall {
+    width: 320px;
+    height: 80px;
+    float: left;
+}
+.proo {
+    width: 355px;
+    height: 290px;
+    margin: 20px 0 0;
+    float: left;
+}
+.news_show_nr {
+    line-height: 26px;
+    padding: 10px 20px 20px 20px;
+    color: #333;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 14px;
+}

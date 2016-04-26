@@ -15,6 +15,7 @@
 		<!--header-->
 		<div class="header">
 			<div class="w1200" >
+<!--
 				<div class="header_left">
 					<ul>
 						<li class="con"></li>
@@ -30,6 +31,7 @@
 						<li><a href="#" class="con10"></a></li>
 					</ul>
 				</div>
+-->
 				<div class="header_right">
 					<a href="register.php">注册</a>|
 					<a href="login.php">登录</a>
@@ -145,151 +147,59 @@
 		    max: laydate.now(+1) //+1代表明天，+2代表后天，以此类推
 		});
 		</script>
-		<!--yuding_con-->
+		<!--detail-->
 	
-		<div class="w1200 order_nav">
-			<p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>&nbsp;房间预订</p>
-		</div>
-		<div class="w1200 yuding_con">
-			
-			<table class="yuding_con_list" cellpadding="0" cellspacing="0" id="order_list_a"  >
-				<thead>
-					<td width="300">房型</td>
-					<td width="100">门市价</td>
-					<td width="200">早餐</td>
-					<td width="200">会员价</td>
-					<td width="200">房态</td>
-					<td width="200">预订</td>
-					
-				</thead>
-				<tbody id="tbody">       
-<!--
-					<tr>
-						<td><span class="yu_color">精选商务房</span>（标准价）</td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td><input type="button" class="btn_yu" value="预订"/></td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">会员促销价</span><span class="yu_radius">惠</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td><input type="button" class="btn_yu" value="预订"/></td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">提前一天预享受优惠</span><span class="yu_radius">惠</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td>需要提前一天预订</td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">提前一天预付8折会...</span><span class="yu_backcolor">预</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td>需要提前一天预订</td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">会员促销价</span><span class="yu_radius">惠</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td><input type="button" class="btn_yu" value="预订"/></td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">提前一天预享受优惠</span><span class="yu_radius">惠</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td>需要提前一天预订</td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">提前一天预付8折会...</span><span class="yu_backcolor">预</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td>需要提前一天预订</td>
-					</tr>
-					<tr>
-						<td><span class="yu_color">精选商务房</span>（标准价）</td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td><input type="button" class="btn_yu" value="预订"/></td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">会员促销价</span><span class="yu_radius">惠</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td><input type="button" class="btn_yu" value="预订"/></td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">提前一天预享受优惠</span><span class="yu_radius">惠</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td>需要提前一天预订</td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">提前一天预付8折会...</span><span class="yu_backcolor">预</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td>需要提前一天预订</td>
-					</tr>
-					<tr>
-						<td><span class="yu_color">精选商务房</span>（标准价）</td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td><input type="button" class="btn_yu" value="预订"/></td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">会员促销价</span><span class="yu_radius">惠</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td><input type="button" class="btn_yu" value="预订"/></td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">提前一天预享受优惠</span><span class="yu_radius">惠</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td>需要提前一天预订</td>
-					</tr>
-					<tr>
-						<td id="yu_left"><span class="yu_left01">提前一天预付8折会...</span><span class="yu_backcolor">预</span></td>
-						<td>￥299</td>
-						<td>带早餐</td>
-						<td>￥<span class="yu_span">259</span>起</td>
-						<td>紧张</td>
-						<td>需要提前一天预订</td>
-					</tr>
--->
-				</tbody>
-			</table>
+            <div class="w1200 order_nav">
+                <p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>&nbsp;<a href="yuding.php">房间预订</a>&nbsp;>&nbsp;房间详情</p>
+            </div>
+            <div class="w1200 yuding_con">
+
+
+            <div id="liuyanbox" class="oloading"></div> 
+            <input type="hidden" id="info_type" value="hotel" />
+         </div>
 			<div class="detail_title">
-				<div class="detail_title01"><span>酒店详情</span></div>
-				<p>如家精选酒店创新性地以视觉、听觉、味觉、嗅觉、触觉等“五感”作为元素，融合现代英伦风格，时尚简约且别树一帜。设施完善的公共商务区域设有大堂休息区和商务洽谈区，100兆WIFI全覆盖、宽敞明亮的环境、现磨咖啡的浓香、优质专业的服务是您品质商旅的首选。酒店临近春熙路步行街、天府广场和盐市口商圈；距武侯祠、锦里商业街10分钟车程，步行至四川大学、华西医院十余分钟，距双流机场17 公里，火车北站8公里，交通十分便利。</p>
+				<div class="detail_title01"><span>房间详情</span></div>
+              <div class="news_show_rt">
+
+              <div class="prbj02">
+          <div class="pdto">
+
+          <div class="jqzoom" id="pdtok"><img src="http://pccoo.cn/store/20130531/20130531173247331.jpg" width="300" height="225" jqimg="http://pccoo.cn/store/20130531/20130531173247331.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间"/></div>
+            <div id="listsmall">
+              <ul id=mycarousel>
+                <li><img name="http://pccoo.cn/store/20130531/20130531173247331.jpg" src="http://pccoo.cn/store/20130531/20130531173247331.jpg"  alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间"/></li>
+                <li><img name="http://pccoo.cn/es_product/20130531/201353117564355.jpg"  src="http://pccoo.cn/es_product/20130531/201353117564355.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间"/></li>
+                <li><img name="http://pccoo.cn/es_product/20130531/201353117571223.jpg"  src="http://pccoo.cn/es_product/20130531/201353117571223.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间"/></li>
+                <li><img name="http://pccoo.cn/es_product/20130531/201353117574226.jpg"  src="http://pccoo.cn/es_product/20130531/201353117574226.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间"/></li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="proo"><h1>云品时尚酒店标准二人间</h1>
+            <ul>            
+              <li class="prxxo"></li>
+             <li>房型面积：30</li>
+             <li>房间类型：<em class="double">标准间</em></li>
+             <li>所在楼层：2</li>
+             <li>上网服务：免费宽带</li>
+             <li>早    餐：暂无</li>
+             <li>卫浴类型：独立卫浴</li>
+              <li>市场价：<span class="pscjia">150.00元</span></li><li>本站价：<span class="pjia">130.00元</span></li>
+              <li>关注度：<span title="商品人气值：2784" class="star"><em class="star5"></em></span></li><li></li>
+
+                <li>
+                        <a class="yuding" href="/hotel/yd1.asp?id=6459" >点击选择在线预订</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+
+              </div>
+              <div class="news_show_nr">
+              <div class="news_show_nr1">商品详情：</div>标准间的价格，豪华间的享受，祝您入住愉快！</div>
+              <div class="news_show_sx">
+             
 			</div>
 			<div class="detail_title">
 				<div class="detail_title01"><span>温馨提示</span></div>
