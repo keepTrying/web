@@ -506,7 +506,7 @@ $(function(){
                         if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
-                    res.push(obj1.data[j]);
+                    res.push(obj1.data[j].room_num);
                     content+="<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥"+obj1.data[j].room_cost+"</td><td>带早餐</td><td>￥<span class=\"yu_span\">"+obj1.data[j].room_cost+"</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" id=\"btn_"+j+"\" value=\"详情\"/></td></tr>";
                     
                     j++;
@@ -520,7 +520,8 @@ $(function(){
 //                    }
                     $(".btn_yu").each(function(index,element){
                         $(this).click(function(){
-                            window.location.href="room_detail.php?room_num="+res[index].room_num;
+                            alert(index);
+//                            window.location.href="room_detail.php?room_num="+res[index];
                         });
                     });
 //                    $(".btn_yu").click(function(){
