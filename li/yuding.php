@@ -511,15 +511,16 @@ $(function(){
                 }
                 $("tbody#tbody").html(content);
                 j=0;
+                var ro;
                  while(obj1.data[j]){
                     for(var room_num in no_rooms){
                         alert(ojb1.data[j].room_num);
                         if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
-
-                    $("#btn_"+j).click(function(j){
-                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
+                    ro=obj1.data[j].room_num;
+                    $("#btn_"+j).click(function(){
+                        window.location.href="room_detail.php?room_num="+ro;
                         
                     });
                     j++;
