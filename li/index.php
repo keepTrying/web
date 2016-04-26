@@ -228,7 +228,7 @@
 //		alert($in+$out+$num);
             window.location.href="yuding.html?in="+$in+"&out="+$out+"&num="+$num;
 	});
-    <?php session_start();?>
+//    <?php session_start();?>
     if(<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?>){
         $("div.header_right").html('<a href="#">'+'<?php echo $_SESSION['user']['user_nick'] ?>'+'</a>');
     }else{
