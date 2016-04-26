@@ -9,6 +9,8 @@
 		<script type="text/javascript" src="js/laydate.js" ></script>
 		<script type="text/javascript" src="jq/jquery.easing.1.3.js" ></script>
 		<script type="text/javascript" src="jq/jquery-barIndicator.js" ></script>
+		<script type="text/javascript" src="jq/jquery.jcarousel.min.js" ></script>
+		
 		<title></title>
 	</head>
 	<body>
@@ -428,6 +430,27 @@ $(function(){
 		 $num = $("#select_num").val().substr(0,1);
 //		alert($in+$out+$num);
             window.location.href="yuding.php?in="+$in+"&out="+$out+"&num="+$num;
+	});
+    function mycarousel_initCallback(carousel){
+        $("#mycarousel li").mouseover(function(){
+            $("#pdtok img")[0].src=this.getElementsByTagName("img")[0].name;
+            $("#pdtok img")[0].jqimg=this.getElementsByTagName("img")[0].name;
+            $(this).siblings().each(function(){
+                this.getElementsByTagName("img")[0].className="";
+            })
+            this.getElementsByTagName("img")[0].className="curr";
+
+        })
+    };
+    jQuery("#mycarousel").jcarousel({initCallback:mycarousel_initCallback});
+    jQuery("#Fi_pro").jcarousel();
+   $(".jqzoom").jqueryzoom({
+		xzoom:403,
+		yzoom:260,
+		offset:10,
+		position:"right",
+        preload:1,
+		lens:1
 	});
 
     
