@@ -276,12 +276,10 @@ background-position: 7.5px 20px;text-align: center;}
     border: 1px solid #E4E4E2;
 }
 .jqzoom {
-    POSITION: relative;
-    PADDING-BOTTOM: 0px;
-    PADDING-LEFT: 0px;
-    PADDING-RIGHT: 0px;
-    FLOAT: left;
-    PADDING-TOP: 0px;
+    position: relative;
+    padding: 0px;
+    float: left;
+    
 }
 #listsmall {
     width: 320px;
