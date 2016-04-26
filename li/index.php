@@ -42,10 +42,10 @@
 				</div>
 				<div class="nav_right">
 					<ul>
-						<li class="on"><a href="index.html">首   页</a></li>
-						<li ><a href="yuding.html">酒店预定</a></li>
-						<li ><a href="discount.html">优惠活动</a></li>
-						<li ><a href="mall.html">积分商城</a></li>	
+						<li class="on"><a href="index.php">首   页</a></li>
+						<li ><a href="yuding.php">酒店预定</a></li>
+						<li ><a href="discount.php">优惠活动</a></li>
+						<li ><a href="mall.php">积分商城</a></li>	
 					</ul>					
 				</div>
 			</div>
