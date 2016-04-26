@@ -517,7 +517,7 @@ $(function(){
                             continue;
                     }
                    
-                    $(".btn_yu").click(function(this){
+                    $(".btn_yu").click(function(){
                         
                         window.location.href="room_detail.php?room_num="+obj1.data[Number(this.id.substr(5))].room_num;
                         
