@@ -520,7 +520,7 @@ $(function(){
 //                    }
                     $(".btn_yu").each(function(index,element){
                         $(this).click(function(){
-                            window.location.href="room_detail.php?room_num="+res.data[index].room_num;
+                            window.location.href="room_detail.php?room_num="+res[index].room_num;
                         });
                     });
 //                    $(".btn_yu").click(function(){
