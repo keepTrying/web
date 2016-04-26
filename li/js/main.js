@@ -20,4 +20,9 @@
         return true;
     else
         return false;
+}
+;function gotologin(islogin){
+    if (islogin==false) {
+        window.location.href='/login.html';
+    }
 }    
