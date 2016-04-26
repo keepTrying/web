@@ -509,19 +509,19 @@ $(function(){
                     j++;
                 }
                 $("tbody#tbody").html(content);
-//                j=0;
-//                 while(obj1.data[j]){
-//                    for(var room_num in no_rooms){
-//                        alert(ojb1.data[j].room_num);
-//                        if(ojb1.data[j].room_num===room_num)
-//                            continue;
-//                    }
-//                    
-//                    $("input.btn_"+j).click(function(){
-//                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
-//                    });
-//                    j++;
-//                }
+                j=0;
+                 while(obj1.data[j]){
+                    for(var room_num in no_rooms){
+                        alert(ojb1.data[j].room_num);
+                        if(ojb1.data[j].room_num===room_num)
+                            continue;
+                    }
+                    
+                    $("input.btn_"+j).click(function(){
+                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
+                    });
+                    j++;
+                }
             });
       });
     
