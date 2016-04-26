@@ -111,22 +111,23 @@ $(function(){
             if(msg==1){  //验证码正确！ 
                 $.post("../hotel/user/login.php",{
                     user_phone:$("#phone").val(),
-                    user_password:$("#pw").val()
+                    user_password:$("#pw").val(),
+                    action:'login'
                 },function(data,status){
                     var obj = $.parseJSON(data);
                     if(obj.status=="200"){
                         alert("login success");
-                        $.cookie("login","true",{expires:7});
-                        $.cookie("user_id", obj.data.user_id, { expires: 7 });
-                        $.cookie("user_nick", obj.data.user_nick, { expires: 7 });
-                        $.cookie("user_gender", obj.data.user_gender, { expires: 7 });
-                        $.cookie("user_years", obj.data.user_years, { expires: 7 });
-                        $.cookie("user_email", obj.data.user_email, { expires: 7 });
-                        $.cookie("user_point", obj.data.user_point, { expires: 7 });
-                        $.cookie("user_phone", obj.data.user_phone, { expires: 7 });
-                        $.cookie("user_password", obj.data.user_password, { expires: 7 });
-                        $.cookie("user_id_num", obj.data.user_id_num, { expires: 7 });
-                        $.cookie("user_name", obj.data.user_name, { expires: 7 });
+//                        $.cookie("login","true",{expires:7});
+//                        $.cookie("user_id", obj.data.user_id, { expires: 7 });
+//                        $.cookie("user_nick", obj.data.user_nick, { expires: 7 });
+//                        $.cookie("user_gender", obj.data.user_gender, { expires: 7 });
+//                        $.cookie("user_years", obj.data.user_years, { expires: 7 });
+//                        $.cookie("user_email", obj.data.user_email, { expires: 7 });
+//                        $.cookie("user_point", obj.data.user_point, { expires: 7 });
+//                        $.cookie("user_phone", obj.data.user_phone, { expires: 7 });
+//                        $.cookie("user_password", obj.data.user_password, { expires: 7 });
+//                        $.cookie("user_id_num", obj.data.user_id_num, { expires: 7 });
+//                        $.cookie("user_name", obj.data.user_name, { expires: 7 });
                         if($("#autologin").prop("checked")){
                             $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie 
                             
