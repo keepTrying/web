@@ -505,7 +505,7 @@ $(function(){
                         if(ojb1.data[j].room_num==room_num)
                             continue;
                     }
-                    content+="<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥"+obj1.data[j].room_cost+"</td><td>带早餐</td><td>￥<span class=\"yu_span\">"+obj1.data[j].room_cost+"</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" value=\"详情\"/><a href=\"room_detail.php?room_id="+obj1.data[j].room_id+"\"></a></td></tr>";
+                    content+="<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥"+obj1.data[j].room_cost+"</td><td>带早餐</td><td>￥<span class=\"yu_span\">"+obj1.data[j].room_cost+"</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" value=\"预订\"/></td></tr>";
                     j++;
                 }
                 $("tbody#tbody").html(content);
