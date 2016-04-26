@@ -517,11 +517,9 @@ $(function(){
                         if(ojb1.data[j].room_num===room_num)
                             continue;
                     }
-                    alert(obj1.data[j].room_num);
-                    $("#btn_"+j).click(function(){
-                        alert(j);
-                        alert("app");
-                        window.location.href="room_detail.php?room_num="+obj1.data[0].room_num;
+
+                    $("#btn_"+j).click(function(j){
+                        window.location.href="room_detail.php?room_num="+obj1.data[j].room_num;
                         
                     });
                     j++;
