@@ -31,8 +31,8 @@
 					</ul>
 				</div>
 				<div class="header_right">
-					<a href="register.html">注册</a>|
-					<a href="login.html">登录</a>
+					<a href="register.php">注册</a>|
+					<a href="login.php">登录</a>
 				</div>
 			</div>
 		</div>
@@ -45,10 +45,10 @@
 				</div>
 				<div class="nav_right">
 					<ul>
-						<li><a href="index.html">首   页</a></li>
-						<li class="on" ><a href="yuding.html">酒店预定</a></li>
-						<li ><a href="discount.html">优惠活动</a></li>
-						<li ><a href="mall.html">积分商城</a></li>	
+						<li><a href="index.php">首   页</a></li>
+						<li class="on" ><a href="yuding.php">酒店预定</a></li>
+						<li ><a href="discount.php">优惠活动</a></li>
+						<li ><a href="mall.php">积分商城</a></li>	
 					</ul>					
 				</div>
 			</div>
@@ -148,7 +148,7 @@
 		<!--yuding_con-->
 	
 		<div class="w1200 order_nav">
-			<p class="login_position">当前位置:<a href="index.html">首页</a>&nbsp;>&nbsp;房间预订</p>
+			<p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>&nbsp;房间预订</p>
 		</div>
 		<div class="w1200 yuding_con">
 			
@@ -517,7 +517,7 @@ $(function(){
 		 $out = $("#input_out").val();
 		 $num = $("#select_num").val().substr(0,1);
 //		alert($in+$out+$num);
-            window.location.href="yuding.html?in="+$in+"&out="+$out+"&num="+$num;
+            window.location.href="yuding.php?in="+$in+"&out="+$out+"&num="+$num;
 	});
 
     
