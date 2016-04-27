@@ -292,12 +292,13 @@ background-position: 7.5px 20px;text-align: center;}
 .jqzoom IMG {
     FLOAT: left;
 }
-#listsmall {
-    width: 320px;
-    height: 80px;
+#listsmall ul li {
+    height: 60px;
+    width: 80px;
     float: left;
-    display: block;
+    padding-top: 5px;
 }
+
 .proo {
     width: 355px;
     height: 290px;
@@ -314,6 +315,12 @@ background-position: 7.5px 20px;text-align: center;}
     display: block;
 }
 
+#listsmall {
+    width: 320px;
+    height: 80px;
+    float: left;
+    display: block;
+}
 #listsmall li .curr {
     border: 2px solid #FF8A04;
     list-style: none;
@@ -349,4 +356,40 @@ background-position: 7.5px 20px;text-align: center;}
 
 #mycarousel li{
     display: inline;
+}
+
+.jqZoomPup {
+    Z-INDEX: 10;
+    BORDER: 1px solid #ccc;
+    POSITION: absolute;
+    FILTER: alpha(Opacity=50);
+    WIDTH: 50px;
+    HEIGHT: 50px;
+    VISIBILITY: hidden;
+    TOP: 0px;
+    CURSOR: move;
+    LEFT: 0px;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    background-position: 50% top;
+}
+
+.zoomdiv {
+    Z-INDEX: 100;
+    BORDER-BOTTOM: #09d 1px solid;
+    POSITION: absolute;
+    TEXT-ALIGN: center;
+    BORDER-LEFT: #09d 1px solid;
+    WIDTH: 200px;
+    DISPLAY: none;
+    BACKGROUND: #fff;
+    HEIGHT: 200px;
+    OVERFLOW: hidden;
+    BORDER-TOP: #09d 1px solid;
+    TOP: 1px;
+    BORDER-RIGHT: #09d 1px solid;
+    LEFT: 0px
 }
