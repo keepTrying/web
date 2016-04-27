@@ -277,12 +277,20 @@ background-position: 7.5px 20px;text-align: center;}
     height: 250px;
     border: 1px solid #E4E4E2;
 }
+#pdtok img {
+    padding: 10px;
+    height: 225px;
+    width: 300px;
+}
 .jqzoom {
     position: relative;
     padding: 0px;
     float: left;
     display: block;
     
+}
+.jqzoom IMG {
+    FLOAT: left;
 }
 #listsmall {
     width: 320px;
@@ -307,7 +315,7 @@ background-position: 7.5px 20px;text-align: center;}
 }
 
 #listsmall li .curr {
-    BORDER: 2px solid #FF8A04;
+    border: 2px solid #FF8A04;
     list-style: none;
 }
 #listsmall li img {
