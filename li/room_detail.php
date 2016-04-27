@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="jq/jquery.easing.1.3.js" ></script>
 		<script type="text/javascript" src="jq/jquery-barIndicator.js" ></script>
 		<script type="text/javascript" src="jq/jquery.jcarousel.min.js" ></script>
+		<script type="text/javascript" src="jq/jquery.zoom.min.js" ></script>
 		
 		<title></title>
 	</head>

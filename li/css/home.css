@@ -338,3 +338,7 @@ background-position: 7.5px 20px;text-align: center;}
     font-size: 18px;
     font-weight: normal;
 }
+
+#mycarousel li{
+    display: inline;
+}
