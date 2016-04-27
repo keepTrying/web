@@ -229,7 +229,7 @@
             window.location.href="yuding.php?in="+$in+"&out="+$out+"&num="+$num;
 	});
 
-    if(<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?>){
+    if(<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?>===true){
         try{
             $("div.header_right").html('<a href="#">'+'<?php echo $_SESSION['user']['user_nick'] ?>'+'</a>|<a href="#">注销</a>');
             $("a:contains('<?php echo $_SESSION['user']['user_nick'] ?>')").click(function(){
