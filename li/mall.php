@@ -75,7 +75,7 @@
 		<div class="mail_con">
 			<div class="w1200">
 				<div class="mail_con_nav">
-					当前位置：<a href="index.html">首页</a>&nbsp;>>&nbsp;<a href="javascript:void(0);">全部商品</a>
+					当前位置：<a href="index.html">首页</a>&nbsp;>>&nbsp;<a href="javascript:void(0);">积分商城</a>
 				</div>
 <!--
 				<div class="mail_con_nav2">

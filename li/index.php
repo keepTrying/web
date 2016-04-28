@@ -44,7 +44,7 @@
 					<ul>
 						<li class="on"><a href="index.php">首   页</a></li>
 						<li ><a href="yuding.php">酒店预定</a></li>
-						<li ><a href="discount.php">优惠活动</a></li>
+						<li ><a href="my_order.php">我的订单</a></li>
 						<li ><a href="mall.php">积分商城</a></li>	
 					</ul>					
 				</div>

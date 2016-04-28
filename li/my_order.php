@@ -50,24 +50,29 @@
 		</div>
 		<!--banner-->
 		<div class="w1200 order_nav">
-			<p class="login_position">当前位置:<a href="index.html">首页</a>&nbsp;>&nbsp;<a href="remeber.html">个人中心</a>&nbsp;>&nbsp;未入住名单</p>
+			<p class="login_position">当前位置:<a href="index.html">首页</a>&nbsp;>&nbsp;<a href="remeber.html">个人中心</a>&nbsp;>&nbsp;我的订单</p>
 		</div>
 		<div class="w1200 order_Con">
 		<div class="order_left">
 			<ul class="border_top">
 				<li class="order_left_title">我的订单
 					<ul class="top_none">
-						<li><a href="" class="curr"><span class="color_a">•</span>&nbsp;&nbsp;未入住订单</a></li>
-						<li><a href=""><span>•</span>&nbsp;&nbsp;历史订单</a></li>
-						<li class="padd_bottom"><a href=""><span>•</span>&nbsp;&nbsp;优选商品订单</a></li>
+						<li><a href="" class="curr"><span class="color_a">•</span>&nbsp;&nbsp;未支付订单</a></li>
+						<li><a href=""><span>•</span>&nbsp;&nbsp;已支付订单</li>
+						<li><a href=""><span>•</span>&nbsp;&nbsp;已完成订单</li>
+						<li><a href=""><span>•</span>&nbsp;&nbsp;已取消订单</li>
+						<li><a href=""><span>•</span>&nbsp;&nbsp;已过期订单</li>
+<!--						<li class="padd_bottom"><a href=""><span>•</span>&nbsp;&nbsp;优选商品订单</a></li>-->
 					</ul>
 				</li>
 				<li class="order_left_title">
 					账户管理
 					<ul class="top_none">
 						<li><a href=""><span>•</span>&nbsp;&nbsp;我的积分</a></li>
+<!--
 						<li><a href=""><span>•</span>&nbsp;&nbsp;我的钱包</a></li>
 						<li class="padd_bottom"><a href=""><span>•</span>&nbsp;&nbsp;我的优惠券</a></li>
+-->
 					</ul>
 				</li>
 				<li class="order_left_title">
@@ -75,11 +80,14 @@
 					<ul class="top_none">
 						<li><a href=""><span>•</span>&nbsp;&nbsp;我的信息</a></li>
 						<li><a href=""><span>•</span>&nbsp;&nbsp;密码修改</a></li>
-						<li><a href=""><span>•</span>&nbsp;&nbsp;我的收藏</a></li>
+						<li><a href=""><span>•</span>&nbsp;&nbsp;我的房间</a></li>
+<!--
 						<li><a href=""><span>•</span>&nbsp;&nbsp;我的评论</a></li>
 						<li class="padd_bottom"><a href=""><span>•</span>&nbsp;&nbsp;我的会员卡</a></li>
+-->
 					</ul>
 				</li>
+<!--
 				<li class="order_left_title">
 					我的社区
 					<ul class="top_none">
@@ -88,34 +96,36 @@
 						<li class="padd_bottom"><a href=""><span>•</span>&nbsp;&nbsp;我的帖子</a></li>
 					</ul>
 				</li>
+-->
 			</ul>
 		</div>
 		<div class="order_right">
 			<div class="order_rightnav">
 				<ul>
-					<li class="curr">未入住订单</li>
-					<li>历史订单</li>
+					<li class="curr">未支付订单</li>
+					<li>已支付订单</li>
+					<li>已完成订单</li>
+					<li>已取消订单</li>
+                             <li>已过期订单</li>
 				</ul>
 			</div>
 			<table class="order_list" cellpadding="0" cellspacing="0" id="order_list_a">
 				<thead>
 					<td width="120">订单编号</td>
-					<td width="120">酒店房型</td>
-					<td width="200">入住/退房日期</td>
-					<td width="120">总房价</td>
-					<td width="120">支付方式</td>
-					<td width="100">订单状态</td>
-					<td width="200">订单操作</td>
+					<td width="120">订单类型</td>
+					<td width="200">下单时间</td>
+					<td width="120">总金额</td>
+					<td width="120">房间号</td>
+					<td width="100">订单操作</td>
 				</thead>
 				<tbody>
 					<tr>
 						<td>12356789</td>
-						<td>标准间</td>
-						<td>150614-150615</td>
+						<td>订房</td>
+						<td>2015-02-04 19:00:00</td>
 						<td>￥259</td>
-						<td>在线</td>
-						<td>已支付</td>
-						<td>&nbsp;</td>
+						<td>100005</td>
+						<td><button>支付</button></td>
 					</tr>
 					<tr>
 						<td>12356789</td>
