@@ -1519,4 +1519,14 @@ img {
     LEFT: 0px
 }
 
+/*user*/
+.cen_bom {
+    margin: 20px;
+}
+.cen_fl {
+    margin-bottom: 10px;
+}
+div{
+    display: block;
+}
 
