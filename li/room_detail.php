@@ -241,7 +241,7 @@
         </div>
         <div class="detail_title">
             <div class="detail_title01"><span>房屋设施</span></div>
-            <p>酒店覆盖wifi
+            <p id="p_room_desc">酒店覆盖wifi
                 <br/> 该酒店可以使用如家钱包充值和消费
                 <br/> 酒店不接受员工卡预订
                 <br/> 2016.04.04-2016.04.29凡新办金卡的上门客人入住首日享受8折优惠 并可获赠两份/间夜
@@ -251,7 +251,7 @@
         </div>
         
         <div class="detail_title">
-            <div class="detail_title01"><span>酒店点评</span></div>
+            <div class="detail_title01"><span>房间点评</span></div>
             <div class="yu_ping">
                 <table>
                     <tr>

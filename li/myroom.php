@@ -237,7 +237,7 @@
         </div>
         <div class="detail_title">
             <div class="detail_title01"><span>房屋设施</span></div>
-            <p>酒店覆盖wifi
+            <p id="p_room_desc">酒店覆盖wifi
                 <br/> 该酒店可以使用如家钱包充值和消费
                 <br/> 酒店不接受员工卡预订
                 <br/> 2016.04.04-2016.04.29凡新办金卡的上门客人入住首日享受8折优惠 并可获赠两份/间夜
@@ -245,18 +245,27 @@
                 <br/> 2016.04.04-2016.04.29会员入住（精选高级商务房与精选高级双床房）赠早餐2份/间夜
             </p>
         </div>
-<div class="detail_title">
+        <div class="detail_title">
             <div class="detail_title01"><span>申请服务</span></div>
             <ul id="service">
-                <li><button>早餐</button></li>
-                <li><button>按摩</button></li>
-                <li><button>续租</button></li>
-                <li><button>退房</button></li>
+                <li>
+                    <button>早餐</button>
+                </li>
+                <li>
+                    <button>按摩</button>
+                </li>
+                <li>
+                    <button>续租</button>
+                </li>
+                <li>
+                    <button>退房</button>
+                </li>
             </ul>
         </div>
     </div>
-        <div class="detail_title">
-            <div class="detail_title01"><span>房间点评</span></div>
+    <div class="detail_title">
+        <div class="detail_title01"><span>房间点评</span></div>
+        <!--
             <div class="yu_ping">
                 <table>
                     <tr>
@@ -273,62 +282,63 @@
 
 
             </div>
+-->
 
-            <div class="message">
-                <form id="message_form">
-                    <ul class="plcontent">
-                        <li class="pli"><span class="l"><em class="red">*</em> 评&nbsp;&nbsp;&nbsp;&nbsp;分：</span>
-                            <p><span class="pfenbar"><a id="pf1" sd="-1" class="hovli">很差</a><a id="pf2" sd="0" class="hovli">差</a><a id="pf3" sd="1" class="hovli">一般</a><a id="pf4" sd="2" class="hovli">好</a><a id="pf5" sd="3" class="hovli">很好</a></span><i>很好</i>
-                    <input type="hidden" class="dfhid" name="ysdp" id="ysdp" value="3">
-                </p>
-                </li>
-                <li><span class="l"><em class="red">*</em> 内&nbsp;&nbsp;&nbsp;&nbsp;容：</span>
-                    <div class="textaCont dconipt">
-                        <div class="t"></div>
-                        <div class="c">
-                            <textarea id="content_txt" name="content_txt"></textarea>
+        <div class="message">
+            <form id="message_form">
+                <ul class="plcontent">
+                    <li class="pli"><span class="l"><em class="red">*</em> 评&nbsp;&nbsp;&nbsp;&nbsp;分：</span>
+                        <p><span class="pfenbar"><a id="pf1" sd="-1" class="hovli">很差</a><a id="pf2" sd="0" class="hovli">差</a><a id="pf3" sd="1" class="hovli">一般</a><a id="pf4" sd="2" class="hovli">好</a><a id="pf5" sd="3" class="hovli">很好</a></span><i>很好</i>
+                            <input type="hidden" class="dfhid" name="ysdp" id="ysdp" value="3">
+                        </p>
+                    </li>
+                    <li><span class="l"><em class="red">*</em> 内&nbsp;&nbsp;&nbsp;&nbsp;容：</span>
+                        <div class="textaCont dconipt">
+                            <div class="t"></div>
+                            <div class="c">
+                                <textarea id="content_txt" name="content_txt"></textarea>
+                            </div>
+                            <div class="b"></div>
+                            <div id="zezlogin" class="red" style="display: none;">亲，难道您要此处省略1万字吗？</div>
                         </div>
-                        <div class="b"></div>
-                        <div id="zezlogin" class="red" style="display: none;">亲，难道您要此处省略1万字吗？</div>
-                    </div>
 
-                    <p>
-                        <input type="button" value="" id="subok">
-                    </p>
-                </li>
+                        <p>
+                            <input type="button" value="" id="subok">
+                        </p>
+                    </li>
                 </ul>
-                </form>
-
-            </div>
+            </form>
 
         </div>
-        <!--advantage-->
-        <div class="advantage">
-            <div class="w1200">
-                <div class="advantage_con">
-                    <img src="img/icon_1.png" />
-                    <h3>3000家酒店</h3>
-                    <p>覆盖全国32个省，330余座城市</p>
-                </div>
-                <div class="advantage_con">
-                    <img src="img/icon_2.png" />
-                    <h3>送积分翻倍</h3>
-                    <p>会员在线预定赠送多倍积分</p>
-                    <p>专享超值礼品和免费房兑换</p>
-                </div>
-                <div class="advantage_con">
-                    <img src="img/icon_3.png" />
-                    <h3>到店有房保障</h3>
-                    <p>订单一经确认</p>
-                    <p>酒店预留客房保证会员安心入住</p>
-                </div>
+
+    </div>
+    <!--advantage-->
+    <div class="advantage">
+        <div class="w1200">
+            <div class="advantage_con">
+                <img src="img/icon_1.png" />
+                <h3>3000家酒店</h3>
+                <p>覆盖全国32个省，330余座城市</p>
+            </div>
+            <div class="advantage_con">
+                <img src="img/icon_2.png" />
+                <h3>送积分翻倍</h3>
+                <p>会员在线预定赠送多倍积分</p>
+                <p>专享超值礼品和免费房兑换</p>
+            </div>
+            <div class="advantage_con">
+                <img src="img/icon_3.png" />
+                <h3>到店有房保障</h3>
+                <p>订单一经确认</p>
+                <p>酒店预留客房保证会员安心入住</p>
             </div>
         </div>
-        <!--footer-->
-        <div class="footer">
-            <p>最终解释权归本公司所有©3.3.2.1102</p>
-        </div>
-        <script type="text/javascript" src="js/main.js"></script>
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <p>最终解释权归本公司所有©3.3.2.1102</p>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
@@ -431,19 +441,51 @@
             lens: 1
         });
 
-        $('.jin').barIndicator({
-            counterStep: 1,
-            milestones: false,
-            horBarHeight: 15,
-            animTime: 1000,
-            numType: 'absolute',
-            numMin: 0.0,
-            numMax: 5.0,
-            horTitle: '综合评分:'
-        });
-        $('a.yuding').click(function() {
-            alert('预订成功！');
-        });
+//        $('.jin').barIndicator({
+//            counterStep: 1,
+//            milestones: false,
+//            horBarHeight: 15,
+//            animTime: 1000,
+//            numType: 'absolute',
+//            numMin: 0.0,
+//            numMax: 5.0,
+//            horTitle: '综合评分:'
+//        });
+//        $('a.yuding').click(function() {
+//            alert('预订成功！');
+//        });
 
+        $(".pfenbar a").live('mouseenter', function() {
+            $(this).nextAll().removeClass("hovli")
+            $(this).addClass("hovli");
+            $(this).prevAll().addClass("hovli")
+            $(this).parents("p").find("i").removeClass("red")
+            $(this).parents("p").find("i").html($(this).html())
+        }).live('mouseleave', function() {
+            var sidv = $(this).attr("sd"),
+                t_hid = $(this).parents("p").find("input").val();
+            if (t_hid == "") {
+                $(this).removeClass("hovli");
+                $(this).prevAll().removeClass("hovli")
+            } else if (t_hid < sidv) {
+                $(this).parent().children("a[sd=" + t_hid + "]").nextAll().removeClass("hovli")
+            } else {
+                $(this).parent().children("a[sd=" + t_hid + "]").addClass("hovli")
+                $(this).parent().children("a[sd=" + t_hid + "]").prevAll().addClass("hovli")
+            }
+            $(this).parents("p").find("i").html($(this).parent().children("a[sd=" + t_hid + "]").html())
+        });
+        $(".pfenbar a").live("click", function() {
+
+            var sidv = $(this).attr("sd");
+            $(this).addClass("hovli");
+            $(this).prevAll().addClass("hovli")
+            $(this).parents("p").find("input").val(sidv)
+            $(this).parents("p").find("i").html($(this).html())
+
+        });
+        $("textarea").live("mouseover", function() {
+            $(this).focus();
+        });
     });
 </script>

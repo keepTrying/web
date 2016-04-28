@@ -1214,7 +1214,7 @@ img {
     border-bottom: 3px solid #3a7fe7;
 }
 
-.detail_title p {
+#p_room_desc {
     color: #333333;
     font-size: 18px;
     line-height: 35px;
@@ -1799,6 +1799,20 @@ a.black:active {
     outline: none;
 }
 
-#service {
+#service li{
     display: inline-block;
+}
+#service{
+    margin-left: 25%;
+}
+
+#service button {
+    width: 100px;
+    height: 30px;
+    color: #ffffff;
+    background: #3a7fe7;
+    border: 0px;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
 }
