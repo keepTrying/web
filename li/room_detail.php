@@ -181,7 +181,7 @@
 
             <div class="w1200 order_nav">
                 <p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>&nbsp;<a href="yuding.php">房间预订</a>&nbsp;>&nbsp;房间详情</p>
-            </div>
+            
             <div class="w1200 yuding_con">
 
 
@@ -189,7 +189,9 @@
                 <input type="hidden" id="info_type" value="hotel" />
             </div>
             <div class="detail_title">
+               <div class="detail_title">
                 <div class="detail_title01"><span>房间详情</span></div>
+                </div>
                 <div class="news_show_rt">
 
                     <div class="prbj02">
@@ -229,10 +231,13 @@
                     </div>
 
                 </div>
+<!--
                 <div class="news_show_nr">
                     <div class="news_show_nr1">商品详情：</div>标准间的价格，豪华间的享受，祝您入住愉快！</div>
                 <div class="news_show_sx">
 
+                </div>
+-->
                 </div>
                 <div class="detail_title">
                     <div class="detail_title01"><span>温馨提示</span></div>
