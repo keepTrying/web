@@ -54,6 +54,7 @@
 		<!--title-->
 		<div class="title">
 			<div class="w1200">
+<!--
 				<ul>
 					<li class="on"><a href="#">全部商品</a></li>
 					<li ><a href="#">会员权益</a></li>
@@ -68,16 +69,19 @@
  						<div class="an"><button><img src="img/search.png"></button></div>
 					</form>
 				</div>
+-->
 			</div>
 		</div>
 		<div class="mail_con">
 			<div class="w1200">
 				<div class="mail_con_nav">
-					当前位置：<a href="index.html">首页</a>&nbsp; >> &nbsp;<a href="discount.html">积分商城</a>&nbsp;>>&nbsp;<a href="#">全部商品</a>
+					当前位置：<a href="index.html">首页</a>&nbsp;>>&nbsp;<a href="javascript:void(0);">全部商品</a>
 				</div>
+<!--
 				<div class="mail_con_nav2">
 					<span>全部商品</span><a href="#" class="on">综合</a><a href="#">销量</a><a href="#">中奖公告</a>
 				</div>
+-->
 			</div>
 		</div>
 		<!--mall_con-->
