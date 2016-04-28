@@ -220,7 +220,7 @@
                             <li>卫浴类型：独立卫浴</li>
                             <li>市场价：<span class="pscjia">150.00元</span></li>
                             <li>本站价：<span class="pjia">130.00元</span></li>
-                            <li>关注度：<span title="商品人气值：2784" class="star"><em class="star5"></em></span></li>
+                            <li>门牌号：<span class="star">101</span></li>
                             <li></li>
 
                             <li>
@@ -240,7 +240,7 @@
 -->
         </div>
         <div class="detail_title">
-            <div class="detail_title01"><span>温馨提示</span></div>
+            <div class="detail_title01"><span>房屋设施</span></div>
             <p>酒店覆盖wifi
                 <br/> 该酒店可以使用如家钱包充值和消费
                 <br/> 酒店不接受员工卡预订
@@ -249,37 +249,7 @@
                 <br/> 2016.04.04-2016.04.29会员入住（精选高级商务房与精选高级双床房）赠早餐2份/间夜
             </p>
         </div>
-        <div class="detail_title">
-            <div class="detail_title01 detail_title02">
-                <ul>
-                    <li class="curr">温馨提示</li>
-                    <li>周边设施</li>
-                </ul>
-            </div>
-            <table class="yu_car">
-                <tr>
-                    <td width="180"><strong>火车站/机场</strong></td>
-                    <td width="160">成都火车北站</td>
-                    <td width="160">距酒店8公里</td>
-                    <td width="640">乘出租车约15分钟，约20元；地铁：坐地铁1号线至华西坝下车，C 口出站，小天竺东街转乘28/21路公交车在新南门站下车。
-                    </td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>成都火车北站</td>
-                    <td>距酒店8公里</td>
-                    <td>乘出租车约15分钟，约20元；地铁：坐地铁1号线至华西坝下车，C 口出站，小天竺东街转乘28/21路公交车在新南门站下车。
-                    </td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>成都火车北站</td>
-                    <td>距酒店8公里</td>
-                    <td>乘出租车约15分钟，约20元；地铁：坐地铁1号线至华西坝下车，C 口出站，小天竺东街转乘28/21路公交车在新南门站下车。
-                    </td>
-                </tr>
-            </table>
-        </div>
+        
         <div class="detail_title">
             <div class="detail_title01"><span>酒店点评</span></div>
             <div class="yu_ping">
@@ -288,41 +258,41 @@
                         <td rowspan="2" width="260">
                             好评率:<span class="yu_jindu">99%</span>
                         </td>
-                        <td width="300" class="tl">综合评分:<img src="img/img_star .jpg" />4.9</td>
-                        <td width="320" class="tl">环境美观:&nbsp;&nbsp;
-                            <div class="bars"><span id="bar" class="jin">89</span></div>
-                        </td>
+                        <td rowspan="2" width="300" class="tl">综合评分:<div class="bars"><span id="bar" class="jin">4.0</span></div>/5.0分</td>
+                        
+<!--
                         <td width="320" class="tl">整洁干净:&nbsp;&nbsp;
                             <div class="bars"><span id="bar" class="jin">89</span></div>
                         </td>
+-->
                     </tr>
-                    <tr>
-                        <td class="tl"><a href="" class="tl">>>查看全部点评:</a></td>
-                        <td class="tl">设施完整:&nbsp;&nbsp;
-                            <div class="bars"><span id="bar" class="jin">89</span></div>
-                        </td>
-                        <td class="tl">服务温馨:&nbsp;&nbsp;
-                            <div class="bars"><span id="bar" class="jin">89</span></div>
-                        </td>
-                    </tr>
+                    
                 </table>
 
+<!--
                 <script>
                     $('.jin').barIndicator({
                         counterStep: 1
                         , milestones: false
                         , horBarHeight: 15
                         , animTime: 1000
+                        , numType:absolute
                     });
                 </script>
+-->
             </div>
             <div class="yu_pingscore">
                 <ul>
-                    <li>综合评分：5.0分</li>
-                    <li>来自183...4324</li>
-                    <li class="yu_pingscorem">点评时间：2016-04-07</li>
+                    <li>综合评分:<div class="bars"><span id="bar" class="jin">4.0</span></div>/5.0分</li>
+                    <li class="yu_pingscorem">点评时间：2016-04-07 20:34:00</li>
                 </ul>
-                <p>酒店干净卫生，带儿子出来旅游，感觉不错。位置也很好，到哪儿都方便，周边吃的东西也不少。早餐也不错。房间每天都有赠送小饼干，儿子很开心。不过第一天进房间门口就有名片，感觉不是很好</p>
+                <ul>
+                    <li>
+                        <img src="http://pccoo.cn/es_product/20130531/201353117574226.jpg">
+                    </li>
+                    <li><p>酒店干净卫生，带儿子出来旅游，感觉不错。位置也很好，到哪儿都方便，周边吃的东西也不少。早餐也不错。房间每天都有赠送小饼干，儿子很开心。不过第一天进房间门口就有名片，感觉不是很好</p></li>
+                </ul>
+                
             </div>
             <div class="yu_pingscore">
                 <ul>
@@ -499,6 +469,14 @@
             , position: "right"
             , preload: 1
             , lens: 1
+        });
+        
+         $('.jin').barIndicator({
+                        counterStep: 1
+                        , milestones: false
+                        , horBarHeight: 15
+                        , animTime: 1000
+                        , numType:absolute
         });
 
 
