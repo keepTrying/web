@@ -301,6 +301,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="cen_fl">
+          <div class="cen_annu">
+            <input type="submit" class="annu_a" id="sub" value="提交修改"><span id="subok" class="subok"></span>
+          </div>
+        </div>
             </div>
         </form>
                 <!--footer-->

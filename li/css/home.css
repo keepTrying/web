@@ -1612,3 +1612,29 @@ a.black:link, a.black:visited, a.black:active {
     font-weight: normal;
     font-size: 12px;
 }
+.cen_annu {
+    border-top: 1px dashed #ddd;
+    height: 50px;
+    text-align: center;
+    padding: 30px;
+    line-height: 50px;
+    color: #999;
+}
+.annu_a {
+    background: url(../img/annu.jpg) -6px -5px no-repeat;
+    width: 123px;
+    height: 44px;
+    border: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #600;
+    cursor: pointer;
+}
+.subok {
+    display: inline-block;
+    height: 40px;
+    line-height: 30px;
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+}
