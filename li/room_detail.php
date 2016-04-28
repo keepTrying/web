@@ -280,7 +280,7 @@
                 </ul>
                 
             </div>
-            <div class="yu_pingscore">
+<!--            <div class="yu_pingscore">
                 <ul>
                     <li>综合评分：5.0分</li>
                     <li>来自183...4324</li>
@@ -465,8 +465,7 @@
                         ,numType:'absolute'
                         ,numMin:0.0
                         ,numMax:5.0
-                        ,numMinLabel:true
-                        ,horTitle:'综合评分' 
+                        ,horTitle:'综合评分:' 
         });
 
 
