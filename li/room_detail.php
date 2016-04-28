@@ -466,7 +466,7 @@
                         ,numType:'absolute'
                         ,numMin:0.0
                         ,numMax:5.0
-                        .horLabel:'right'
+                        .horLabelPos:'right'
                        
         });
 
