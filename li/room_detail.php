@@ -259,12 +259,8 @@
                             好评率:<span class="yu_jindu">99%</span>
                         </td>
                         <td rowspan="2" width="300" class="tl">综合评分:<div class="bars"><span id="bar" class="jin">4.0</span></div>/5.0分</td>
-                        
-<!--
-                        <td width="320" class="tl">整洁干净:&nbsp;&nbsp;
-                            <div class="bars"><span id="bar" class="jin">89</span></div>
-                        </td>
--->
+                        <td rowspan="2" width="300" class="tl">/5.0分</td>
+
                     </tr>
                     
                 </table>
@@ -273,8 +269,9 @@
             </div>
             <div class="yu_pingscore">
                 <ul>
-                    <li>综合评分:<div class="bars"><span id="bar" class="jin">4.0</span></div>/5.0分</li>
+                    <li>综合评分:<div class="bars"><span id="bar" class="jin">4.0</span></div></li>
                     <li class="yu_pingscorem">点评时间：2016-04-07 20:34:00</li>
+                    <li>/5.0分</li>
                 </ul>
                 <ul>
                     <li>
@@ -466,6 +463,10 @@
                         , milestones: false
                         , horBarHeight: 15
                         , animTime: 1000
+                        ,numType:'absolute'
+                        ,numMin:0.0
+                        ,numMax:5.0
+                        .horLabel:'right'
                        
         });
 

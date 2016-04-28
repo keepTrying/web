@@ -1256,6 +1256,10 @@ img {
     text-align: center;
 }
 
+.yu_ping {
+    padding: 20px 0;
+}
+
 .yu_ping table tr td {
     height: 50px;
     color: #333333;
