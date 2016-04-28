@@ -188,6 +188,7 @@
                 <div id="liuyanbox" class="oloading"></div>
                 <input type="hidden" id="info_type" value="hotel" />
             </div>
+            </div>
             <div class="detail_title">
                <div class="detail_title">
                 <div class="detail_title01"><span>房间详情</span></div>
