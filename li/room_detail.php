@@ -269,7 +269,6 @@
                     
                 </table>
 
-<!--
                 <script>
                     $('.jin').barIndicator({
                         counterStep: 1
@@ -279,7 +278,6 @@
                         , numType:absolute
                     });
                 </script>
--->
             </div>
             <div class="yu_pingscore">
                 <ul>
