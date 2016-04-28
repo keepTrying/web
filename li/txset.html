@@ -39,7 +39,6 @@
     $(function () {
         $("img").each(function (index, element) {
             $(this).click(function () {
-                alert($(this).attr('src'));
                 var window_index = parent.layer.getFrameIndex(window.name); //获取窗口索引
                 parent.$('img#niimg').attr('src',$(this).attr('src'));
                 parent.layer.close(window_index);
