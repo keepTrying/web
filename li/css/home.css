@@ -1665,3 +1665,26 @@ a.black:active {
     font-size: 12px;
     font-weight: normal;
 }
+
+/*choose nick image*/
+#tb_tx{
+
+}
+#tb_tx thead{
+    text-align: center;
+    font-size: 18px;
+}
+#tb_tx tbody{
+    
+}
+#tb_tx tr{
+    
+}
+#tb_tx td{
+    width: 100px;
+    height: 100px;
+}
+#tb_tx img{
+    width: 100px;
+    height: 100px;
+}
