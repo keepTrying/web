@@ -1684,7 +1684,7 @@ a.black:active {
 #tb_tx tr{
     
 }
-#tb_tx td{
+#tb_tx tbody td{
     width: 100px;
     height: 100px;
 }
