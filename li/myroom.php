@@ -103,20 +103,20 @@
 
             <script type="text/javascript">
                 /* 控制左右按钮显示 */
-                jQuery(".fullSlide").hover(function () {
+                jQuery(".fullSlide").hover(function() {
                     jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
-                }, function () {
+                }, function() {
                     jQuery(this).find(".prev,.next").fadeOut()
                 });
                 /* 调用SuperSlide */
                 jQuery(".fullSlide").slide({
-                    titCell: ".hd ul"
-                    , mainCell: ".bd ul"
-                    , effect: "fold"
-                    , autoPlay: true
-                    , autoPage: true
-                    , trigger: "click"
-                    , startFun: function (i) {
+                    titCell: ".hd ul",
+                    mainCell: ".bd ul",
+                    effect: "fold",
+                    autoPlay: true,
+                    autoPage: true,
+                    trigger: "click",
+                    startFun: function(i) {
                         var curLi = jQuery(".fullSlide .bd li").eq(i); /* 当前大图的li */
                         if (!!curLi.attr("_src")) {
                             curLi.css("background-image", curLi.attr("_src")).removeAttr("_src") /* 将_src地址赋予li背景，然后删除_src */
@@ -125,7 +125,7 @@
                 });
             </script>
             <script type="text/javascript">
-                ! function () {
+                ! function() {
                     laydate.skin('dahong'); //切换皮肤，请查看skins下面皮肤库
                     laydate({
                         elem: '#demo'
@@ -134,26 +134,26 @@
 
                 //日期范围限制
                 var start = {
-                    elem: '#start'
-                    , format: 'YYYY-MM-DD'
-                    , min: laydate.now(), //设定最小日期为当前日期
+                    elem: '#start',
+                    format: 'YYYY-MM-DD',
+                    min: laydate.now(), //设定最小日期为当前日期
                     max: '2099-06-16', //最大日期
-                    istime: true
-                    , istoday: false
-                    , choose: function (datas) {
+                    istime: true,
+                    istoday: false,
+                    choose: function(datas) {
                         end.min = datas; //开始日选好后，重置结束日的最小日期
                         end.start = datas //将结束日的初始值设定为开始日
                     }
                 };
 
                 var end = {
-                    elem: '#end'
-                    , format: 'YYYY-MM-DD'
-                    , min: laydate.now()
-                    , max: '2099-06-16'
-                    , istime: true
-                    , istoday: false
-                    , choose: function (datas) {
+                    elem: '#end',
+                    format: 'YYYY-MM-DD',
+                    min: laydate.now(),
+                    max: '2099-06-16',
+                    istime: true,
+                    istoday: false,
+                    choose: function(datas) {
                         start.max = datas; //结束日选好后，充值开始日的最大日期
                     }
                 };
@@ -162,25 +162,25 @@
 
                 //自定义日期格式
                 laydate({
-                    elem: '#test1'
-                    , format: 'YYYY年MM月DD日'
-                    , festival: true, //显示节日
-                    choose: function (datas) { //选择日期完毕的回调
+                    elem: '#test1',
+                    format: 'YYYY年MM月DD日',
+                    festival: true, //显示节日
+                    choose: function(datas) { //选择日期完毕的回调
                         alert('得到：' + datas);
                     }
                 });
 
                 //日期范围限定在昨天到明天
                 laydate({
-                    elem: '#hello3'
-                    , min: laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
+                    elem: '#hello3',
+                    min: laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
                     max: laydate.now(+1) //+1代表明天，+2代表后天，以此类推
                 });
             </script>
             <!--detail-->
 
             <div class="w1200 order_nav">
-                <p class="login_position">当前位置:<a href="index.php">首页&nbsp;>&nbsp;我的房间</p>
+                <p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>&nbsp;我的房间</p>
 
                 <div class="w1200 yuding_con">
 
@@ -279,24 +279,24 @@
                     <ul class="plcontent">
                         <li class="pli"><span class="l"><em class="red">*</em> 评&nbsp;&nbsp;&nbsp;&nbsp;分：</span>
                             <p><span class="pfenbar"><a id="pf1" sd="-1" class="hovli">很差</a><a id="pf2" sd="0" class="hovli">差</a><a id="pf3" sd="1" class="hovli">一般</a><a id="pf4" sd="2" class="hovli">好</a><a id="pf5" sd="3" class="hovli">很好</a></span><i>很好</i>
-                                <input type="hidden" class="dfhid" name="ysdp" id="ysdp" value="3">
-                            </p>
-                        </li>
-                        <li><span class="l"><em class="red">*</em> 内&nbsp;&nbsp;&nbsp;&nbsp;容：</span>
-                            <div class="textaCont dconipt">
-                                <div class="t"></div>
-                                <div class="c">
-                                    <textarea id="content_txt" name="content_txt"></textarea>
-                                </div>
-                                <div class="b"></div>
-                                <div id="zezlogin" class="red" style="display: none;">亲，难道您要此处省略1万字吗？</div>
-                            </div>
-                    
-                            <p>
-                                <input type="button" value="" id="subok">
-                            </p>
-                        </li>
-                    </ul>
+                    <input type="hidden" class="dfhid" name="ysdp" id="ysdp" value="3">
+                </p>
+                </li>
+                <li><span class="l"><em class="red">*</em> 内&nbsp;&nbsp;&nbsp;&nbsp;容：</span>
+                    <div class="textaCont dconipt">
+                        <div class="t"></div>
+                        <div class="c">
+                            <textarea id="content_txt" name="content_txt"></textarea>
+                        </div>
+                        <div class="b"></div>
+                        <div id="zezlogin" class="red" style="display: none;">亲，难道您要此处省略1万字吗？</div>
+                    </div>
+
+                    <p>
+                        <input type="button" value="" id="subok">
+                    </p>
+                </li>
+                </ul>
                 </form>
 
             </div>
@@ -333,9 +333,9 @@
 
 </html>
 <script>
-    $(function () {
-        var vars = []
-            , hash;
+    $(function() {
+        var vars = [],
+            hash;
 
         var q = document.URL.split('?')[1];
 
@@ -355,52 +355,51 @@
 
         }
         $.post("http://42.96.148.66/hotel/indent/query.php", {
-                time_begin: ""
-                , time_end: ""
-                , cost_max: ""
-                , cost_min: ""
-                , indent_time_begin: ""
-                , indent_time_end: ""
-                , room_num: ""
-                , indent_id: ""
-                , indent_status: "2"
-                , user_id: ""
-                , indent_type: "1"
-                , page: "0"
-                , num_page: "999"
+            time_begin: "",
+            time_end: "",
+            cost_max: "",
+            cost_min: "",
+            indent_time_begin: "",
+            indent_time_end: "",
+            room_num: "",
+            indent_id: "",
+            indent_status: "2",
+            user_id: "",
+            indent_type: "1",
+            page: "0",
+            num_page: "999"
+        }, function(data, status) {
+            var obj = $.parseJSON(data);
+            var i = 0;
+            var no_rooms = new Array();
+            while (obj.data[i]) {
+                if (istimeconfict(obj.data[i].time_begin, obj.data[i].time_end, vars["in"], vars["out"])) {
+                    no_rooms.push(obj.data[i].room_num);
+                };
+                i++;
             }
-            , function (data, status) {
-                var obj = $.parseJSON(data);
-                var i = 0;
-                var no_rooms = new Array();
-                while (obj.data[i]) {
-                    if (istimeconfict(obj.data[i].time_begin, obj.data[i].time_end, vars["in"], vars["out"])) {
-                        no_rooms.push(obj.data[i].room_num);
-                    };
-                    i++;
-                }
-                $.post("http://42.96.148.66/hotel/room/query.php", {
-                    room_type: vars["num"]
-                    , room_num: ""
-                    , page: "0"
-                    , num_page: "999"
-                }, function (data, status) {
-                    var obj1 = $.parseJSON(data);
-                    var j = 0;
-                    var content = "";
-                    while (obj1.data[j]) {
-                        for (var room_num in no_rooms) {
-                            if (ojb1.data[j].room_num == room_num)
-                                continue;
-                        }
-                        content += "<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥" + obj1.data[j].room_cost + "</td><td>带早餐</td><td>￥<span class=\"yu_span\">" + obj1.data[j].room_cost + "</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" value=\"预订\"/></td></tr>";
-                        j++;
+            $.post("http://42.96.148.66/hotel/room/query.php", {
+                room_type: vars["num"],
+                room_num: "",
+                page: "0",
+                num_page: "999"
+            }, function(data, status) {
+                var obj1 = $.parseJSON(data);
+                var j = 0;
+                var content = "";
+                while (obj1.data[j]) {
+                    for (var room_num in no_rooms) {
+                        if (ojb1.data[j].room_num == room_num)
+                            continue;
                     }
-                    $("tbody#tbody").html(content);
-                });
+                    content += "<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥" + obj1.data[j].room_cost + "</td><td>带早餐</td><td>￥<span class=\"yu_span\">" + obj1.data[j].room_cost + "</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" value=\"预订\"/></td></tr>";
+                    j++;
+                }
+                $("tbody#tbody").html(content);
             });
+        });
 
-        $("#find").click(function () {
+        $("#find").click(function() {
             $in = $("#input_in").val();
             $out = $("#input_out").val();
             $num = $("#select_num").val().substr(0, 1);
@@ -409,10 +408,10 @@
         });
 
         function mycarousel_initCallback(carousel) {
-            $("#mycarousel li").mouseover(function () {
+            $("#mycarousel li").mouseover(function() {
                 $("#pdtok img")[0].src = this.getElementsByTagName("img")[0].name;
                 $("#pdtok img")[0].jqimg = this.getElementsByTagName("img")[0].name;
-                $(this).siblings().each(function () {
+                $(this).siblings().each(function() {
                     this.getElementsByTagName("img")[0].className = "";
                 })
                 this.getElementsByTagName("img")[0].className = "curr";
@@ -424,25 +423,25 @@
         });
         jQuery("#Fi_pro").jcarousel();
         $(".jqzoom").jqueryzoom({
-            xzoom: 403
-            , yzoom: 260
-            , offset: 10
-            , position: "right"
-            , preload: 1
-            , lens: 1
+            xzoom: 403,
+            yzoom: 260,
+            offset: 10,
+            position: "right",
+            preload: 1,
+            lens: 1
         });
 
         $('.jin').barIndicator({
-            counterStep: 1
-            , milestones: false
-            , horBarHeight: 15
-            , animTime: 1000
-            , numType: 'absolute'
-            , numMin: 0.0
-            , numMax: 5.0
-            , horTitle: '综合评分:'
+            counterStep: 1,
+            milestones: false,
+            horBarHeight: 15,
+            animTime: 1000,
+            numType: 'absolute',
+            numMin: 0.0,
+            numMax: 5.0,
+            horTitle: '综合评分:'
         });
-        $('a.yuding').click(function () {
+        $('a.yuding').click(function() {
             alert('预订成功！');
         });
 
