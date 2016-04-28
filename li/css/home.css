@@ -1530,7 +1530,7 @@ img {
     border-bottom: #ccc 1px solid;
     height: 30px;
     line-height: 30px;
-    background: url(../imag/annu_es2.jpg) 5px -97px no-repeat;
+    background: url(../img/annu_es2.jpg) 5px -97px no-repeat;
     padding-left: 30px;
     font-size: 14px;
     font-weight: bold;
@@ -1689,4 +1689,116 @@ a.black:active {
 #tb_tx img{
     width: 100px;
     height: 100px;
+}
+/*myroom*/
+.plcontent {
+    color: rgb(102, 102, 102);
+    font-family: 宋体;
+    padding: 10px 15px;
+}
+.plcontent li.pli {
+    float: left;
+    width: 320px;
+    clear: none;
+}
+.plcontent li {
+    line-height: 23px;
+    padding: 7px 0;
+    clear: both;
+}
+.plcontent .l {
+    width: 85px;
+    text-align: right;
+    float: left;
+}
+.plcontent .red {
+    color: #F00;
+    font-size: 12px;
+}
+.plcontent p {
+    margin-left: 90px;
+}
+.plcontent .pfenbar {
+    width: 90px;
+    height: 16px;
+    padding-top: 3px;
+    float: left;
+    overflow: hidden;
+}
+.plcontent .pfenbar #pf1.hovli {
+    background-position: 0 -421px;
+}
+.plcontent .pfenbar a {
+    width: 16px;
+    height: 16px;
+    background: url(../img/conioc1.png) 0 -447px no-repeat;
+    display: inline-block;
+    padding-right: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 200px;
+}
+#ysdp {
+    vertical-align: middle;
+    outline: none;
+}
+.plcontent .textaCont {
+    position: relative;
+}
+.plcontent .dconipt {
+    width: 540px;
+    margin-left: 90px;
+    background: url(../img/conybg.gif) -617px 0 repeat-y;
+}
+.plcontent .dconipt .t {
+    width: 540px;
+    height: 4px;
+    overflow: hidden;
+    background: #FFF url(../img/sconbg1.png) 0 -40px no-repeat;
+}
+.plcontent .dconipt .c {
+    padding: 0 5px;
+}
+.plcontent .dconipt textarea {
+    border: none;
+    background: none;
+    height: 110px;
+    width: 528px;
+    overflow-y: auto;
+}
+#content_txt {
+    resize: none;
+    outline: none;
+}
+.plcontent .dconipt .b {
+    width: 540px;
+    height: 4px;
+    overflow: hidden;
+    background: #FFF url(../img/sconbg1.png) 0 -45px no-repeat;
+    font-weight: bold;
+}
+
+.plcontent #zezlogin {
+    position: absolute;
+    width: 245px;
+    line-height: 18px;
+    left: 140px;
+    top: 50px;
+    text-align: center;
+    z-index: 100;
+    display: none;
+}
+#subok {
+    width: 106px;
+    height: 35px;
+    background: url(../img/sconbg1.png) -64px -142px no-repeat;
+    border: none;
+    margin: 15px 0;
+    cursor: pointer;
+    vertical-align: middle;
+    outline: none;
+}
+
+#service {
+    display: inline-block;
 }

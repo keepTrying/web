@@ -26,8 +26,8 @@
 					</ul>
 				</div>
 				<div class="header_right">
-					<a href="remeber.html">Neyaoter</a>|
-					<a href="#">注销</a>
+					<a href="login.php">登录</a>|
+					<a href="register.php">注册</a>
 				</div>
 			</div>
 		</div>
