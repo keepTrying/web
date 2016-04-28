@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="jq/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+
+<body>
+    <!--        <h1>请选择头像</h1>-->
+    <table>
+        <thead>
+            请选择头像
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="img/n1.jpg"></td>
+                <td><img src="img/n2.png"></td>
+                <td><img src="img/n3.png"></td>
+                <td><img src="img/n4.png"></td>
+                <td><img src="img/n5.jpg"></td>
+            </tr>
+            <tr>
+                <td><img src="img/n6.jpg"></td>
+                <td><img src="img/n7.png"></td>
+                <td><img src="img/n8.png"></td>
+                <td><img src="img/n9.png"></td>
+                <td><img src="img/n10.png"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("img").each(function (index, element) {
+            $(this).click(function () {
+
+                var window_index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                parent.$('#niimg').attr('src',$(this).src);
+                parent.layer.close(window_index);
+            });
+        });
+    })
+</script>

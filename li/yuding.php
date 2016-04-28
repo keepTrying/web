@@ -515,7 +515,7 @@ $(function(){
 
                     $(".btn_yu").each(function(index,element){
                         $(this).click(function(){
-                            alert(index);
+//                            alert(index);
                             window.location.href="room_detail.php?room_num="+res[index];
                         });
                     });

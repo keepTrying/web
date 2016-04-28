@@ -173,32 +173,32 @@
                     <input type="hidden" id="info_type" value="hotel" />
                 </div>
             </div>
-        <form action="infosave.asp" method="post" name="infopost" id="infopost">
-            <div class="cen_bom">
-                <div class="cen_fl">
-                    <div class="cen_bt">基本信息</div>
-                    <div class="cen_nr">
-                        <div class="cen_name">
-                            <div class="cen_name_le">
-                                <div class="cen_name_le_1">用户名：</div>
-                                <div class="cen_name_le_3"> <strong>qqid18573883</strong>
+            <form action="infosave.asp" method="post" name="infopost" id="infopost">
+                <div class="cen_bom">
+                    <div class="cen_fl">
+                        <div class="cen_bt">基本信息</div>
+                        <div class="cen_nr">
+                            <div class="cen_name">
+                                <div class="cen_name_le">
+                                    <div class="cen_name_le_1">用户名：</div>
+                                    <div class="cen_name_le_3"> <strong>qqid18573883</strong>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cen_name_le">
-                                <div class="cen_name_le_1">
-                                    <em>*</em> 昵 称：
-                                </div>
-                                <div class="cen_name_le_3">
-                                    <span>
+                                <div class="cen_name_le">
+                                    <div class="cen_name_le_1">
+                                        <em>*</em> 昵 称：
+                                    </div>
+                                    <div class="cen_name_le_3">
+                                        <span>
                                                 <input name="niname" type="text" class="inp" id="niname" style="width:200px;" value="nuller" size="12" maxlength="12"/>
                                             </span>
-                                    <span id="ninameTip"></span>
+                                        <span id="ninameTip"></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cen_name_le">
-                                <div class="cen_name_le_1">性 别：</div>
-                                <div class="cen_name_le_3">
-                                    <span>
+                                <div class="cen_name_le">
+                                    <div class="cen_name_le_1">性 别：</div>
+                                    <div class="cen_name_le_3">
+                                        <span>
                                                 <label>
                                                     <input name="sex" type="radio" value="1" class="cen_dx"  checked="checked"/>
                                                     男
@@ -208,66 +208,66 @@
                                                     女
                                                 </label>
                                             </span>
-                                    <span id="sexTip"></span>
+                                        <span id="sexTip"></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cen_name_le">
-                                <div class="cen_name_le_1">姓 名：</div>
-                                <div class="cen_name_le_3">
-                                    <span>
+                                <div class="cen_name_le">
+                                    <div class="cen_name_le_1">姓 名：</div>
+                                    <div class="cen_name_le_3">
+                                        <span>
                                                 <input name="name" type="text" class="inp" id="name" size="10" maxlength="16"  style="width:200px;" value="级就就"/>
                                             </span>
-                                    <span id="nameTip"></span>
+                                        <span id="nameTip"></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cen_name_le">
-                                <div class="cen_name_le_1">姓 名：</div>
-                                <div class="cen_name_le_3">
-                                    <span>
+                                <div class="cen_name_le">
+                                    <div class="cen_name_le_1">姓 名：</div>
+                                    <div class="cen_name_le_3">
+                                        <span>
                                                 <input name="idcard" type="text" class="inp" id="idcard" size="10" maxlength="18"  style="width:200px;" value="142603166404301045"/>
                                             </span>
-                                    <span id="idcardTip"></span>
+                                        <span id="idcardTip"></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cen_name_le">
-                                <div class="cen_name_le_1">年 龄：</div>
-                                <div class="cen_name_le_3">
-                                    <span>
+                                <div class="cen_name_le">
+                                    <div class="cen_name_le_1">年 龄：</div>
+                                    <div class="cen_name_le_3">
+                                        <span>
                                                 <input name="bir" type="text" class="inp" id="bir" style="width:120px;" size="20" maxlength="20" onfocus="WdatePicker({maxDate:'%y-%M-%d'})" value="1900/1/1"/>
                                             </span>
-                                    <span id="birTip"></span>
+                                        <span id="birTip"></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cen_img">
-                            <div class="img_t">
-                                <img src="http://qzapp.qlogo.cn/qzapp/204708/3DF42BD751CFA7322B5483691BC9E3EA/100?3" alt="" width="100" height="100" id="niimg" />
+                            <div class="cen_img">
+                                <div class="img_t">
+                                    <img src="http://qzapp.qlogo.cn/qzapp/204708/3DF42BD751CFA7322B5483691BC9E3EA/100?3" alt="" width="100" height="100" id="niimg" />
+                                </div>
+                                <div class="img_m">我的头像</div>
+                                <div class="img_m">
+                                    <a href="javascript:void(0);" class="black" id="txset">设置头像</a>
+                                </div>
                             </div>
-                            <div class="img_m">我的头像</div>
-                            <div class="img_m">
-                                <a href="javascript:void(0);" class="black" id="txset">设置头像</a>
-                            </div>
+                            <div class="clear"></div>
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="cen_fl">
-                    <div class="cen_bt">联系方式</div>
-                    <div class="cen_nr">
-                        <div class="cen_name_le">
-                            <div class="cen_name_le_1">
-                                <em>*</em> 手 机：
-                            </div>
-                            <div class="cen_name_le_2">
-                                <span>
+                    <div class="cen_fl">
+                        <div class="cen_bt">联系方式</div>
+                        <div class="cen_nr">
+                            <div class="cen_name_le">
+                                <div class="cen_name_le_1">
+                                    <em>*</em> 手 机：
+                                </div>
+                                <div class="cen_name_le_2">
+                                    <span>
                                             <input name="phone" type="text" class="inp" id="phone" size="11" maxlength="11" style="width:200px;" value="15708444257" />
                                         </span>
-                                <span class="tel" title="此手机还未通过认证，认证后可以直接使用它登录本站"></span>
-                                <span id="phoneTip"></span>
+                                    <span class="tel" title="此手机还未通过认证，认证后可以直接使用它登录本站"></span>
+                                    <span id="phoneTip"></span>
+                                </div>
                             </div>
-                        </div>
-<!--
+                            <!--
                         <div class="cen_name_le">
                             <div class="cen_name_le_1">固定电话：</div>
                             <div class="cen_name_le_2">
@@ -287,32 +287,32 @@
                             </div>
                         </div>
 -->
-                        <div class="cen_name_le">
-                            <div class="cen_name_le_1">
-                                <em>*</em> Email：
-                            </div>
-                            <div class="cen_name_le_2">
-                                <span>
+                            <div class="cen_name_le">
+                                <div class="cen_name_le_1">
+                                    <em>*</em> Email：
+                                </div>
+                                <div class="cen_name_le_2">
+                                    <span>
                                             <input name="email" type="text" class="inp" id="email" size="30" maxlength="50" style="width:200px;" value="vitress@qq.com"  />
                                         </span>
-                                <span class="e_mail" title="此邮箱还未通过认证，认证后可以直接使用它登录本站"></span>
-                                <span id="emailTip"></span>
+                                    <span class="e_mail" title="此邮箱还未通过认证，认证后可以直接使用它登录本站"></span>
+                                    <span id="emailTip"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="cen_fl">
+                        <div class="cen_annu">
+                            <input type="submit" class="annu_a" id="sub" value="提交修改"><span id="subok" class="subok"></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="cen_fl">
-          <div class="cen_annu">
-            <input type="submit" class="annu_a" id="sub" value="提交修改"><span id="subok" class="subok"></span>
-          </div>
-        </div>
+            </form>
+            <!--footer-->
+            <div class="footer">
+                <p>最终解释权归本公司所有©3.3.2.1102</p>
             </div>
-        </form>
-                <!--footer-->
-                <div class="footer">
-                    <p>最终解释权归本公司所有©3.3.2.1102</p>
-                </div>
-                <script type="text/javascript" src="js/main.js"></script>
+            <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
@@ -392,6 +392,16 @@
             window.location.href = "yuding.php?in=" + $in + "&out=" + $out + "&num=" + $num;
         });
 
+        $("#txset").click(function () {
+            layer.open({
+                type: 2
+                , area: ['700px', '530px']
+                , fix: false //不固定
+                , maxmin: true
+                , content: 'txset.html'
+            });
+
+        });
 
     });
 </script>
