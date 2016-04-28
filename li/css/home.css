@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+div{
+    display: block;
+}
 li {
     list-style: none;
 }
@@ -1520,13 +1523,91 @@ img {
 }
 
 /*user*/
+.cen_bt {
+    border-bottom: #ccc 1px solid;
+    height: 30px;
+    line-height: 30px;
+    background: url(../imag/annu_es2.jpg) 5px -97px no-repeat;
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
 .cen_bom {
     margin: 20px;
 }
 .cen_fl {
     margin-bottom: 10px;
 }
-div{
-    display: block;
+.input_public {
+    border: #CCC 1px solid;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 3px;
+    background: url(../imag/inputbg.gif) 0 0 no-repeat;
+    font-family: Arial, Helvetica, sans-serif, "宋体";
+    font-size: 14px;
 }
-
+.input_correct {
+    border: #CCC 1px solid;
+}
+.cen_name {
+    float: left;
+    width: 690px;
+}
+.cen_name_le_1 {
+    float: left;
+    width: 120px;
+    text-align: right;
+    font-size: 14px;
+}
+.cen_name_le_3 {
+    float: left;
+    width: 560px;
+    color: #999;
+}
+.cen_name_le_3 strong {
+    font-size: 16px;
+    color: #333;
+}
+.cen_name_le {
+    line-height: 32px;
+    color: #666;
+    height: 40px;
+}
+.cen_name_le_2 span, .cen_name_le_3 span {
+    float: left;
+}
+.cen_dx {
+    vertical-align: middle;
+    margin: 5px 3px;
+}
+.cen_img {
+    float: left;
+    width: 156px;
+    text-align: center;
+    color: #999;
+    margin: 10px 0;
+}
+.img_t img {
+    width: 100px;
+    height: 100px;
+    padding: 4px;
+    border: #E5E5E5 1px solid;
+}
+.img_m {
+    height: 26px;
+    line-height: 26px;
+}
+.cen_nr {
+    margin: 20px 0;
+}
+.cen_name_le em {
+    color: #F00;
+}
+a.black:link, a.black:visited, a.black:active {
+    color: #06c;
+    text-decoration: underline;
+    font-weight: normal;
+    font-size: 12px;
+}
