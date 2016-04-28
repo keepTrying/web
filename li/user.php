@@ -12,7 +12,7 @@
     <script type="text/javascript" src="jq/jquery-barIndicator.js"></script>
     <script type="text/javascript" src="jq/jquery.jcarousel.min.js"></script>
     <script type="text/javascript" src="jq/jquery.zoom.min.js"></script>
-
+    <script type="text/javascript" src="js/layer/layer.js"></script>
     <title></title>
 </head>
 
