@@ -1678,8 +1678,8 @@ a.black:active {
     background: #f7f7f7;
     font-size: 20px;
 }
-#tb_tx tbody{
-    
+#tb_tx thead td{
+    width: inherit;
 }
 #tb_tx tr{
     
