@@ -20,23 +20,7 @@
     <!--header-->
     <div class="header">
         <div class="w1200">
-            <!--
-				<div class="header_left">
-					<ul>
-						<li class="con"></li>
-						<li><a href="#" class="con1"></a></li>
-						<li><a href="#" class="con2"></a></li>
-						<li><a href="#" class="con3"></a></li>
-						<li><a href="#" class="con4"></a></li>
-						<li><a href="#" class="con5"></a></li>
-						<li><a href="#" class="con6"></a></li>
-						<li><a href="#" class="con7"></a></li>
-						<li><a href="#" class="con8"></a></li>
-						<li><a href="#" class="con9"></a></li>
-						<li><a href="#" class="con10"></a></li>
-					</ul>
-				</div>
--->
+
             <div class="header_right">
                 <a href="register.php">注册</a>|
                 <a href="login.php">登录</a>
@@ -180,7 +164,7 @@
             <!--detail-->
 
             <div class="w1200 order_nav">
-                <p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>&nbsp;<a href="yuding.php">房间预订</a>&nbsp;>&nbsp;房间详情</p>
+                <p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>&nbsp;个人资料</p>
 
                 <div class="w1200 yuding_con">
 
@@ -189,166 +173,7 @@
                     <input type="hidden" id="info_type" value="hotel" />
                 </div>
             </div>
-            <div class="detail_title">
-                <div class="detail_title01"><span>房间详情</span></div>
-            </div>
-            <div class="news_show_rt">
-
-                <div class="prbj02">
-                    <div class="pdto">
-
-                        <div class="jqzoom" id="pdtok"><img src="http://pccoo.cn/store/20130531/20130531173247331.jpg" width="300" height="225" jqimg="http://pccoo.cn/store/20130531/20130531173247331.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></div>
-                        <div id="listsmall">
-                            <ul id=mycarousel>
-                                <li><img name="http://pccoo.cn/store/20130531/20130531173247331.jpg" src="http://pccoo.cn/store/20130531/20130531173247331.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></li>
-                                <li><img name="http://pccoo.cn/es_product/20130531/201353117564355.jpg" src="http://pccoo.cn/es_product/20130531/201353117564355.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></li>
-                                <li><img name="http://pccoo.cn/es_product/20130531/201353117571223.jpg" src="http://pccoo.cn/es_product/20130531/201353117571223.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></li>
-                                <li><img name="http://pccoo.cn/es_product/20130531/201353117574226.jpg" src="http://pccoo.cn/es_product/20130531/201353117574226.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="proo">
-                        <h1>云品时尚酒店标准二人间</h1>
-                        <ul>
-                            <li class="prxxo"></li>
-                            <li>房型面积：30</li>
-                            <li>房间类型：<em class="double">标准间</em></li>
-                            <li>所在楼层：2</li>
-                            <li>上网服务：免费宽带</li>
-                            <li>早 餐：暂无</li>
-                            <li>卫浴类型：独立卫浴</li>
-                            <li>市场价：<span class="pscjia">150.00元</span></li>
-                            <li>本站价：<span class="pjia">130.00元</span></li>
-                            <li>门牌号：<span class="star">101</span></li>
-                            <li></li>
-
-                            <li>
-                                <a class="yuding">点击选择在线预订</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <!--
-                <div class="news_show_nr">
-                    <div class="news_show_nr1">商品详情：</div>标准间的价格，豪华间的享受，祝您入住愉快！</div>
-                <div class="news_show_sx">
-
-                </div>
--->
-        </div>
-        <div class="detail_title">
-            <div class="detail_title01"><span>房屋设施</span></div>
-            <p>酒店覆盖wifi
-                <br/> 该酒店可以使用如家钱包充值和消费
-                <br/> 酒店不接受员工卡预订
-                <br/> 2016.04.04-2016.04.29凡新办金卡的上门客人入住首日享受8折优惠 并可获赠两份/间夜
-                <br/> 2016.04.04-2016.04.29商务日房：非会员140元/4小时，会员120元/4小时
-                <br/> 2016.04.04-2016.04.29会员入住（精选高级商务房与精选高级双床房）赠早餐2份/间夜
-            </p>
-        </div>
-        
-        <div class="detail_title">
-            <div class="detail_title01"><span>酒店点评</span></div>
-            <div class="yu_ping">
-                <table>
-                    <tr>
-                        <td rowspan="2" width="260">
-                            好评率:<span class="yu_jindu">99%</span>
-                        </td>
-                        <td rowspan="2" width="300" class="tl"><div class="bars"><span id="bar" class="jin">4.0</span></div></td>
-
-                    </tr>
-                    
-                </table>
-
-
-            </div>
-            <div class="yu_pingscore">
-                <ul>
-                    <li>大姐夫</li>
-                    <li><div class="bars"><span id="bar" class="jin">4.0</span></div></li>
-                    <li class="yu_pingscorem">点评时间：2016-04-07 20:34:00</li>
-                </ul>
-                <ul>
-                    <li>
-                        <img src="http://pccoo.cn/es_product/20130531/201353117574226.jpg">
-                    </li>
-                    <li><p>酒店干净卫生，带儿子出来旅游，感觉不错。位置也很好，到哪儿都方便，周边吃的东西也不少。早餐也不错。房间每天都有赠送小饼干，儿子很开心。不过第一天进房间门口就有名片，感觉不是很好</p></li>
-                </ul>
-                
-            </div>
-<!--            <div class="yu_pingscore">
-                <ul>
-                    <li>综合评分：5.0分</li>
-                    <li>来自183...4324</li>
-                    <li class="yu_pingscorem">点评时间：2016-04-07</li>
-                </ul>
-                <p>一如既往的好，安静，卫生，安全，方便，周到。</p>
-            </div>
-            <div class="yu_pingscore">
-                <ul>
-                    <li>综合评分：5.0分</li>
-                    <li>来自183...4324</li>
-                    <li class="yu_pingscorem">点评时间：2016-04-07</li>
-                </ul>
-                <p>一如既往的好，安静，卫生，安全，方便，周到。</p>
-            </div>
-            <div class="yu_pingscore yu_pingscorel">
-                <ul>
-                    <li>综合评分：5.0分</li>
-                    <li>来自183...4324</li>
-                    <li class="yu_pingscorem">点评时间：2016-04-07</li>
-                </ul>
-                <p>好喜欢，好高大上。。。自助洗衣超给力，房间特舒服。下次还要住，精选就是不一样。。各方面态度也好。。。</p>
-            </div>
-            <div class="yu_look"><a href="">>>查看全部点评</a></div>
-        </div>
-        <!--<div class="graph"> 
-				<strong id="bar" style="width:1%;"></strong> 
-			</div>-->
-        <!--<script type="text/javascript"> 
-				function $(obj){ 
-				return document.getElementById(obj); 
-				} 
-				function go(){ 
-				$("bar").style.width = parseInt($("bar").style.width) + 1 + "%"; 
-				$("bar").innerHTML = $("bar").style.width; 
-				if($("bar").style.width == "100%"){ 
-				window.clearInterval(bar); 
-				} 
-				
-				} 
-				var bar = window.setInterval("go()",50); 
-				window.onload = function(){ 
-				bar; 
-				} 
-			</script> -->
-    </div>
-    <!--advantage-->
-    <div class="advantage">
-        <div class="w1200">
-            <div class="advantage_con">
-                <img src="img/icon_1.png" />
-                <h3>3000家酒店</h3>
-                <p>覆盖全国32个省，330余座城市</p>
-            </div>
-            <div class="advantage_con">
-                <img src="img/icon_2.png" />
-                <h3>送积分翻倍</h3>
-                <p>会员在线预定赠送多倍积分</p>
-                <p>专享超值礼品和免费房兑换</p>
-            </div>
-            <div class="advantage_con">
-                <img src="img/icon_3.png" />
-                <h3>到店有房保障</h3>
-                <p>订单一经确认</p>
-                <p>酒店预留客房保证会员安心入住</p>
-            </div>
-        </div>
-    </div>
+            
     <!--footer-->
     <div class="footer">
         <p>最终解释权归本公司所有©3.3.2.1102</p>
