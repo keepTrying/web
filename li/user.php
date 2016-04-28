@@ -395,7 +395,7 @@
         $("#txset").click(function () {
             layer.open({
                 type: 2
-                , area: ['662px', '530px']
+                , area: ['662px', '356px']
                 , fix: false //不固定
                 , maxmin: true
                 , content: 'txset.html'

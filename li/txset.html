@@ -39,9 +39,9 @@
     $(function () {
         $("img").each(function (index, element) {
             $(this).click(function () {
-
+                alert($(this).src);
                 var window_index = parent.layer.getFrameIndex(window.name); //获取窗口索引
-                parent.$('#niimg').attr('src',$(this).src);
+                parent.$('img#niimg').attr('src',$(this).src);
                 parent.layer.close(window_index);
             });
         });
