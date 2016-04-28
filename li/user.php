@@ -258,43 +258,6 @@
             window.location.href = "yuding.php?in=" + $in + "&out=" + $out + "&num=" + $num;
         });
 
-        function mycarousel_initCallback(carousel) {
-            $("#mycarousel li").mouseover(function () {
-                $("#pdtok img")[0].src = this.getElementsByTagName("img")[0].name;
-                $("#pdtok img")[0].jqimg = this.getElementsByTagName("img")[0].name;
-                $(this).siblings().each(function () {
-                    this.getElementsByTagName("img")[0].className = "";
-                })
-                this.getElementsByTagName("img")[0].className = "curr";
-
-            })
-        };
-        jQuery("#mycarousel").jcarousel({
-            initCallback: mycarousel_initCallback
-        });
-        jQuery("#Fi_pro").jcarousel();
-        $(".jqzoom").jqueryzoom({
-            xzoom: 403
-            , yzoom: 260
-            , offset: 10
-            , position: "right"
-            , preload: 1
-            , lens: 1
-        });
-        
-         $('.jin').barIndicator({
-                        counterStep: 1
-                        , milestones: false
-                        , horBarHeight: 15
-                        , animTime: 1000
-                        ,numType:'absolute'
-                        ,numMin:0.0
-                        ,numMax:5.0
-                        ,horTitle:'综合评分:' 
-        });
-        $('a.yuding').click(function(){
-            alert('预订成功！');
-        });
 
     });
 </script>
