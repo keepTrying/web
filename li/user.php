@@ -221,7 +221,16 @@
                                 </div>
                             </div>
                             <div class="cen_name_le">
-                                <div class="cen_name_le_1">生 日：</div>
+                                <div class="cen_name_le_1">姓 名：</div>
+                                <div class="cen_name_le_3">
+                                    <span>
+                                                <input name="idcard" type="text" class="inp" id="idcard" size="10" maxlength="18"  style="width:200px;" value="142603166404301045"/>
+                                            </span>
+                                    <span id="idcardTip"></span>
+                                </div>
+                            </div>
+                            <div class="cen_name_le">
+                                <div class="cen_name_le_1">年 龄：</div>
                                 <div class="cen_name_le_3">
                                     <span>
                                                 <input name="bir" type="text" class="inp" id="bir" style="width:120px;" size="20" maxlength="20" onfocus="WdatePicker({maxDate:'%y-%M-%d'})" value="1900/1/1"/>
@@ -258,6 +267,7 @@
                                 <span id="phoneTip"></span>
                             </div>
                         </div>
+<!--
                         <div class="cen_name_le">
                             <div class="cen_name_le_1">固定电话：</div>
                             <div class="cen_name_le_2">
@@ -276,6 +286,7 @@
                                 <span id="qqTip"></span>
                             </div>
                         </div>
+-->
                         <div class="cen_name_le">
                             <div class="cen_name_le_1">
                                 <em>*</em> Email：
