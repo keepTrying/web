@@ -268,9 +268,9 @@
             </div>
             <div class="yu_pingscore">
                 <ul>
+                    <li>大姐夫</li>
                     <li><div class="bars"><span id="bar" class="jin">4.0</span></div></li>
                     <li class="yu_pingscorem">点评时间：2016-04-07 20:34:00</li>
-                    <li>/5.0分</li>
                 </ul>
                 <ul>
                     <li>

@@ -1362,7 +1362,7 @@ img {
 
 .news_show_rt {
     height: 360px;
-    border-bottom: 1px solid #EBEBEB;
+/*    border-bottom: 1px solid #EBEBEB;*/
     display: block;
 }
 
