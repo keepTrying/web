@@ -269,15 +269,7 @@
                     
                 </table>
 
-                <script>
-                    $('.jin').barIndicator({
-                        counterStep: 1
-                        , milestones: false
-                        , horBarHeight: 15
-                        , animTime: 1000
-                        , numType:absolute
-                    });
-                </script>
+
             </div>
             <div class="yu_pingscore">
                 <ul>
@@ -474,7 +466,7 @@
                         , milestones: false
                         , horBarHeight: 15
                         , animTime: 1000
-                        , numType:absolute
+                       
         });
 
 
