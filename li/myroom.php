@@ -210,7 +210,7 @@
                     </div>
                     <div class="proo">
                         <h1>云品时尚酒店标准二人间</h1>
-                        <ul>
+                        <ul class="myroom_ul">
                             <li class="prxxo"></li>
                             <li>房型面积：30</li>
                             <li>房间类型：<em class="double">标准间</em></li>
