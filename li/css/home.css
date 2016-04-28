@@ -1707,6 +1707,11 @@ a.black:active {
     clear: none;
 }
 
+.plcontent li.pli p{
+    font-size: 15px;
+    font-style: normal;
+}
+
 .plcontent li {
     line-height: 23px;
     padding: 7px 0;

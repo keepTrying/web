@@ -461,20 +461,22 @@
             $(this).prevAll().addClass("hovli")
             $(this).parents("p").find("i").removeClass("red")
             $(this).parents("p").find("i").html($(this).html())
-        }).live('mouseleave', function() {
-            var sidv = $(this).attr("sd"),
-                t_hid = $(this).parents("p").find("input").val();
-            if (t_hid == "") {
-                $(this).removeClass("hovli");
-                $(this).prevAll().removeClass("hovli")
-            } else if (t_hid < sidv) {
-                $(this).parent().children("a[sd=" + t_hid + "]").nextAll().removeClass("hovli")
-            } else {
-                $(this).parent().children("a[sd=" + t_hid + "]").addClass("hovli")
-                $(this).parent().children("a[sd=" + t_hid + "]").prevAll().addClass("hovli")
-            }
-            $(this).parents("p").find("i").html($(this).parent().children("a[sd=" + t_hid + "]").html())
-        });
+        })
+//            .live('mouseleave', function() {
+//            var sidv = $(this).attr("sd"),
+//                t_hid = $(this).parents("p").find("input").val();
+//            if (t_hid == "") {
+//                $(this).removeClass("hovli");
+//                $(this).prevAll().removeClass("hovli")
+//            } else if (t_hid < sidv) {
+//                $(this).parent().children("a[sd=" + t_hid + "]").nextAll().removeClass("hovli")
+//            } else {
+//                $(this).parent().children("a[sd=" + t_hid + "]").addClass("hovli")
+//                $(this).parent().children("a[sd=" + t_hid + "]").prevAll().addClass("hovli")
+//            }
+//            $(this).parents("p").find("i").html($(this).parent().children("a[sd=" + t_hid + "]").html())
+//        })
+        ;
         $(".pfenbar a").live("click", function() {
 
             var sidv = $(this).attr("sd");
