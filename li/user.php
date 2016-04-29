@@ -330,7 +330,7 @@
         $("#email").attr('value','<?php echo $_SESSION['user']['user_email']?$_SESSION['user']['user_email']:'';?>');
         if(<?php echo $_SESSION['user']['user_gender']?$_SESSION['user']['user_gender']:'';?>===2){
             $("#user_gender_male").removeAttr('checked');
-            $("#user_gender_female").attr('checked');
+            $("#user_gender_female").attr('checked','checked');
         }
         $("#sub").click(function(){
            $.post('http://42.96.148.66/hotel/user/alter.php',
