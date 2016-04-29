@@ -17,10 +17,12 @@
 </head>
 
 <body>
-    <!--header-->
+        <!--header-->
     <div class="header">
         <div class="w1200">
-
+            <div class="header_left">
+                
+            </div>
             <div class="header_right">
                 <a href="register.php">注册</a>|
                 <a href="login.php">登录</a>
@@ -36,9 +38,9 @@
             </div>
             <div class="nav_right">
                 <ul>
-                    <li><a href="index.php">首   页</a></li>
-                    <li class="on"><a href="yuding.php">酒店预定</a></li>
-                    <li><a href="discount.php">优惠活动</a></li>
+                    <li class="on"><a href="index.php">首   页</a></li>
+                    <li><a href="yuding.php">酒店预定</a></li>
+                    <li><a href="my_order.php">我的订单</a></li>
                     <li><a href="mall.php">积分商城</a></li>
                 </ul>
             </div>
@@ -46,22 +48,22 @@
     </div>
     <!--banner-->
     <div class="fullSlide">
-        <div class="bd">
+                <div class="bd">
             <ul>
                 <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
-                    <a target="_blank" href="#"></a>
+                    <a target="_blank" href="javascript:void(0);"></a>
                 </li>
                 <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
-                    <a target="_blank" href="#"></a>
+                    <a target="_blank" href="javascript:void(0);"></a>
                 </li>
                 <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
-                    <a target="_blank" href="#"></a>
+                    <a target="_blank" href="javascript:void(0);"></a>
                 </li>
                 <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
-                    <a target="_blank" href="#"></a>
+                    <a target="_blank" href="javascript:void(0);"></a>
                 </li>
                 <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
-                    <a target="_blank" href="#"></a>
+                    <a target="_blank" href="javascript:void(0);"></a>
                 </li>
             </ul>
         </div>

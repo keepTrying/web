@@ -17,26 +17,12 @@
 </head>
 
 <body>
-    <!--header-->
+<!--header-->
     <div class="header">
         <div class="w1200">
-            <!--
-				<div class="header_left">
-					<ul>
-						<li class="con"></li>
-						<li><a href="#" class="con1"></a></li>
-						<li><a href="#" class="con2"></a></li>
-						<li><a href="#" class="con3"></a></li>
-						<li><a href="#" class="con4"></a></li>
-						<li><a href="#" class="con5"></a></li>
-						<li><a href="#" class="con6"></a></li>
-						<li><a href="#" class="con7"></a></li>
-						<li><a href="#" class="con8"></a></li>
-						<li><a href="#" class="con9"></a></li>
-						<li><a href="#" class="con10"></a></li>
-					</ul>
-				</div>
--->
+            <div class="header_left">
+                
+            </div>
             <div class="header_right">
                 <a href="register.php">注册</a>|
                 <a href="login.php">登录</a>
@@ -52,9 +38,9 @@
             </div>
             <div class="nav_right">
                 <ul>
-                    <li><a href="index.php">首   页</a></li>
-                    <li class="on"><a href="yuding.php">酒店预定</a></li>
-                    <li><a href="discount.php">优惠活动</a></li>
+                    <li class="on"><a href="index.php">首   页</a></li>
+                    <li><a href="yuding.php">酒店预定</a></li>
+                    <li><a href="my_order.php">我的订单</a></li>
                     <li><a href="mall.php">积分商城</a></li>
                 </ul>
             </div>
@@ -328,27 +314,28 @@
 			</script> -->
     </div>
     <!--advantage-->
-    <div class="advantage">
-        <div class="w1200">
-            <div class="advantage_con">
-                <img src="img/icon_1.png" />
-                <h3>3000家酒店</h3>
-                <p>覆盖全国32个省，330余座城市</p>
+            <div class="advantage">
+                <div class="w1200">
+                    <div class="advantage_con">
+                        <img src="img/icon_1.png" />
+                        <h3>家的感觉</h3>
+                        <p>夏日里的清凉</p>
+                        <p>冬日里的阳光</p>
+                    </div>
+                    <div class="advantage_con">
+                        <img src="img/icon_2.png" />
+                        <h3>积分乐趣</h3>
+                        <p>会员在线预定赠送积分</p>
+                        <p>专享超值礼品和免费房兑换</p>
+                    </div>
+                    <div class="advantage_con">
+                        <img src="img/icon_3.png" />
+                        <h3>到店有房保障</h3>
+                        <p>订单一经确认</p>
+                        <p>酒店预留客房保证会员安心入住</p>
+                    </div>
+                </div>
             </div>
-            <div class="advantage_con">
-                <img src="img/icon_2.png" />
-                <h3>送积分翻倍</h3>
-                <p>会员在线预定赠送多倍积分</p>
-                <p>专享超值礼品和免费房兑换</p>
-            </div>
-            <div class="advantage_con">
-                <img src="img/icon_3.png" />
-                <h3>到店有房保障</h3>
-                <p>订单一经确认</p>
-                <p>酒店预留客房保证会员安心入住</p>
-            </div>
-        </div>
-    </div>
     <!--footer-->
     <div class="footer">
         <p>最终解释权归本公司所有©3.3.2.1102</p>

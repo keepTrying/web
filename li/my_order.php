@@ -8,46 +8,34 @@
 	</head>
 	<body>
 		<!--header-->
-		<div class="header">
-			<div class="w1200" >
-				<div class="header_left">
-					<ul>
-						<li class="con"></li>
-						<li><a href="#" class="con1"></a></li>
-						<li><a href="#" class="con2"></a></li>
-						<li><a href="#" class="con3"></a></li>
-						<li><a href="#" class="con4"></a></li>
-						<li><a href="#" class="con5"></a></li>
-						<li><a href="#" class="con6"></a></li>
-						<li><a href="#" class="con7"></a></li>
-						<li><a href="#" class="con8"></a></li>
-						<li><a href="#" class="con9"></a></li>
-						<li><a href="#" class="con10"></a></li>
-					</ul>
-				</div>
-				<div class="header_right">
-					<a href="login.php">登录</a>|
-					<a href="register.php">注册</a>
-				</div>
-			</div>
-		</div>
-		<!--nav-->
-		<div class="nav">
-			<div class="w1200">
-				<div class="nav_left">
-					<img src="img/logo.png"/>
-					<img src="img/logo2.png"/>
-				</div>
-				<div class="nav_right">
-					<ul>
-						<li class="on"><a href="index.html">首   页</a></li>
-						<li ><a href="yuding.html">酒店预定</a></li>
-						<li ><a href="discount.html">优惠活动</a></li>
-						<li ><a href="mall.html">积分商城</a></li>	
-					</ul>					
-				</div>
-			</div>
-		</div>
+    <div class="header">
+        <div class="w1200">
+            <div class="header_left">
+                
+            </div>
+            <div class="header_right">
+                <a href="register.php">注册</a>|
+                <a href="login.php">登录</a>
+            </div>
+        </div>
+    </div>
+    <!--nav-->
+    <div class="nav">
+        <div class="w1200">
+            <div class="nav_left">
+                <img src="img/logo.png" />
+                <img src="img/logo2.png" />
+            </div>
+            <div class="nav_right">
+                <ul>
+                    <li class="on"><a href="index.php">首   页</a></li>
+                    <li><a href="yuding.php">酒店预定</a></li>
+                    <li><a href="my_order.php">我的订单</a></li>
+                    <li><a href="mall.php">积分商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 		<!--banner-->
 		<div class="w1200 order_nav">
 			<p class="login_position">当前位置:<a href="index.html">首页</a>&nbsp;>&nbsp;<a href="remeber.html">个人中心</a>&nbsp;>&nbsp;我的订单</p>

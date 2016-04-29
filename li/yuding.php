@@ -13,57 +13,56 @@
 	</head>
 	<body>
 		<!--header-->
-		<div class="header">
-			<div class="w1200" >
-				<div class="header_left">
-					<ul>
-						<li class="con"></li>
-						<li><a href="#" class="con1"></a></li>
-						<li><a href="#" class="con2"></a></li>
-						<li><a href="#" class="con3"></a></li>
-						<li><a href="#" class="con4"></a></li>
-						<li><a href="#" class="con5"></a></li>
-						<li><a href="#" class="con6"></a></li>
-						<li><a href="#" class="con7"></a></li>
-						<li><a href="#" class="con8"></a></li>
-						<li><a href="#" class="con9"></a></li>
-						<li><a href="#" class="con10"></a></li>
-					</ul>
-				</div>
-				<div class="header_right">
-					<a href="register.php">注册</a>|
-					<a href="login.php">登录</a>
-				</div>
-			</div>
-		</div>
-		<!--nav-->
-		<div class="nav">
-			<div class="w1200">
-				<div class="nav_left">
-					<img src="img/logo.png"/>
-					<img src="img/logo2.png"/>
-				</div>
-				<div class="nav_right">
-					<ul>
-						<li><a href="index.php">首   页</a></li>
-						<li class="on" ><a href="yuding.php">酒店预定</a></li>
-						<li ><a href="discount.php">优惠活动</a></li>
-						<li ><a href="mall.php">积分商城</a></li>	
-					</ul>					
-				</div>
-			</div>
-		</div>
+		    <!--header-->
+    <div class="header">
+        <div class="w1200">
+            <div class="header_left">
+                
+            </div>
+            <div class="header_right">
+                <a href="register.php">注册</a>|
+                <a href="login.php">登录</a>
+            </div>
+        </div>
+    </div>
+    <!--nav-->
+    <div class="nav">
+        <div class="w1200">
+            <div class="nav_left">
+                <img src="img/logo.png" />
+                <img src="img/logo2.png" />
+            </div>
+            <div class="nav_right">
+                <ul>
+                    <li class="on"><a href="index.php">首   页</a></li>
+                    <li><a href="yuding.php">酒店预定</a></li>
+                    <li><a href="my_order.php">我的订单</a></li>
+                    <li><a href="mall.php">积分商城</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 		<!--banner-->
 		<div class="fullSlide">
 			<div class="bd">
-				<ul>
-					<li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;"><a target="_blank" href="#"></a></li>
-					<li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;"><a target="_blank" href="#"></a></li>
-					<li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;"><a target="_blank" href="#"></a></li>
-					<li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;"><a target="_blank" href="#"></a></li>
-					<li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;"><a target="_blank" href="#"></a></li>
-				</ul>
-			</div>
+            <ul>
+                <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
+                    <a target="_blank" href="javascript:void(0);"></a>
+                </li>
+                <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
+                    <a target="_blank" href="javascript:void(0);"></a>
+                </li>
+                <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
+                    <a target="_blank" href="javascript:void(0);"></a>
+                </li>
+                <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
+                    <a target="_blank" href="javascript:void(0);"></a>
+                </li>
+                <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
+                    <a target="_blank" href="javascript:void(0);"></a>
+                </li>
+            </ul>
+        </div>
 		<div class="hd"><ul></ul></div>
 		<div class="banner_date"></div>
 		<div class="banner_date2">
@@ -316,89 +315,8 @@
 
 				</table>
 			</div>
-<!--			<div class="detail_title">-->
-				<div class="detail_title01"><span>酒店点评</span></div>
-				<div class="yu_ping">
-					<table>
-						<tr>
-							<td rowspan="2" width="260">
-								好评率:<span class="yu_jindu">99%</span>
-							</td>
-							<td width="300" class="tl">综合评分:<img src="img/img_star .jpg"/>4.9</td>
-							<td width="320" class="tl">环境美观:&nbsp;&nbsp;<div class="bars"><span id="bar" class="jin">89</span></div></td>
-							<td width="320" class="tl">整洁干净:&nbsp;&nbsp;<div class="bars"><span id="bar"  class="jin">89</span></div></td>
-						</tr>
-						<tr>
-							<td  class="tl"><a href=""  class="tl">>>查看全部点评:</a></td>
-							<td class="tl">设施完整:&nbsp;&nbsp;<div class="bars"><span id="bar"  class="jin">89</span></div></td>
-							<td class="tl">服务温馨:&nbsp;&nbsp;<div class="bars"><span id="bar"  class="jin">89</span></div></td>
-						</tr>
-					</table>
-					
-					<script>
-					 $('.jin').barIndicator({
-						counterStep:1,
-						milestones:false,
-						horBarHeight:15,
-						animTime:1000
-					 });
-					</script>
-				</div>
-				<div class="yu_pingscore">
-					<ul>
-						<li>综合评分：5.0分</li>
-						<li>来自183...4324</li>
-						<li class="yu_pingscorem">点评时间：2016-04-07</li>
-					</ul>
-					<p>酒店干净卫生，带儿子出来旅游，感觉不错。位置也很好，到哪儿都方便，周边吃的东西也不少。早餐也不错。房间每天都有赠送小饼干，儿子很开心。不过第一天进房间门口就有名片，感觉不是很好</p>					
-				</div>
-				<div class="yu_pingscore">
-					<ul>
-						<li>综合评分：5.0分</li>
-						<li>来自183...4324</li>
-						<li class="yu_pingscorem">点评时间：2016-04-07</li>
-					</ul>
-					<p>一如既往的好，安静，卫生，安全，方便，周到。</p>					
-				</div>
-				<div class="yu_pingscore">
-					<ul>
-						<li>综合评分：5.0分</li>
-						<li>来自183...4324</li>
-						<li class="yu_pingscorem">点评时间：2016-04-07</li>
-					</ul>
-					<p>一如既往的好，安静，卫生，安全，方便，周到。</p>					
-				</div>
-				<div class="yu_pingscore yu_pingscorel">
-					<ul>
-						<li>综合评分：5.0分</li>
-						<li>来自183...4324</li>
-						<li class="yu_pingscorem">点评时间：2016-04-07</li>
-					</ul>
-					<p>好喜欢，好高大上。。。自助洗衣超给力，房间特舒服。下次还要住，精选就是不一样。。各方面态度也好。。。</p>					
-				</div>
-				<div class="yu_look"><a href="">>>查看全部点评</a></div>
-			</div>
-			<!--<div class="graph"> 
-				<strong id="bar" style="width:1%;"></strong> 
-			</div>-->
-			<!--<script type="text/javascript"> 
-				function $(obj){ 
-				return document.getElementById(obj); 
-				} 
-				function go(){ 
-				$("bar").style.width = parseInt($("bar").style.width) + 1 + "%"; 
-				$("bar").innerHTML = $("bar").style.width; 
-				if($("bar").style.width == "100%"){ 
-				window.clearInterval(bar); 
-				} 
-				
-				} 
-				var bar = window.setInterval("go()",50); 
-				window.onload = function(){ 
-				bar; 
-				} 
-			</script> -->
-		</div>
+
+		
 		<!--advantage-->
             <div class="advantage">
                 <div class="w1200">
