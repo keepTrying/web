@@ -342,7 +342,7 @@
                     user_years:$("#bir").val(),
                     user_email:$("#email").val(),
                     user_phone:$("#phone").val(),
-                    user_id_num:$("#idcard").val(),
+                    user_id_num:$("#idcard").val()+'',
                     user_name:$("#name").val(),
                     user_img:$("#niimg").attr('src').replace(/[^0-9]/ig,""),
                     user_point:'<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_point']; }else{echo 0;}?>',
@@ -352,6 +352,7 @@
                var obj = $.parseJSON(data);
                if(obj.status=='200'){
                    alert('修改成功');
+                   window.location.reload();
                }else{
                    alert('修改失败');
                }
