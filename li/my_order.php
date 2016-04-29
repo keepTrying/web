@@ -270,6 +270,8 @@
 $(function(){
     if (<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?> === false){
         window.location.href="login.php";
+    }else{
+        
     }
 })
 </script>
