@@ -195,7 +195,7 @@
 
                     </div>
                     <div class="proo">
-                        <h1>云品时尚酒店标准二人间</h1>
+                        <h1>成都顾家酒店标准二人间</h1>
                         <ul>
                             <li class="prxxo"></li>
                             <li id="area">房型面积：30</li>
@@ -380,36 +380,39 @@
             }
             , function (data, status) {
                 var obj = $.parseJSON(data).data[0];
-            var type;
+            var type='';
             switch(obj.room_type){
                 case 1:
-                    type='单人间';
+                    type+='单人间';
                     break;
                     case 2:
-                    type='双人间';
+                    type+='双人间';
                     break;
                     case 3:
-                    type='三人间';
+                    type+='三人间';
                     break;
                 default:
                     break;
                     
             }
             $(".double").text(type);
-            $("#area").text('房型面积：'+obj.room_area);
-             $("#floor").text(obj.room_num.substr(1,3));
-            $(".pscjia").text(obj.room_cost+50+'元');
+            $(".proo h1").text('成都顾家酒店标准'+type);
+            $("#area").text('房型面积：'+obj.room_area+'平米');
+             $("#floor").text('所在楼层：'+obj.room_num.substr(0,-3));
+            var pscjia=Number(obj.room_cost)+50;
+            $(".pscjia").text(pscjia+'元');
             $(".pjia").text(obj.room_cost+'元');
             $(".star").text(obj.room_num.substr(-3));
              $("#p_room_desc").text(obj.room_facility);
-            $("#pdtok img")[0].src = obj.room_img;
+            $("#pdtok img").attr('src',obj.room_img) ;
             $("#mycarousel img")[0].src = obj.room_img;
             $("#mycarousel img")[1].src = obj.room_img1;
             $("#mycarousel img")[2].src = obj.room_img2;
             $("#mycarousel img")[3].src = obj.room_img3;
            
                 });
-        
+        var content='';
+        var img_url='';
         $.post("http://42.96.148.66/hotel/comment/query.php", {
                room_num:vars['room_num'],
                 user_id:'',
@@ -425,10 +428,10 @@ user_name:'',
             , function (data, status) {
                 var obj = $.parseJSON(data);
             if(obj.status=='200'){
-                var content;
                 
-                for(var i in obj.data){
-                    var img_url;
+                
+                for(var i=0;i<obj.data.length;i++){
+                    
                                $.post('http://42.96.148.66/hotel/user/query.php',
                  {
                     user_nick:'',
@@ -446,13 +449,13 @@ user_name:'',
                 , num_page: "999"
                 
            },function(data,status){
-               var obj = $.parseJSON(data);
-               if(obj.status=='200'){
-                img_url='img/n'+obj.data[0].user_img+'.png';
+               var obj1 = $.parseJSON(data);
+               if(obj1.status=='200'){
+                img_url='img/n'+obj1.data[0].user_img+'.png';
                }else{
                    img_url='img/n1.png';
                }
-                                   content+='<div class="yu_pingscore"><ul><li>'+i.user_name+'</li><li><div class="bars"><span id="bar" class="jin">'+i.comment_star+'</span></div></li><li class="yu_pingscorem">点评时间：'+i.comment_time+'</li></ul><ul><li><img src="'+img_url+'"></li><li><p>'+i.comment_text+'</p></li></ul></div>';
+                                   content+='<div class="yu_pingscore"><ul><li>'+obj.data[i].user_name+'</li><li><div class="bars"><span id="bar" class="jin">'+obj.data[i].comment_star+'</span></div></li><li class="yu_pingscorem">点评时间：'+obj.data[i].comment_time+'</li></ul><ul><li><img src="'+img_url+'"></li><li><p>'+obj.data[i].comment_text+'</p></li></ul></div>';
            }); 
                     
                 }
@@ -473,8 +476,8 @@ user_name:'',
 
         function mycarousel_initCallback(carousel) {
             $("#mycarousel li").mouseover(function () {
-                $("#pdtok img")[0].src = this.getElementsByTagName("img")[0].name;
-                $("#pdtok img")[0].jqimg = this.getElementsByTagName("img")[0].name;
+                $("#pdtok img")[0].src = this.getElementsByTagName("img")[0].src;
+                $("#pdtok img")[0].jqimg = this.getElementsByTagName("img")[0].src;
                 $(this).siblings().each(function () {
                     this.getElementsByTagName("img")[0].className = "";
                 })
