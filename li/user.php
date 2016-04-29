@@ -346,6 +346,7 @@
                     user_name:$("#name").val(),
                     user_img:$("#niimg").attr('src').replace(/[^0-9]/ig,""),
                     user_point:'<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_point']; }else{echo 0;}?>',
+                    user_id:'<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_id']; }else{echo '';}?>'
                     web:'1'
                 
            },function(data,status){
