@@ -340,7 +340,7 @@
         marker.setLabel(label);
 
         var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
-            '<img src="assets/img/hotel.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+            '<img src="img/hotel.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
             '地址：成都市高新西区百叶路<br/>电话：349928888<br/>简介：hotel位于成都市高新西区，为五星级酒店。' +
             '</div>';
 
