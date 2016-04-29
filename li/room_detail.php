@@ -387,13 +387,13 @@
             var obj = $.parseJSON(data).data[0];
             var type = '';
             switch (obj.room_type) {
-                case 1:
+                case "1":
                     type += '单人间';
                     break;
-                case 2:
+                case "2":
                     type += '双人间';
                     break;
-                case 3:
+                case "3":
                     type += '三人间';
                     break;
                 default:
