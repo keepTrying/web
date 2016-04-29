@@ -328,9 +328,9 @@
         $("#bir").attr('value','<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_years']; }else{echo '';}?>');
         $("#phone").attr('value','<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_phone']; }else{echo '';}?>');
         $("#email").attr('value','<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_email']; }else{echo '';}?>');
-        var src='img/n'+'<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_img']; }else{echo '';}?>'+'.png';
+        var src='img/n'+'<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_img']; }else{echo 1;}?>'+'.png';
         $("#niimg").attr('src',src);
-        if(<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_gender']; }else{echo '';}?>===2){
+        if(<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_gender']; }else{echo 1;}?>===2){
             $("#user_gender_male").removeAttr('checked');
             $("#user_gender_female").attr('checked','checked');
         }
@@ -345,7 +345,7 @@
                     user_id_num:$("#idcard").val(),
                     user_name:$("#name").val(),
                     user_img:$("#niimg").attr('src').substr(-5).substr(2),
-                    user_point:<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_point']; }else{echo 0;}?>,
+                    user_point:'<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_point']; }else{echo 0;}?>',
                     web:'1'
                 
            },function(data,status){
