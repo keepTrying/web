@@ -45,7 +45,7 @@
 			<div class="form_left"><img src="img/login_img.jpg" /></div>
 			<div class="form_right">
 				<div class="form_right01">
-					<p>会员登录</p>
+					<p>忘记密码</p>
 					<table>
 						<tr>
 							<td width="15%" class="tr">手机号:</td>
@@ -53,22 +53,24 @@
 							<td width="45%" class="tl color_999" >请输入手机号</td>
 						</tr>
 						<tr>
-							<td width="15%" class="tr" >密码:</td>
-							<td width="40%" class="tl"><input type="password" class="text ml_10" id="pw"/></td>
-							<td width="45%" class="tl"><a href="forget.php" class="forget">忘记密码？</a></td>
+							<td width="15%" class="tr" >身份证号:</td>
+							<td width="40%" class="tl"><input type="text" class="text ml_10" id="idcard"/></td>
+							<td width="45%" class="tl color_999" >请输入身份证号</td>
+						</tr>
+						<tr>
+							<td width="15%" class="tr" >姓 名:</td>
+							<td width="40%" class="tl"><input type="text" class="text ml_10" id="name"/></td>
+							<td width="45%" class="tl color_999" >请输入您的真实姓名</td>
 						</tr>
 						<tr>
 							<td width="15%" class="tr">验证码:</td>
 							<td width="40%" class="tl"><input type="text" class="txt_yan ml_10 code_num" maxlength="4" name="code_num"/><img src="../hotel/code_num.php" id="getcode_num" title="看不清，换一张"/></td>
 							<td width="45%" class="tl color_999">请输入图片中的数字</td>
 						</tr>
+						
 						<tr>
 							<td width="15%">&nbsp;</td>
-							<td colspan="2" class="tl vr"><input type="checkbox" class="ml_10 vr"  id="autologin"/>自动登录</td>
-						</tr>
-						<tr>
-							<td width="15%">&nbsp;</td>
-							<td colspan="2" class="tl"><input type="button" value="登录" class="btn_register ml_10" id="chk_num"/>&nbsp;&nbsp;&nbsp;<a href="register.php" class="forget">注册会员</a></td>
+							<td colspan="2" class="tl"><input type="button" value="提交" class="btn_register ml_10" id="chk_num"/></td>
 						</tr>
 					</table>
 				</div>
