@@ -49,7 +49,7 @@
 					<table>
 						<tr>
 							<td width="15%" class="tr">安全问题:</td>p
-                            <td width="40%" class="tl"><p class="text ml_10" id="question"></p></td>
+                            <td width="40%" class="tl question"></td>
 							
 						</tr>
 						
