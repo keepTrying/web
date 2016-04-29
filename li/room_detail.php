@@ -403,7 +403,7 @@
             $(".double").text(type);
             $(".proo h1").text('成都顾家酒店标准' + type);
             $("#area").text('房型面积：' + obj.room_area + '平米');
-            $("#floor").text('所在楼层：' + obj.room_num.substr(0, -3));
+            $("#floor").text('所在楼层：' + obj.room_num.slice(0, -3));
             var pscjia = Number(obj.room_cost) + 50;
             $(".pscjia").text(pscjia + '元');
             $(".pjia").text(obj.room_cost + '元');
