@@ -407,9 +407,7 @@
 
         });
         
-        $("#sub").click(function(){
-            
-        })
+       
         
         
 
