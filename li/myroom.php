@@ -457,9 +457,9 @@
 
         $(".pfenbar a").live('mouseenter', function() {
             $(this).nextAll().removeClass("hovli")
-            $(this).addClass("hovli");
+            $(this).addClass("hovli")
             $(this).prevAll().addClass("hovli")
-            $(this).parents("p").find("i").removeClass("red")
+//            $(this).parents("p").find("i").removeClass("red")
             $(this).parents("p").find("i").html($(this).html())
         })
 //            .live('mouseleave', function() {
@@ -477,15 +477,15 @@
 //            $(this).parents("p").find("i").html($(this).parent().children("a[sd=" + t_hid + "]").html())
 //        })
         ;
-        $(".pfenbar a").live("click", function() {
-
-            var sidv = $(this).attr("sd");
-            $(this).addClass("hovli");
-            $(this).prevAll().addClass("hovli")
-            $(this).parents("p").find("input").val(sidv)
-            $(this).parents("p").find("i").html($(this).html())
-
-        });
+//        $(".pfenbar a").live("click", function() {
+//
+//            var sidv = $(this).attr("sd");
+//            $(this).addClass("hovli");
+//            $(this).prevAll().addClass("hovli")
+//            $(this).parents("p").find("input").val(sidv)
+//            $(this).parents("p").find("i").html($(this).html())
+//
+//        });
         $("textarea").live("mouseover", function() {
             $(this).focus();
         });

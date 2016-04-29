@@ -1471,7 +1471,7 @@ img {
 
 .proo ul li {
     width: 170px;
-    line-height: 30px;
+    line-height: 50px;
     color: #666;
     font-size: 16px;
     padding: 8px 2px;
@@ -1848,7 +1848,7 @@ a.black:active {
 
 #service {
     margin-left: 12.5%;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 #service button {
