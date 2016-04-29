@@ -432,9 +432,9 @@
             var obj = $.parseJSON(data);
             if (obj.status == '200') {
 
-
+                
                 for (var i = 0; i < obj.data.length; i++) {
-
+                        alert(obj.data[i].user_id);
                     $.post('http://42.96.148.66/hotel/user/query.php', {
                         user_nick: '',
                         user_gender: '',
@@ -516,21 +516,18 @@
         //user name
         if (<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?> === true) {
             try {
-                var nick = '<?php if(isset($_SESSION['
-                user '])) echo $_SESSION['
-                user ']['
-                user_nick '] ?>'.trim();
+                var nick = '<?php if(isset($_SESSION['user'])) echo $_SESSION['user']['user_nick'] ?>'.trim();
                 $("div.header_right").html('<a href="user.php">' + nick + '</a>|<a href="#">注销</a>');
-                //                $("a:contains(nick)").click(function () {
-                //                    window.location.href = "user.php";
-                //                });
+//                $("a:contains(nick)").click(function () {
+//                    window.location.href = "user.php";
+//                });
             } catch (e) {
                 alert(e.message);
             }
-            $("a:contains('注销')").click(function() {
+            $("a:contains('注销')").click(function () {
                 $.post("../hotel/user/login.php", {
                     action: 'logout'
-                }, function(data, status) {
+                }, function (data, status) {
                     var obj = $.parseJSON(data);
                     if (obj.status == "200") {
                         alert("logout success");
@@ -545,6 +542,7 @@
         } else {
             $("div.header_right").html('<a href=\"register.php\">注册</a>|<a href=\"login.php\">登录</a>');
         }
+
 
     });
 </script>
