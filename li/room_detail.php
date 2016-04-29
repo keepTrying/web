@@ -417,7 +417,6 @@
 
         });
         var content = '';
-        var img_url = '';
         $.post("http://42.96.148.66/hotel/comment/query.php", {
             room_num: vars['room_num'],
             user_id: '',
@@ -450,9 +449,10 @@
                         page: "0",
                         num_page: "999"
 
-                    }, function(data1, status) {
+                    }, function(data1, status1) {
                         var obj1 = $.parseJSON(data1);
-                        if (obj1.status == '200') {
+                        var img_url='';
+                        if (obj1.status1 == '200') {
                             img_url = 'img/n' + obj1.data[0].user_img + '.png';
                         } else {
                             img_url = 'img/n1.png';
