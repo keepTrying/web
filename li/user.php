@@ -175,7 +175,7 @@
                     <input type="hidden" id="info_type" value="hotel" />
                 </div>
             </div>
-            <form action="infosave.asp" method="post" name="infopost" id="infopost">
+            <form method="post" name="infopost" id="infopost">
                 <div class="cen_bom">
                     <div class="cen_fl">
                         <div class="cen_bt">基本信息</div>
@@ -183,7 +183,7 @@
                             <div class="cen_name">
                                 <div class="cen_name_le">
                                     <div class="cen_name_le_1">用户名：</div>
-                                    <div class="cen_name_le_3"> <strong>qqid18573883</strong>
+                                    <div class="cen_name_le_3"> <strong id="user_id">qqid18573883</strong>
                                     </div>
                                 </div>
                                 <div class="cen_name_le">
@@ -202,11 +202,11 @@
                                     <div class="cen_name_le_3">
                                         <span>
                                                 <label>
-                                                    <input name="sex" type="radio" value="1" class="cen_dx"  checked="checked"/>
+                                                    <input name="sex" type="radio" value="1" class="cen_dx"  checked="checked" id="user_gender_male"/>
                                                     男
                                                 </label>
                                                 <label>
-                                                    <input name="sex" type="radio" value="2" class="cen_dx" />
+                                                    <input name="sex" type="radio" value="2" class="cen_dx" id="user_gender_female"/>
                                                     女
                                                 </label>
                                             </span>
@@ -214,7 +214,7 @@
                                     </div>
                                 </div>
                                 <div class="cen_name_le">
-                                    <div class="cen_name_le_1">姓 名：</div>
+                                    <div class="cen_name_le_1" >姓 名：</div>
                                     <div class="cen_name_le_3">
                                         <span>
                                                 <input name="name" type="text" class="inp" id="name" size="10" maxlength="16"  style="width:200px;" value="级就就"/>
@@ -223,7 +223,7 @@
                                     </div>
                                 </div>
                                 <div class="cen_name_le">
-                                    <div class="cen_name_le_1">姓 名：</div>
+                                    <div class="cen_name_le_1">身份证：</div>
                                     <div class="cen_name_le_3">
                                         <span>
                                                 <input name="idcard" type="text" class="inp" id="idcard" size="10" maxlength="18"  style="width:200px;" value="142603166404301045"/>
@@ -320,71 +320,42 @@
 </html>
 <script>
     $(function () {
-        var vars = []
-            , hash;
-
-        var q = document.URL.split('?')[1];
-
-        if (q != undefined) {
-
-            q = q.split('&');
-
-            for (var i = 0; i < q.length; i++) {
-
-                hash = q[i].split('=');
-
-                vars.push(hash[1]);
-
-                vars[hash[0]] = hash[1];
-
-            }
-
+        
+        $("#user_id").text('user'+'<?php echo $_SESSION['user']['user_id'];?>');
+        if(<?php echo $_SESSION['user']['user_id'];?>===2){
+            $("#user_gender_male").removeAttr('checked');
+            $("#user_gender_female").attr('checked');
         }
-        $.post("http://42.96.148.66/hotel/indent/query.php", {
-                time_begin: ""
-                , time_end: ""
-                , cost_max: ""
-                , cost_min: ""
-                , indent_time_begin: ""
-                , indent_time_end: ""
-                , room_num: ""
-                , indent_id: ""
-                , indent_status: "2"
-                , user_id: ""
-                , indent_type: "1"
-                , page: "0"
-                , num_page: "999"
+        
+         //user name
+        if (<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?> === true) {
+            try {
+                var nick = '<?php if(isset($_SESSION['user'])) echo $_SESSION['user']['user_nick'] ?>'.trim();
+                $("div.header_right").html('<a href="user.php">' + nick + '</a>|<a href="#">注销</a>');
+//                $("a:contains(nick)").click(function () {
+//                    window.location.href = "user.php";
+//                });
+            } catch (e) {
+                alert(e.message);
             }
-            , function (data, status) {
-                var obj = $.parseJSON(data);
-                var i = 0;
-                var no_rooms = new Array();
-                while (obj.data[i]) {
-                    if (istimeconfict(obj.data[i].time_begin, obj.data[i].time_end, vars["in"], vars["out"])) {
-                        no_rooms.push(obj.data[i].room_num);
-                    };
-                    i++;
-                }
-                $.post("http://42.96.148.66/hotel/room/query.php", {
-                    room_type: vars["num"]
-                    , room_num: ""
-                    , page: "0"
-                    , num_page: "999"
+            $("a:contains('注销')").click(function () {
+                $.post("../hotel/user/login.php", {
+                    action: 'logout'
                 }, function (data, status) {
-                    var obj1 = $.parseJSON(data);
-                    var j = 0;
-                    var content = "";
-                    while (obj1.data[j]) {
-                        for (var room_num in no_rooms) {
-                            if (ojb1.data[j].room_num == room_num)
-                                continue;
-                        }
-                        content += "<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥" + obj1.data[j].room_cost + "</td><td>带早餐</td><td>￥<span class=\"yu_span\">" + obj1.data[j].room_cost + "</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" value=\"预订\"/></td></tr>";
-                        j++;
+                    var obj = $.parseJSON(data);
+                    if (obj.status == "200") {
+                        alert("logout success");
+
+                        window.location.reload();
+                    } else {
+                        alert("logout fail!");
                     }
-                    $("tbody#tbody").html(content);
+
                 });
             });
+        } else {
+            $("div.header_right").html('<a href=\"register.php\">注册</a>|<a href=\"login.php\">登录</a>');
+        }
 
         $("#find").click(function () {
             $in = $("#input_in").val();
@@ -404,6 +375,12 @@
             });
 
         });
+        
+        $("#sub").click(function(){
+            
+        })
+        
+        
 
     });
 </script>
