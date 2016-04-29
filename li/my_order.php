@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/home.css">
-		
+		 <script type="text/javascript" src="jq/jquery-1.7.1.min.js"></script>
 		<title></title>
 	</head>
 	<body>
@@ -38,7 +38,7 @@
     </div>
 		<!--banner-->
 		<div class="w1200 order_nav">
-			<p class="login_position">当前位置:<a href="index.html">首页</a>&nbsp;>&nbsp;<a href="remeber.html">个人中心</a>&nbsp;>&nbsp;我的订单</p>
+			<p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>&nbsp;我的订单</p>
 		</div>
 		<div class="w1200 order_Con">
 		<div class="order_left">
@@ -266,3 +266,10 @@
         
 	</body>
 </html>
+<script>
+$(function(){
+    if (<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?> === false){
+        window.location.href="login.php";
+    }
+})
+</script>
