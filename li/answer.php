@@ -112,7 +112,7 @@ $(function(){
    $("#chk_num").click(function(){  
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
             if(msg==1){  //验证码正确！ 
-                $.post("../hotel/security/get_question.php",{
+                $.post("../hotel/security/answer.php",{
                     user_id:vars['user_id'],
                     user_ans:$("#ans").val(),
                 },function(data,status){
