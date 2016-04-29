@@ -113,7 +113,7 @@ $(function(){
            }
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
             if(msg==1){  //验证码正确！ 
-                $.post("../hotel/security/get_question.php",{
+                $.post("../hotel/security/modify_password.php",{
                     user_id:vars['user_id'],
                     password_new:$("#pw").val(),
                 },function(data,status){
