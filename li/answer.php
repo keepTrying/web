@@ -45,18 +45,19 @@
 			<div class="form_left"><img src="img/login_img.jpg" /></div>
 			<div class="form_right">
 				<div class="form_right01">
-					<p>重置密码</p>
+					<p>安全验证</p>
 					<table>
-					<tr>
-					<td width="15%" class="tr">新密码:</td>
-						<td width="40%" class="tl"><input type="password" class="text ml_10" id="pw"></td>
-                 <td width="45%" class="tl color_999">请输入新密码</td>
-				     </tr>
-				     <tr>
-					<td width="15%" class="tr">确认密码:</td>
-						<td width="40%" class="tl"><input type="password" class="text ml_10" id="cpw"></td>
-                 <td width="45%" class="tl color_999">请再次输入新密码</td>
-				     </tr>
+						<tr>
+							<td width="15%" class="tr">安全问题:</td>p
+                            <td width="40%" class="tl"><p class="text ml_10" id="question"></p></td>
+							
+						</tr>
+						
+						<tr>
+							<td width="15%" class="tr" >答 案:</td>
+							<td width="40%" class="tl"><input type="text" class="text ml_10" id="ans"/></td>
+							<td width="45%" class="tl color_999" >请输入您的安全答案</td>
+						</tr>
 						<tr>
 							<td width="15%" class="tr">验证码:</td>
 							<td width="40%" class="tl"><input type="text" class="txt_yan ml_10 code_num" maxlength="4" name="code_num"/><img src="../hotel/code_num.php" id="getcode_num" title="看不清，换一张"/></td>
@@ -86,7 +87,7 @@
 </html>
 <script>
 $(function(){
-     var vars = []
+    var vars = []
             , hash;
 
         var q = document.URL.split('?')[1];
@@ -106,26 +107,23 @@ $(function(){
             }
 
         }
-   $("#chk_num").click(function(){
-       if($("#pw").val()!=$("#cpw").val()){
-               alert("两次输入的密码不一致！");
-               return;
-           }
+    $("#question").val(vars['question']);
+
+   $("#chk_num").click(function(){  
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
             if(msg==1){  //验证码正确！ 
                 $.post("../hotel/security/get_question.php",{
                     user_id:vars['user_id'],
-                    password_new:$("#pw").val(),
+                    user_ans:$("#ans").val(),
                 },function(data,status){
                     var obj = $.parseJSON(data);
                     if(obj.status=="200"){
-                        alert("重置密码成功！请重新登录。");
+                        alert("请重置密码！");
 
-                        
-                        window.location.href='login.php';
+                        window.location.href='restorepw.php?user_id='+vars['user_id'];
                         
                     }else{
-                        alert("重置密码失败！错误码："+obj.status);
+                        alert("答案错误！请重新输入。");
                     }
                 });
             }else{  

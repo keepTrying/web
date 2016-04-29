@@ -183,16 +183,7 @@ $(function(){
                 }  
         }); 
    });
-    $(".forget").click(function(){
-        layer.open({
-          type: 2,
-          title: false,
-          shadeClose: true,
-          shade: false,
-          maxmin: true, //开启最大化最小化按钮
-          area: ['893px', '600px'],
-          content: 'notify.html'
-    });
+
     });
 })
 </script>
