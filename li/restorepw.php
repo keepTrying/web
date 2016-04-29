@@ -86,11 +86,7 @@
 </html>
 <script>
 $(function(){
-    if($.cookie("rmbUser")=="true"){
-        $("#phone").val($.cookie("user_phone"));
-        $("#pw").val($.cookie("user_password"));
-        $("#autologin").prop("checked",true);
-    }
+   
    $("#chk_num").click(function(){  
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
             if(msg==1){  //验证码正确！ 
@@ -102,24 +98,8 @@ $(function(){
                     var obj = $.parseJSON(data);
                     if(obj.status=="200"){
                         alert("login success");
-//                        $.cookie("login","true",{expires:7});
-//                        $.cookie("user_id", obj.data.user_id, { expires: 7 });
-//                        $.cookie("user_nick", obj.data.user_nick, { expires: 7 });
-//                        $.cookie("user_gender", obj.data.user_gender, { expires: 7 });
-//                        $.cookie("user_years", obj.data.user_years, { expires: 7 });
-//                        $.cookie("user_email", obj.data.user_email, { expires: 7 });
-//                        $.cookie("user_point", obj.data.user_point, { expires: 7 });
+
                         
-//                        $.cookie("user_id_num", obj.data.user_id_num, { expires: 7 });
-//                        $.cookie("user_name", obj.data.user_name, { expires: 7 });
-                        if($("#autologin").prop("checked")){
-                            $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie 
-                            $.cookie("user_phone", obj.data.user_phone, { expires: 7 });
-                            $.cookie("user_password", obj.data.user_password, { expires: 7 });
-                            
-                        }else{ 
-                            $.cookie("rmbUser", "false", { expire: -1 }); 
-                        } 
                         window.location.href='index.php';
                         
                     }else{

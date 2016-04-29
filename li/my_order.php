@@ -104,7 +104,7 @@
 					<td width="200">下单时间</td>
 					<td width="120">总金额</td>
 					<td width="120">房间号</td>
-					<td width="100">订单操作</td>
+					<td width="300">订单操作</td>
 				</thead>
 				<tbody>
 					<tr>
@@ -113,7 +113,7 @@
 						<td>2015-02-04 19:00:00</td>
 						<td>￥259</td>
 						<td>100005</td>
-						<td><button>支付</button></td>
+						<td><button>付款</button><button>取消</button></td>
 					</tr>
 					<tr>
 						<td>12356789</td>

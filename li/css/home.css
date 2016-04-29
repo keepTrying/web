@@ -985,6 +985,16 @@ img {
     font-size: 16px;
 }
 
+.order_list tbody tr td button{
+    width: 50px;
+    color: #ffffff;
+    background: #3a7fe7;
+    border: 0px;
+    border-radius: 5px;
+    line-height: 20px;
+    text-align: center;
+}
+
 
 /*remeber*/
 
