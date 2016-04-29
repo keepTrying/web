@@ -289,23 +289,20 @@
 			</table>
 			<div class="detail_title">
 				<div class="detail_title01"><span>酒店详情</span></div>
-				<p>如家精选酒店创新性地以视觉、听觉、味觉、嗅觉、触觉等“五感”作为元素，融合现代英伦风格，时尚简约且别树一帜。设施完善的公共商务区域设有大堂休息区和商务洽谈区，100兆WIFI全覆盖、宽敞明亮的环境、现磨咖啡的浓香、优质专业的服务是您品质商旅的首选。酒店临近春熙路步行街、天府广场和盐市口商圈；距武侯祠、锦里商业街10分钟车程，步行至四川大学、华西医院十余分钟，距双流机场17 公里，火车北站8公里，交通十分便利。</p>
+				<p>成都顾家酒店创新性地以视觉、听觉、味觉、嗅觉、触觉等“五感”作为元素，融合现代英伦风格，时尚简约且别树一帜。设施完善的公共商务区域设有大堂休息区和商务洽谈区，100兆WIFI全覆盖、宽敞明亮的环境、现磨咖啡的浓香、优质专业的服务是您品质商旅的首选。酒店临近春熙路步行街、天府广场和盐市口商圈；距武侯祠、锦里商业街10分钟车程，步行至四川大学、华西医院十余分钟，距双流机场17 公里，火车北站8公里，交通十分便利。</p>
 			</div>
 			<div class="detail_title">
 				<div class="detail_title01"><span>温馨提示</span></div>
 				<p>酒店覆盖wifi<br/>
-					该酒店可以使用如家钱包充值和消费<br/>
+					该酒店可以使用信用卡充值和消费<br/>
 					酒店不接受员工卡预订<br/>
-					2016.04.04-2016.04.29凡新办金卡的上门客人入住首日享受8折优惠 并可获赠两份/间夜<br/>
-					2016.04.04-2016.04.29商务日房：非会员140元/4小时，会员120元/4小时<br/>
-					2016.04.04-2016.04.29会员入住（精选高级商务房与精选高级双床房）赠早餐2份/间夜
+					
 				</p>
 			</div>
 			<div class="detail_title">
 				<div class="detail_title01 detail_title02">
 					<ul>
 						<li class="curr">温馨提示</li>
-						<li>周边设施</li>
 					</ul>
 				</div>
 				<table class="yu_car">
@@ -316,23 +313,10 @@
 						<td width="640">乘出租车约15分钟，约20元；地铁：坐地铁1号线至华西坝下车，C
 口出站，小天竺东街转乘28/21路公交车在新南门站下车。</td>
 					</tr>
-					<tr>
-						<td>&nbsp;</td>
-						<td>成都火车北站</td>
-						<td>距酒店8公里</td>
-						<td>乘出租车约15分钟，约20元；地铁：坐地铁1号线至华西坝下车，C
-口出站，小天竺东街转乘28/21路公交车在新南门站下车。</td>
-					</tr>
-					<tr>
-						<td>&nbsp;</td>
-						<td>成都火车北站</td>
-						<td>距酒店8公里</td>
-						<td>乘出租车约15分钟，约20元；地铁：坐地铁1号线至华西坝下车，C
-口出站，小天竺东街转乘28/21路公交车在新南门站下车。</td>
-					</tr>
+
 				</table>
 			</div>
-			<div class="detail_title">
+<!--			<div class="detail_title">-->
 				<div class="detail_title01"><span>酒店点评</span></div>
 				<div class="yu_ping">
 					<table>
@@ -416,27 +400,28 @@
 			</script> -->
 		</div>
 		<!--advantage-->
-		<div class="advantage">
-			<div class="w1200">
-				<div class="advantage_con">
-					<img src="img/icon_1.png"/>
-					<h3>3000家酒店</h3>
-					<p>覆盖全国32个省，330余座城市</p>
-				</div>
-				<div class="advantage_con">
-					<img src="img/icon_2.png"/>
-					<h3>送积分翻倍</h3>
-					<p>会员在线预定赠送多倍积分</p>
-					<p>专享超值礼品和免费房兑换</p>
-				</div>
-				<div class="advantage_con">
-					<img src="img/icon_3.png"/>
-					<h3>到店有房保障</h3>
-					<p>订单一经确认</p>
-					<p>酒店预留客房保证会员安心入住</p>
-				</div>
-			</div>
-		</div>
+            <div class="advantage">
+                <div class="w1200">
+                    <div class="advantage_con">
+                        <img src="img/icon_1.png" />
+                        <h3>家的感觉</h3>
+                        <p>夏日里的清凉</p>
+                        <p>冬日里的阳光</p>
+                    </div>
+                    <div class="advantage_con">
+                        <img src="img/icon_2.png" />
+                        <h3>积分乐趣</h3>
+                        <p>会员在线预定赠送积分</p>
+                        <p>专享超值礼品和免费房兑换</p>
+                    </div>
+                    <div class="advantage_con">
+                        <img src="img/icon_3.png" />
+                        <h3>到店有房保障</h3>
+                        <p>订单一经确认</p>
+                        <p>酒店预留客房保证会员安心入住</p>
+                    </div>
+                </div>
+            </div>
 		<!--footer-->
 		<div class="footer">
 			<p>最终解释权归本公司所有©3.3.2.1102</p>

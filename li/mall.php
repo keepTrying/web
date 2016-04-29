@@ -172,27 +172,28 @@
 		</div>
 			
 		<!--advantage-->
-		<div class="advantage">
-			<div class="w1200">
-				<div class="advantage_con">
-					<img src="img/icon_1.png"/>
-					<h3>3000家酒店</h3>
-					<p>覆盖全国32个省，330余座城市</p>
-				</div>
-				<div class="advantage_con">
-					<img src="img/icon_2.png"/>
-					<h3>送积分翻倍</h3>
-					<p>会员在线预定赠送多倍积分</p>
-					<p>专享超值礼品和免费房兑换</p>
-				</div>
-				<div class="advantage_con">
-					<img src="img/icon_3.png"/>
-					<h3>到店有房保障</h3>
-					<p>订单一经确认</p>
-					<p>酒店预留客房保证会员安心入住</p>
-				</div>
-			</div>
-		</div>
+            <div class="advantage">
+                <div class="w1200">
+                    <div class="advantage_con">
+                        <img src="img/icon_1.png" />
+                        <h3>家的感觉</h3>
+                        <p>夏日里的清凉</p>
+                        <p>冬日里的阳光</p>
+                    </div>
+                    <div class="advantage_con">
+                        <img src="img/icon_2.png" />
+                        <h3>积分乐趣</h3>
+                        <p>会员在线预定赠送积分</p>
+                        <p>专享超值礼品和免费房兑换</p>
+                    </div>
+                    <div class="advantage_con">
+                        <img src="img/icon_3.png" />
+                        <h3>到店有房保障</h3>
+                        <p>订单一经确认</p>
+                        <p>酒店预留客房保证会员安心入住</p>
+                    </div>
+                </div>
+            </div>
 		<!--footer-->
 		<div class="footer">
 			<p>最终解释权归本公司所有©3.3.2.1102</p>

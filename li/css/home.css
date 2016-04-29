@@ -1203,6 +1203,11 @@ img {
     margin: 50px;
 }
 
+.detail_title p{
+    margin-top: 20px;
+    line-height: 30px;
+}
+
 .detail_title01 {
     border-bottom: 1px solid #D5D5D5;
     height: 34px;
