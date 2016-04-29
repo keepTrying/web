@@ -197,7 +197,7 @@ $(function(){
     $('input.change.fr').click(function(){
         var point = parseInt($(this).prev().text());
         if(<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?>){
-            var user_point='<?php if(isset($_SESSION['user'])) echo '$_SESSION['user']['user_point]'; else echo ''; ?>';
+            var user_point=<?php if(isset($_SESSION['user'])) echo $_SESSION['user']['user_point']; else echo ''; ?>;
             if(point>=user_point){
                 layer.alert('积分不足！', {
                     skin: 'layui-layer-molv' //样式类名
