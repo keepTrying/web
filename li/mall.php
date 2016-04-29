@@ -222,8 +222,6 @@ $(function(){
                             user_name:obj.data[0].user_name,
                             user_point:(parseInt(obj.data[0].user_point)-point)+'',
                             user_img:obj.data[0].user_img,
-                            page:'0',
-                            num_page:'1'
                        },function(data,status){
                            var obj1 = $.parseJSON(data);
                             if(obj1.status=="200"){

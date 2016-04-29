@@ -321,11 +321,40 @@
 <script>
     $(function () {
         
-        $("#user_id").text('user'+'<?php echo $_SESSION['user']['user_id'];?>');
-        if(<?php echo $_SESSION['user']['user_id'];?>===2){
+        $("#user_id").text('user'+'<?php echo $_SESSION['user']['user_id']?$_SESSION['user']['user_id']:'';?>');
+        $("#niname").attr('value','user'+'<?php echo $_SESSION['user']['user_nick']?$_SESSION['user']['user_nick']:'';?>');
+        $("#name").attr('value','<?php echo $_SESSION['user']['user_name']?$_SESSION['user']['user_name']:'';?>');
+        $("#idcard").attr('value','user'+'<?php echo $_SESSION['user']['user_id_num']?$_SESSION['user']['user_id_num']:'';?>');
+        $("#bir").attr('value','user'+'<?php echo $_SESSION['user']['user_years']?$_SESSION['user']['user_years']:'';?>');
+        $("#phone").attr('value','user'+'<?php echo $_SESSION['user']['user_phone']?$_SESSION['user']['user_phone']:'';?>');
+        $("#email").attr('value','user'+'<?php echo $_SESSION['user']['user_email']?$_SESSION['user']['user_email']:'';?>');
+        if(<?php echo $_SESSION['user']['user_gender']?$_SESSION['user']['user_gender']:'';?>==='2'){
             $("#user_gender_male").removeAttr('checked');
             $("#user_gender_female").attr('checked');
         }
+        $("#sub").click(function(){
+           $.post('http://42.96.148.66/hotel/user/alter.php',
+                 {
+                    user_nick:$("#niname").val(),
+                    user_gender:$("#user_gender_male").is(":checked")?'1':'2',
+                    user_years:$("#bir").val(),
+                    user_email:$("#email").val(),
+                    user_phone:$("#phone").val(),
+                    user_id_num:$("#idcard").val(),
+                    user_name:$("#name").val(),
+                    user_img:$("#niimg").attr('src'),
+                    user_point:'<?php echo $_SESSION['user']['user_point']?$_SESSION['user']['user_point']:'';?>',
+                    web:'1'
+                
+           },function(data,status){
+               var obj = $.parseJSON(data);
+               if(obj.status=='200'){
+                   alert('修改成功');
+               }else{
+                   alert('修改失败');
+               }
+           }); 
+        });
         
          //user name
         if (<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?> === true) {
