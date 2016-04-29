@@ -183,13 +183,13 @@
                 <div class="prbj02">
                     <div class="pdto">
 
-                        <div class="jqzoom" id="pdtok"><img src="http://pccoo.cn/store/20130531/20130531173247331.jpg" width="300" height="225" jqimg="http://pccoo.cn/store/20130531/20130531173247331.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></div>
+                        <div class="jqzoom" id="pdtok"><img src="http://pccoo.cn/store/20130531/20130531173247331.jpg" width="300" height="225" jqimg="http://pccoo.cn/store/20130531/20130531173247331.jpg" alt="房间图片" title="房间图片" /></div>
                         <div id="listsmall">
                             <ul id=mycarousel>
-                                <li><img name="http://pccoo.cn/store/20130531/20130531173247331.jpg" src="http://pccoo.cn/store/20130531/20130531173247331.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></li>
-                                <li><img name="http://pccoo.cn/es_product/20130531/201353117564355.jpg" src="http://pccoo.cn/es_product/20130531/201353117564355.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></li>
-                                <li><img name="http://pccoo.cn/es_product/20130531/201353117571223.jpg" src="http://pccoo.cn/es_product/20130531/201353117571223.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></li>
-                                <li><img name="http://pccoo.cn/es_product/20130531/201353117574226.jpg" src="http://pccoo.cn/es_product/20130531/201353117574226.jpg" alt="云品时尚酒店标准二人间" title="云品时尚酒店标准二人间" /></li>
+                                <li><img name="http://pccoo.cn/store/20130531/20130531173247331.jpg" src="http://pccoo.cn/store/20130531/20130531173247331.jpg" alt="房间图片" title="房间图片" /></li>
+                                <li><img name="http://pccoo.cn/es_product/20130531/201353117564355.jpg" src="http://pccoo.cn/es_product/20130531/201353117564355.jpg" alt="房间图片" title="房间图片" /></li>
+                                <li><img name="http://pccoo.cn/es_product/20130531/201353117571223.jpg" src="http://pccoo.cn/es_product/20130531/201353117571223.jpg" alt="房间图片" title="房间图片" /></li>
+                                <li><img name="http://pccoo.cn/es_product/20130531/201353117574226.jpg" src="http://pccoo.cn/es_product/20130531/201353117574226.jpg" alt="房间图片" title="房间图片" /></li>
                             </ul>
                         </div>
 
@@ -198,11 +198,11 @@
                         <h1>云品时尚酒店标准二人间</h1>
                         <ul>
                             <li class="prxxo"></li>
-                            <li>房型面积：30</li>
+                            <li id="area">房型面积：30</li>
                             <li>房间类型：<em class="double">标准间</em></li>
-                            <li>所在楼层：2</li>
+                            <li id="floor">所在楼层：2</li>
                             <li>上网服务：免费宽带</li>
-                            <li>早 餐：暂无</li>
+                            <li>早 餐：有</li>
                             <li>卫浴类型：独立卫浴</li>
                             <li>市场价：<span class="pscjia">150.00元</span></li>
                             <li>本站价：<span class="pjia">130.00元</span></li>
@@ -227,12 +227,14 @@
         </div>
         <div class="detail_title">
             <div class="detail_title01"><span>房屋设施</span></div>
-            <p id="p_room_desc">酒店覆盖wifi
+            <p id="p_room_desc">
+<!--
                 <br/> 该酒店可以使用如家钱包充值和消费
                 <br/> 酒店不接受员工卡预订
                 <br/> 2016.04.04-2016.04.29凡新办金卡的上门客人入住首日享受8折优惠 并可获赠两份/间夜
                 <br/> 2016.04.04-2016.04.29商务日房：非会员140元/4小时，会员120元/4小时
                 <br/> 2016.04.04-2016.04.29会员入住（精选高级商务房与精选高级双床房）赠早餐2份/间夜
+-->
             </p>
         </div>
         
@@ -366,51 +368,100 @@
             }
 
         }
-        $.post("http://42.96.148.66/hotel/indent/query.php", {
-                time_begin: ""
-                , time_end: ""
-                , cost_max: ""
-                , cost_min: ""
-                , indent_time_begin: ""
-                , indent_time_end: ""
-                , room_num: ""
-                , indent_id: ""
-                , indent_status: "2"
-                , user_id: ""
-                , indent_type: "1"
-                , page: "0"
+        $.post("http://42.96.148.66/hotel/room/query.php", {
+               room_num:vars['room_num'],
+                room_type:'',
+                room_area_min:'',
+                room_area_max:'',
+                room_cost_min:'',
+                room_cost_max:'',
+                 page: "0"
+                , num_page: "999"
+            }
+            , function (data, status) {
+                var obj = $.parseJSON(data).data[0];
+            var type;
+            switch(obj.room_type){
+                case 1:
+                    type='单人间';
+                    break;
+                    case 2:
+                    type='双人间';
+                    break;
+                    case 3:
+                    type='三人间';
+                    break;
+                default:
+                    break;
+                    
+            }
+            $(".double").text(type);
+            $("#area").text('房型面积：'+obj.room_area);
+             $("#floor").text(obj.room_num.substr(1,3));
+            $(".pscjia").text(obj.room_cost+50+'元');
+            $(".pjia").text(obj.room_cost+'元');
+            $(".star").text(obj.room_num.substr(-3));
+             $("#p_room_desc").text(obj.room_facility);
+            $("#pdtok img")[0].src = obj.room_img;
+            $("#mycarousel img")[0].src = obj.room_img;
+            $("#mycarousel img")[1].src = obj.room_img1;
+            $("#mycarousel img")[2].src = obj.room_img2;
+            $("#mycarousel img")[3].src = obj.room_img3;
+           
+                });
+        
+        $.post("http://42.96.148.66/hotel/comment/query.php", {
+               room_num:vars['room_num'],
+                user_id:'',
+comment_text:'',
+comment_star:'',
+comment_time_begin:'',
+comment_time_end:'',
+user_name:'',
+            comment_id:'',
+                 page: "0"
                 , num_page: "999"
             }
             , function (data, status) {
                 var obj = $.parseJSON(data);
-                var i = 0;
-                var no_rooms = new Array();
-                while (obj.data[i]) {
-                    if (istimeconfict(obj.data[i].time_begin, obj.data[i].time_end, vars["in"], vars["out"])) {
-                        no_rooms.push(obj.data[i].room_num);
-                    };
-                    i++;
+            if(obj.status=='200'){
+                var content;
+                
+                for(var i:obj){
+                    var img_url;
+                               $.post('http://42.96.148.66/hotel/user/query.php',
+                 {
+                    user_nick:'',
+                    user_gender:'',
+                    user_years:'',
+                    user_email:'',
+                    user_phone:'',
+                    user_id_num:'',
+                    user_name:'',
+                    user_img:'',
+                    user_point:'',
+                    user_id:i.user_id
+                    ,
+                 page: "0"
+                , num_page: "999"
+                
+           },function(data,status){
+               var obj = $.parseJSON(data);
+               if(obj.status=='200'){
+                img_url='img/n'+obj.data[0].user_img+'.png';
+               }else{
+                   img_url='img/n1.png';
+               }
+                                   content+='<div class="yu_pingscore"><ul><li>'+i.user_name+'</li><li><div class="bars"><span id="bar" class="jin">'+i.comment_star+'</span></div></li><li class="yu_pingscorem">点评时间：'+i.comment_time+'</li></ul><ul><li><img src="'+img_url+'"></li><li><p>'+i.comment_text+'</p></li></ul></div>';
+           }); 
+                    
                 }
-                $.post("http://42.96.148.66/hotel/room/query.php", {
-                    room_type: vars["num"]
-                    , room_num: ""
-                    , page: "0"
-                    , num_page: "999"
-                }, function (data, status) {
-                    var obj1 = $.parseJSON(data);
-                    var j = 0;
-                    var content = "";
-                    while (obj1.data[j]) {
-                        for (var room_num in no_rooms) {
-                            if (ojb1.data[j].room_num == room_num)
-                                continue;
-                        }
-                        content += "<tr><td><span class=\"yu_color\">精选商务房</span>（标准价）</td><td>￥" + obj1.data[j].room_cost + "</td><td>带早餐</td><td>￥<span class=\"yu_span\">" + obj1.data[j].room_cost + "</span>起</td><td>紧张</td><td><input type=\"button\" class=\"btn_yu\" value=\"预订\"/></td></tr>";
-                        j++;
-                    }
-                    $("tbody#tbody").html(content);
-                });
-            });
+                $("#yu_ping").after(content);
+            }
+        
+        
+        });
+            
 
         $("#find").click(function () {
             $in = $("#input_in").val();
@@ -457,6 +508,35 @@
         $('a.yuding').click(function(){
             alert('预订成功！');
         });
+        //user name
+        if (<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?> === true) {
+            try {
+                var nick = '<?php if(isset($_SESSION['user'])) echo $_SESSION['user']['user_nick'] ?>'.trim();
+                $("div.header_right").html('<a href="user.php">' + nick + '</a>|<a href="#">注销</a>');
+//                $("a:contains(nick)").click(function () {
+//                    window.location.href = "user.php";
+//                });
+            } catch (e) {
+                alert(e.message);
+            }
+            $("a:contains('注销')").click(function () {
+                $.post("../hotel/user/login.php", {
+                    action: 'logout'
+                }, function (data, status) {
+                    var obj = $.parseJSON(data);
+                    if (obj.status == "200") {
+                        alert("logout success");
+
+                        window.location.reload();
+                    } else {
+                        alert("logout fail!");
+                    }
+
+                });
+            });
+        } else {
+            $("div.header_right").html('<a href=\"register.php\">注册</a>|<a href=\"login.php\">登录</a>');
+        }
 
     });
 </script>

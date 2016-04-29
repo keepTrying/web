@@ -195,6 +195,37 @@
 <script>
 $(function(){
     $('input.change.fr').click(function(){
+        
+        //user name
+        if (<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?> === true) {
+            try {
+                var nick = '<?php if(isset($_SESSION['user'])) echo $_SESSION['user']['user_nick'] ?>'.trim();
+                $("div.header_right").html('<a href="user.php">' + nick + '</a>|<a href="#">注销</a>');
+//                $("a:contains(nick)").click(function () {
+//                    window.location.href = "user.php";
+//                });
+            } catch (e) {
+                alert(e.message);
+            }
+            $("a:contains('注销')").click(function () {
+                $.post("../hotel/user/login.php", {
+                    action: 'logout'
+                }, function (data, status) {
+                    var obj = $.parseJSON(data);
+                    if (obj.status == "200") {
+                        alert("logout success");
+
+                        window.location.reload();
+                    } else {
+                        alert("logout fail!");
+                    }
+
+                });
+            });
+        } else {
+            $("div.header_right").html('<a href=\"register.php\">注册</a>|<a href=\"login.php\">登录</a>');
+        }
+        
         var point = parseInt($(this).prev().text());
         if(<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?>){
             var user_point=<?php if(isset($_SESSION['user'])) echo $_SESSION['user']['user_point']; else echo 0; ?>;
