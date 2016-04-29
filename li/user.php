@@ -321,15 +321,15 @@
 <script>
     $(function () {
         
-        $("#user_id").text('user'+'<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_id']:'';?>');
-        $("#niname").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_nick']:'';?>');
-        $("#name").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_name']:'';?>');
-        $("#idcard").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_id_num']:'';?>');
-        $("#bir").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_years']:'';?>');
-        $("#phone").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_phone']:'';?>');
-        $("#email").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_email']:'';?>');
-        $("#niimg").attr('src','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_img']:'';?>');
-        if(<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_gender']:'';?>===2){
+        $("#user_id").text('user'+'<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_id']; }else{echo '';}?>');
+        $("#niname").attr('value','<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_nick']; }else{echo '';}?>');
+        $("#name").attr('value','<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_name']; }else{echo '';}?>');
+        $("#idcard").attr('value','<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_id_num']; }else{echo '';}?>');
+        $("#bir").attr('value','<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_years']; }else{echo '';}?>');
+        $("#phone").attr('value','<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_phone']; }else{echo '';}?>');
+        $("#email").attr('value','<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_email']; }else{echo '';}?>');
+        $("#niimg").attr('src','<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_img']; }else{echo '';}?>');
+        if(<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_gender']; }else{echo '';}?>===2){
             $("#user_gender_male").removeAttr('checked');
             $("#user_gender_female").attr('checked','checked');
         }
@@ -344,7 +344,7 @@
                     user_id_num:$("#idcard").val(),
                     user_name:$("#name").val(),
                     user_img:$("#niimg").attr('src'),
-                    user_point:'<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_point']:'';?>',
+                    user_point:'<?php if(isset($_SESSION('user'))){echo $_SESSION['user']['user_point']; }else{echo '';}?>',
                     web:'1'
                 
            },function(data,status){
