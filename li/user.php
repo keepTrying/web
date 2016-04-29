@@ -344,7 +344,7 @@
                     user_phone:$("#phone").val(),
                     user_id_num:$("#idcard").val(),
                     user_name:$("#name").val(),
-                    user_img:parseInt($("#niimg").attr('src')),
+                    user_img:$("#niimg").attr('src').replace(/[^0-9]/ig,""),
                     user_point:'<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_point']; }else{echo 0;}?>',
                     web:'1'
                 
@@ -391,7 +391,7 @@
         $("#find").click(function () {
             $in = $("#input_in").val();
             $out = $("#input_out").val();
-            $num = $("#select_num").val().replace(/[^0-9]/ig,"");
+            $num = $("#select_num").val();
             //		alert($in+$out+$num);
             window.location.href = "yuding.php?in=" + $in + "&out=" + $out + "&num=" + $num;
         });
