@@ -321,14 +321,15 @@
 <script>
     $(function () {
         
-        $("#user_id").text('user'+'<?php echo $_SESSION['user']['user_id']?$_SESSION['user']['user_id']:'';?>');
-        $("#niname").attr('value','<?php echo $_SESSION['user']['user_nick']?$_SESSION['user']['user_nick']:'';?>');
-        $("#name").attr('value','<?php echo $_SESSION['user']['user_name']?$_SESSION['user']['user_name']:'';?>');
-        $("#idcard").attr('value','<?php echo $_SESSION['user']['user_id_num']?$_SESSION['user']['user_id_num']:'';?>');
-        $("#bir").attr('value','<?php echo $_SESSION['user']['user_years']?$_SESSION['user']['user_years']:'';?>');
-        $("#phone").attr('value','<?php echo $_SESSION['user']['user_phone']?$_SESSION['user']['user_phone']:'';?>');
-        $("#email").attr('value','<?php echo $_SESSION['user']['user_email']?$_SESSION['user']['user_email']:'';?>');
-        if(<?php echo $_SESSION['user']['user_gender']?$_SESSION['user']['user_gender']:'';?>===2){
+        $("#user_id").text('user'+'<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_id']:'';?>');
+        $("#niname").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_nick']:'';?>');
+        $("#name").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_name']:'';?>');
+        $("#idcard").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_id_num']:'';?>');
+        $("#bir").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_years']:'';?>');
+        $("#phone").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_phone']:'';?>');
+        $("#email").attr('value','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_email']:'';?>');
+        $("#niimg").attr('src','<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_img']:'';?>');
+        if(<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_gender']:'';?>===2){
             $("#user_gender_male").removeAttr('checked');
             $("#user_gender_female").attr('checked','checked');
         }
@@ -343,7 +344,7 @@
                     user_id_num:$("#idcard").val(),
                     user_name:$("#name").val(),
                     user_img:$("#niimg").attr('src'),
-                    user_point:'<?php echo $_SESSION['user']['user_point']?$_SESSION['user']['user_point']:'';?>',
+                    user_point:'<?php echo isset($_SESSION['user'])?$_SESSION['user']['user_point']:'';?>',
                     web:'1'
                 
            },function(data,status){
