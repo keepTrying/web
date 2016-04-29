@@ -66,16 +66,16 @@
                 <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
                     <a target="_blank" href="javascript:void(0);"></a>
                 </li>
-                <li _src="url(img/home_hot_img2.jpg)" style="background:center 0 no-repeat;">
+                <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
                     <a target="_blank" href="javascript:void(0);"></a>
                 </li>
-                <li _src="url(img/home_hot_img3.jpg)" style="background:center 0 no-repeat;">
+                <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
                     <a target="_blank" href="javascript:void(0);"></a>
                 </li>
-                <li _src="url(img/home_hot_img4.jpg)" style="background:center 0 no-repeat;">
+                <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
                     <a target="_blank" href="javascript:void(0);"></a>
                 </li>
-                <li _src="url(img/home_hot_img5.jpg)" style="background:center 0 no-repeat;">
+                <li _src="url(img/home_banner.jpg)" style="background:center 0 no-repeat;">
                     <a target="_blank" href="javascript:void(0);"></a>
                 </li>
             </ul>
