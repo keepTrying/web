@@ -305,7 +305,7 @@
                     </div>
                     <div class="cen_fl">
                         <div class="cen_annu">
-                            <input type="submit" class="annu_a" id="sub" value="提交修改">
+                            <input type="button" class="annu_a" id="sub" value="提交修改">
                         </div>
                     </div>
                 </div>
