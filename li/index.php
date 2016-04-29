@@ -271,6 +271,7 @@
 </html>
 <script>
     $(function () {
+        //search
         $("#find").click(function () {
             $in = $("#input_in").val();
             $out = $("#input_out").val();
@@ -279,6 +280,38 @@
             window.location.href = "yuding.php?in=" + $in + "&out=" + $out + "&num=" + $num;
         });
 
+        //user name
+        if (<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?> === true) {
+            try {
+                var nick = '<?php if(isset($_SESSION['
+                user '])) echo $_SESSION['
+                user ']['
+                user_nick '] ?>'.trim();
+                $("div.header_right").html('<a href="user.php">' + nick + '</a>|<a href="#">注销</a>');
+                $("a:contains(nick)").click(function () {
+                    window.location.href = "http://www.baidu.com";
+                });
+            } catch (e) {
+                alert(e.message);
+            }
+            $("a:contains('注销')").click(function () {
+                $.post("../hotel/user/login.php", {
+                    action: 'logout'
+                }, function (data, status) {
+                    var obj = $.parseJSON(data);
+                    if (obj.status == "200") {
+                        alert("logout success");
+
+                        window.location.reload();
+                    } else {
+                        alert("logout fail!");
+                    }
+
+                });
+            });
+        } else {
+            $("div.header_right").html('<a href=\"register.php\">注册</a>|<a href=\"login.php\">登录</a>');
+        }
 
         // 百度地图API功能
         var point = new BMap.Point(103.972929, 30.734606);
