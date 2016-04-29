@@ -391,7 +391,7 @@
         $("#find").click(function () {
             $in = $("#input_in").val();
             $out = $("#input_out").val();
-            $num = $("#select_num").val().substr(0, 1);
+            $num = $("#select_num").val().replace(/[^0-9]/ig,"");
             //		alert($in+$out+$num);
             window.location.href = "yuding.php?in=" + $in + "&out=" + $out + "&num=" + $num;
         });
