@@ -107,7 +107,7 @@ $(function(){
             }
 
         }
-    $(".question").val(vars['question']);
+    $(".question").text(vars['question']);
 
    $("#chk_num").click(function(){  
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
