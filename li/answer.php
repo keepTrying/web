@@ -49,7 +49,7 @@
 					<table>
 						<tr>
 							<td width="15%" class="tr">安全问题:</td>p
-                            <td width="40%" class="tl question"></td>
+                                        <td width="40%" class="tl question"></td>
 							
 						</tr>
 						
@@ -107,7 +107,7 @@ $(function(){
             }
 
         }
-    $("#question").val(vars['question']);
+    $(".question").val(vars['question']);
 
    $("#chk_num").click(function(){  
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
