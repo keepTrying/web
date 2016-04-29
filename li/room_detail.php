@@ -427,7 +427,7 @@ user_name:'',
             if(obj.status=='200'){
                 var content;
                 
-                for(var i:obj){
+                for(var i:obj.data){
                     var img_url;
                                $.post('http://42.96.148.66/hotel/user/query.php',
                  {
