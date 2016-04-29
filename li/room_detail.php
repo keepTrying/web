@@ -450,8 +450,8 @@
                         page: "0",
                         num_page: "999"
 
-                    }, function(data, status) {
-                        var obj1 = $.parseJSON(data);
+                    }, function(data1, status) {
+                        var obj1 = $.parseJSON(data1);
                         if (obj1.status == '200') {
                             img_url = 'img/n' + obj1.data[0].user_img + '.png';
                         } else {
