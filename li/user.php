@@ -344,7 +344,7 @@
                     user_phone:$("#phone").val(),
                     user_id_num:$("#idcard").val(),
                     user_name:$("#name").val(),
-                    user_img:$("#niimg").attr('src').substr(-5).substr(2),
+                    user_img:parseInt($("#niimg").attr('src')),
                     user_point:'<?php if(isset($_SESSION['user'])){echo $_SESSION['user']['user_point']; }else{echo 0;}?>',
                     web:'1'
                 
