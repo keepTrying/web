@@ -17,11 +17,11 @@
 </head>
 
 <body>
-<!--header-->
+    <!--header-->
     <div class="header">
         <div class="w1200">
             <div class="header_left">
-                
+
             </div>
             <div class="header_right">
                 <a href="register.php">注册</a>|
@@ -89,20 +89,20 @@
 
             <script type="text/javascript">
                 /* 控制左右按钮显示 */
-                jQuery(".fullSlide").hover(function () {
+                jQuery(".fullSlide").hover(function() {
                     jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
-                }, function () {
+                }, function() {
                     jQuery(this).find(".prev,.next").fadeOut()
                 });
                 /* 调用SuperSlide */
                 jQuery(".fullSlide").slide({
-                    titCell: ".hd ul"
-                    , mainCell: ".bd ul"
-                    , effect: "fold"
-                    , autoPlay: true
-                    , autoPage: true
-                    , trigger: "click"
-                    , startFun: function (i) {
+                    titCell: ".hd ul",
+                    mainCell: ".bd ul",
+                    effect: "fold",
+                    autoPlay: true,
+                    autoPage: true,
+                    trigger: "click",
+                    startFun: function(i) {
                         var curLi = jQuery(".fullSlide .bd li").eq(i); /* 当前大图的li */
                         if (!!curLi.attr("_src")) {
                             curLi.css("background-image", curLi.attr("_src")).removeAttr("_src") /* 将_src地址赋予li背景，然后删除_src */
@@ -111,7 +111,7 @@
                 });
             </script>
             <script type="text/javascript">
-                ! function () {
+                ! function() {
                     laydate.skin('dahong'); //切换皮肤，请查看skins下面皮肤库
                     laydate({
                         elem: '#demo'
@@ -120,26 +120,26 @@
 
                 //日期范围限制
                 var start = {
-                    elem: '#start'
-                    , format: 'YYYY-MM-DD'
-                    , min: laydate.now(), //设定最小日期为当前日期
+                    elem: '#start',
+                    format: 'YYYY-MM-DD',
+                    min: laydate.now(), //设定最小日期为当前日期
                     max: '2099-06-16', //最大日期
-                    istime: true
-                    , istoday: false
-                    , choose: function (datas) {
+                    istime: true,
+                    istoday: false,
+                    choose: function(datas) {
                         end.min = datas; //开始日选好后，重置结束日的最小日期
                         end.start = datas //将结束日的初始值设定为开始日
                     }
                 };
 
                 var end = {
-                    elem: '#end'
-                    , format: 'YYYY-MM-DD'
-                    , min: laydate.now()
-                    , max: '2099-06-16'
-                    , istime: true
-                    , istoday: false
-                    , choose: function (datas) {
+                    elem: '#end',
+                    format: 'YYYY-MM-DD',
+                    min: laydate.now(),
+                    max: '2099-06-16',
+                    istime: true,
+                    istoday: false,
+                    choose: function(datas) {
                         start.max = datas; //结束日选好后，充值开始日的最大日期
                     }
                 };
@@ -148,18 +148,18 @@
 
                 //自定义日期格式
                 laydate({
-                    elem: '#test1'
-                    , format: 'YYYY年MM月DD日'
-                    , festival: true, //显示节日
-                    choose: function (datas) { //选择日期完毕的回调
+                    elem: '#test1',
+                    format: 'YYYY年MM月DD日',
+                    festival: true, //显示节日
+                    choose: function(datas) { //选择日期完毕的回调
                         alert('得到：' + datas);
                     }
                 });
 
                 //日期范围限定在昨天到明天
                 laydate({
-                    elem: '#hello3'
-                    , min: laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
+                    elem: '#hello3',
+                    min: laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
                     max: laydate.now(+1) //+1代表明天，+2代表后天，以此类推
                 });
             </script>
@@ -228,7 +228,7 @@
         <div class="detail_title">
             <div class="detail_title01"><span>房屋设施</span></div>
             <p id="p_room_desc">
-<!--
+                <!--
                 <br/> 该酒店可以使用如家钱包充值和消费
                 <br/> 酒店不接受员工卡预订
                 <br/> 2016.04.04-2016.04.29凡新办金卡的上门客人入住首日享受8折优惠 并可获赠两份/间夜
@@ -237,7 +237,7 @@
 -->
             </p>
         </div>
-        
+
         <div class="detail_title">
             <div class="detail_title01"><span>房间点评</span></div>
             <div class="yu_ping">
@@ -246,10 +246,12 @@
                         <td rowspan="2" width="260">
                             好评率:<span class="yu_jindu">99%</span>
                         </td>
-                        <td rowspan="2" width="300" class="tl"><div class="bars"><span id="bar" class="jin">4.0</span></div></td>
+                        <td rowspan="2" width="300" class="tl">
+                            <div class="bars"><span id="bar" class="jin">4.0</span></div>
+                        </td>
 
                     </tr>
-                    
+
                 </table>
 
 
@@ -257,18 +259,22 @@
             <div class="yu_pingscore">
                 <ul>
                     <li>大姐夫</li>
-                    <li><div class="bars"><span id="bar" class="jin">4.0</span></div></li>
+                    <li>
+                        <div class="bars"><span id="bar" class="jin">4.0</span></div>
+                    </li>
                     <li class="yu_pingscorem">点评时间：2016-04-07 20:34:00</li>
                 </ul>
                 <ul>
                     <li>
                         <img src="http://pccoo.cn/es_product/20130531/201353117574226.jpg">
                     </li>
-                    <li><p>酒店干净卫生，带儿子出来旅游，感觉不错。位置也很好，到哪儿都方便，周边吃的东西也不少。早餐也不错。房间每天都有赠送小饼干，儿子很开心。不过第一天进房间门口就有名片，感觉不是很好</p></li>
+                    <li>
+                        <p>酒店干净卫生，带儿子出来旅游，感觉不错。位置也很好，到哪儿都方便，周边吃的东西也不少。早餐也不错。房间每天都有赠送小饼干，儿子很开心。不过第一天进房间门口就有名片，感觉不是很好</p>
+                    </li>
                 </ul>
-                
+
             </div>
-<!--            <div class="yu_pingscore">
+            <!--            <div class="yu_pingscore">
                 <ul>
                     <li>综合评分：5.0分</li>
                     <li>来自183...4324</li>
@@ -297,7 +303,7 @@
         <!--<div class="graph"> 
 				<strong id="bar" style="width:1%;"></strong> 
 			</div>-->
-        <!--<script type="text/javascript"> 
+            <!--<script type="text/javascript"> 
 				function $(obj){ 
 				return document.getElementById(obj); 
 				} 
@@ -314,42 +320,42 @@
 				bar; 
 				} 
 			</script> -->
-    </div>
-    <!--advantage-->
-            <div class="advantage">
-                <div class="w1200">
-                    <div class="advantage_con">
-                        <img src="img/icon_1.png" />
-                        <h3>家的感觉</h3>
-                        <p>夏日里的清凉</p>
-                        <p>冬日里的阳光</p>
-                    </div>
-                    <div class="advantage_con">
-                        <img src="img/icon_2.png" />
-                        <h3>积分乐趣</h3>
-                        <p>会员在线预定赠送积分</p>
-                        <p>专享超值礼品和免费房兑换</p>
-                    </div>
-                    <div class="advantage_con">
-                        <img src="img/icon_3.png" />
-                        <h3>到店有房保障</h3>
-                        <p>订单一经确认</p>
-                        <p>酒店预留客房保证会员安心入住</p>
-                    </div>
+        </div>
+        <!--advantage-->
+        <div class="advantage">
+            <div class="w1200">
+                <div class="advantage_con">
+                    <img src="img/icon_1.png" />
+                    <h3>家的感觉</h3>
+                    <p>夏日里的清凉</p>
+                    <p>冬日里的阳光</p>
+                </div>
+                <div class="advantage_con">
+                    <img src="img/icon_2.png" />
+                    <h3>积分乐趣</h3>
+                    <p>会员在线预定赠送积分</p>
+                    <p>专享超值礼品和免费房兑换</p>
+                </div>
+                <div class="advantage_con">
+                    <img src="img/icon_3.png" />
+                    <h3>到店有房保障</h3>
+                    <p>订单一经确认</p>
+                    <p>酒店预留客房保证会员安心入住</p>
                 </div>
             </div>
-    <!--footer-->
-    <div class="footer">
-        <p>最终解释权归本公司所有©3.3.2.1102</p>
-    </div>
-    <script type="text/javascript" src="js/main.js"></script>
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <p>最终解释权归本公司所有©3.3.2.1102</p>
+        </div>
+        <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
 <script>
-    $(function () {
-        var vars = []
-            , hash;
+    $(function() {
+        var vars = [],
+            hash;
 
         var q = document.URL.split('?')[1];
 
@@ -369,104 +375,100 @@
 
         }
         $.post("http://42.96.148.66/hotel/room/query.php", {
-               room_num:vars['room_num'],
-                room_type:'',
-                room_area_min:'',
-                room_area_max:'',
-                room_cost_min:'',
-                room_cost_max:'',
-                 page: "0"
-                , num_page: "999"
-            }
-            , function (data, status) {
-                var obj = $.parseJSON(data).data[0];
-            var type='';
-            switch(obj.room_type){
+            room_num: vars['room_num'],
+            room_type: '',
+            room_area_min: '',
+            room_area_max: '',
+            room_cost_min: '',
+            room_cost_max: '',
+            page: "0",
+            num_page: "999"
+        }, function(data, status) {
+            var obj = $.parseJSON(data).data[0];
+            var type = '';
+            switch (obj.room_type) {
                 case 1:
-                    type+='单人间';
+                    type += '单人间';
                     break;
-                    case 2:
-                    type+='双人间';
+                case 2:
+                    type += '双人间';
                     break;
-                    case 3:
-                    type+='三人间';
+                case 3:
+                    type += '三人间';
                     break;
                 default:
                     break;
-                    
+
             }
             $(".double").text(type);
-            $(".proo h1").text('成都顾家酒店标准'+type);
-            $("#area").text('房型面积：'+obj.room_area+'平米');
-             $("#floor").text('所在楼层：'+obj.room_num.substr(0,-3));
-            var pscjia=Number(obj.room_cost)+50;
-            $(".pscjia").text(pscjia+'元');
-            $(".pjia").text(obj.room_cost+'元');
+            $(".proo h1").text('成都顾家酒店标准' + type);
+            $("#area").text('房型面积：' + obj.room_area + '平米');
+            $("#floor").text('所在楼层：' + obj.room_num.substr(0, -3));
+            var pscjia = Number(obj.room_cost) + 50;
+            $(".pscjia").text(pscjia + '元');
+            $(".pjia").text(obj.room_cost + '元');
             $(".star").text(obj.room_num.substr(-3));
-             $("#p_room_desc").text(obj.room_facility);
-            $("#pdtok img").attr('src',obj.room_img) ;
+            $("#p_room_desc").text(obj.room_facility);
+            $("#pdtok img").attr('src', obj.room_img);
             $("#mycarousel img")[0].src = obj.room_img;
             $("#mycarousel img")[1].src = obj.room_img1;
             $("#mycarousel img")[2].src = obj.room_img2;
             $("#mycarousel img")[3].src = obj.room_img3;
-           
-                });
-        var content='';
-        var img_url='';
+
+        });
+        var content = '';
+        var img_url = '';
         $.post("http://42.96.148.66/hotel/comment/query.php", {
-               room_num:vars['room_num'],
-                user_id:'',
-comment_text:'',
-comment_star:'',
-comment_time_begin:'',
-comment_time_end:'',
-user_name:'',
-            comment_id:'',
-                 page: "0"
-                , num_page: "999"
-            }
-            , function (data, status) {
-                var obj = $.parseJSON(data);
-            if(obj.status=='200'){
-                
-                
-                for(var i=0;i<obj.data.length;i++){
-                    
-                               $.post('http://42.96.148.66/hotel/user/query.php',
-                 {
-                    user_nick:'',
-                    user_gender:'',
-                    user_years:'',
-                    user_email:'',
-                    user_phone:'',
-                    user_id_num:'',
-                    user_name:'',
-                    user_img:'',
-                    user_point:'',
-                    user_id:i.user_id
-                    ,
-                 page: "0"
-                , num_page: "999"
-                
-           },function(data,status){
-               var obj1 = $.parseJSON(data);
-               if(obj1.status=='200'){
-                img_url='img/n'+obj1.data[0].user_img+'.png';
-               }else{
-                   img_url='img/n1.png';
-               }
-                                   content+='<div class="yu_pingscore"><ul><li>'+obj.data[i].user_name+'</li><li><div class="bars"><span id="bar" class="jin">'+obj.data[i].comment_star+'</span></div></li><li class="yu_pingscorem">点评时间：'+obj.data[i].comment_time+'</li></ul><ul><li><img src="'+img_url+'"></li><li><p>'+obj.data[i].comment_text+'</p></li></ul></div>';
-           }); 
-                    
+            room_num: vars['room_num'],
+            user_id: '',
+            comment_text: '',
+            comment_star: '',
+            comment_time_begin: '',
+            comment_time_end: '',
+            user_name: '',
+            comment_id: '',
+            page: "0",
+            num_page: "999"
+        }, function(data, status) {
+            var obj = $.parseJSON(data);
+            if (obj.status == '200') {
+
+
+                for (var i = 0; i < obj.data.length; i++) {
+
+                    $.post('http://42.96.148.66/hotel/user/query.php', {
+                        user_nick: '',
+                        user_gender: '',
+                        user_years: '',
+                        user_email: '',
+                        user_phone: '',
+                        user_id_num: '',
+                        user_name: '',
+                        user_img: '',
+                        user_point: '',
+                        user_id: obj.data[i].user_id,
+                        page: "0",
+                        num_page: "999"
+
+                    }, function(data, status) {
+                        var obj1 = $.parseJSON(data);
+                        if (obj1.status == '200') {
+                            img_url = 'img/n' + obj1.data[0].user_img + '.png';
+                        } else {
+                            img_url = 'img/n1.png';
+                        }
+                        content += '<div class="yu_pingscore"><ul><li>' + obj.data[i].user_name + '</li><li><div class="bars"><span id="bar" class="jin">' + obj.data[i].comment_star + '</span></div></li><li class="yu_pingscorem">点评时间：' + obj.data[i].comment_time + '</li></ul><ul><li><img src="' + img_url + '"></li><li><p>' + obj.data[i].comment_text + '</p></li></ul></div>';
+                    });
+
                 }
                 $("#yu_ping").after(content);
             }
-        
-        
-        });
-            
 
-        $("#find").click(function () {
+
+        });
+
+
+        $("#find").click(function() {
             $in = $("#input_in").val();
             $out = $("#input_out").val();
             $num = $("#select_num").val().substr(0, 1);
@@ -475,10 +477,10 @@ user_name:'',
         });
 
         function mycarousel_initCallback(carousel) {
-            $("#mycarousel li").mouseover(function () {
+            $("#mycarousel li").mouseover(function() {
                 $("#pdtok img")[0].src = this.getElementsByTagName("img")[0].src;
                 $("#pdtok img")[0].jqimg = this.getElementsByTagName("img")[0].src;
-                $(this).siblings().each(function () {
+                $(this).siblings().each(function() {
                     this.getElementsByTagName("img")[0].className = "";
                 })
                 this.getElementsByTagName("img")[0].className = "curr";
@@ -490,42 +492,45 @@ user_name:'',
         });
         jQuery("#Fi_pro").jcarousel();
         $(".jqzoom").jqueryzoom({
-            xzoom: 403
-            , yzoom: 260
-            , offset: 10
-            , position: "right"
-            , preload: 1
-            , lens: 1
+            xzoom: 403,
+            yzoom: 260,
+            offset: 10,
+            position: "right",
+            preload: 1,
+            lens: 1
         });
-        
-         $('.jin').barIndicator({
-                        counterStep: 1
-                        , milestones: false
-                        , horBarHeight: 15
-                        , animTime: 1000
-                        ,numType:'absolute'
-                        ,numMin:0.0
-                        ,numMax:5.0
-                        ,horTitle:'综合评分:' 
+
+        $('.jin').barIndicator({
+            counterStep: 1,
+            milestones: false,
+            horBarHeight: 15,
+            animTime: 1000,
+            numType: 'absolute',
+            numMin: 0.0,
+            numMax: 5.0,
+            horTitle: '综合评分:'
         });
-        $('a.yuding').click(function(){
+        $('a.yuding').click(function() {
             alert('预订成功！');
         });
         //user name
         if (<?php if(isset($_SESSION['user'])) echo 'true'; else echo 'false'; ?> === true) {
             try {
-                var nick = '<?php if(isset($_SESSION['user'])) echo $_SESSION['user']['user_nick'] ?>'.trim();
+                var nick = '<?php if(isset($_SESSION['
+                user '])) echo $_SESSION['
+                user ']['
+                user_nick '] ?>'.trim();
                 $("div.header_right").html('<a href="user.php">' + nick + '</a>|<a href="#">注销</a>');
-//                $("a:contains(nick)").click(function () {
-//                    window.location.href = "user.php";
-//                });
+                //                $("a:contains(nick)").click(function () {
+                //                    window.location.href = "user.php";
+                //                });
             } catch (e) {
                 alert(e.message);
             }
-            $("a:contains('注销')").click(function () {
+            $("a:contains('注销')").click(function() {
                 $.post("../hotel/user/login.php", {
                     action: 'logout'
-                }, function (data, status) {
+                }, function(data, status) {
                     var obj = $.parseJSON(data);
                     if (obj.status == "200") {
                         alert("logout success");
