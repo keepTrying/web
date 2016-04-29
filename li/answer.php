@@ -38,7 +38,7 @@
 		<!--banner-->
 		<div class="w1200 login">
 			<p class="login_position">当前位置:<a href="index.php">首页</a>&nbsp;>> &nbsp;会员登录</p>
-			<img src="img/login_banner.jpg" /> 
+			<img src="img/login_banner.jpg" />
 		</div>
 		<!--form-->
 		<div class="w1200 form">
@@ -48,8 +48,8 @@
 					<p>安全验证</p>
 					<table>
 						<tr>
-							<td width="15%" class="tr">安全问题:</td>p
-                                        <td width="40%" class="tl question"></td>
+							<td width="15%" class="tr">安全问题:</td>
+                                        <td width="50%" class="tl question"></td>
 							
 						</tr>
 						
@@ -107,7 +107,7 @@ $(function(){
             }
 
         }
-//    $(".question").text(vars['question']);
+    $(".question").text(vars['question']);
 
    $("#chk_num").click(function(){  
         $.post("../hotel/chk_code.php?act=num",{code:$(".code_num").val()},function(msg){  
