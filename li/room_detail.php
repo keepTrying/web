@@ -444,7 +444,7 @@
                        
                     }
                     
-                $("#yu_ping").after(content);
+                $(".yu_ping").after(content);
                 }
                 
             }
