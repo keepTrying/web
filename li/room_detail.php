@@ -433,35 +433,12 @@
             if (obj.status == '200') {
 
                 var i=0;
+                var img_url='';
                 while(obj.data[i]) {
                     i=i%obj.data.length;
                     var comment=obj.data[i];
-                        var userid=obj.data[i].user_id;
-                    $.post('http://42.96.148.66/hotel/user/query.php', {
-                        user_nick: '',
-                        user_gender: '',
-                        user_years: '',
-                        user_email: '',
-                        user_phone: '',
-                        user_id_num: '',
-                        user_name: '',
-                        user_img: '',
-                        user_point: '',
-                        user_id: userid,
-                        page: "0",
-                        num_page: "999"
-
-                    }, function(data1, status1) {
-                        alert(i);
-                        alert(obj.data[i].user_name);
-                        
-                        var obj1 = $.parseJSON(data1);
-                        var img_url='';
-                        if (obj1.status1 == '200') {
-                            img_url = 'img/n' + obj1.data[0].user_img + '.png';
-                        } else {
-                            img_url = 'img/n1.png';
-                        }
+                    
+                        img_url+='img/n'+comment.user_img+'.png';
                         content += '<div class="yu_pingscore"><ul><li>' + comment.user_name + '</li><li><div class="bars"><span id="bar" class="jin">' + comment.comment_star + '</span></div></li><li class="yu_pingscorem">点评时间：' + comment.comment_time + '</li></ul><ul><li><img src="' + img_url + '"></li><li><p>' + comment.comment_text + '</p></li></ul></div>';
                         i++;
                        
