@@ -434,7 +434,7 @@
 
                 
                 for (var i = 0; i < obj.data.length; i++) {
-                        alert(obj.data[i].user_id);
+                        var userid=obj.data[i].user_id;
                     $.post('http://42.96.148.66/hotel/user/query.php', {
                         user_nick: '',
                         user_gender: '',
@@ -445,11 +445,14 @@
                         user_name: '',
                         user_img: '',
                         user_point: '',
-                        user_id: obj.data[i].user_id,
+                        user_id: userid,
                         page: "0",
                         num_page: "999"
 
                     }, function(data1, status1) {
+                        alert(i);
+                        alert(obj.data[i].user_name);
+                        
                         var obj1 = $.parseJSON(data1);
                         var img_url='';
                         if (obj1.status1 == '200') {
