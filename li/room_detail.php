@@ -429,11 +429,10 @@
             page: "0",
             num_page: "999"
         }, function(data, status) {
-            var obj = $.parseJSON(data);
+            var obj = eval(data);
             if (obj.status == '200') {
 
-                var i;
-                for (i in obj.data) {
+                for (var i in obj.data) {
                         alert(i.user_id);
                     $.post('http://42.96.148.66/hotel/user/query.php', {
                         user_nick: '',
