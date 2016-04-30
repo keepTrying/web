@@ -432,8 +432,8 @@
             var obj = $.parseJSON(data);
             if (obj.status == '200') {
 
-                
-                for (var i = 0; i < obj.data.length; i++) {
+                var i=0;
+                while(obj.data[i]) {
                         var userid=obj.data[i].user_id;
                     $.post('http://42.96.148.66/hotel/user/query.php', {
                         user_nick: '',
@@ -461,7 +461,9 @@
                             img_url = 'img/n1.png';
                         }
                         content += '<div class="yu_pingscore"><ul><li>' + obj.data[i].user_name + '</li><li><div class="bars"><span id="bar" class="jin">' + obj.data[i].comment_star + '</span></div></li><li class="yu_pingscorem">点评时间：' + obj.data[i].comment_time + '</li></ul><ul><li><img src="' + img_url + '"></li><li><p>' + obj.data[i].comment_text + '</p></li></ul></div>';
+                       
                     });
+                    i++;
 
                 }
                 $("#yu_ping").after(content);
