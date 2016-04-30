@@ -440,7 +440,7 @@
                     var comment=obj.data[i];
                     
                         img_url='img/n'+comment.user_img+'.png';
-                        content = '<div class="yu_pingscore"><ul><li>' + comment.user_name + '</li><li><div class="bars"><span id="bar" class="jin" index="'+i+'">' + comment.comment_star + '</span></div></li><li class="yu_pingscorem">点评时间：' + comment.comment_time + '</li></ul><ul><li><img src="' + img_url + '"></li><li><p>' + comment.comment_text + '</p></li></ul></div>';
+                        content += '<div class="yu_pingscore"><ul><li>' + comment.user_name + '</li><li><div class="bars"><span id="bar" class="jin" index="'+i+'">' + comment.comment_star + '</span></div></li><li class="yu_pingscorem">点评时间：' + comment.comment_time + '</li></ul><ul><li><img src="' + img_url + '"></li><li><p>' + comment.comment_text + '</p></li></ul></div>';
                         data.push(Number(comment.comment_star));
                         i++;
                        
