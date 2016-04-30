@@ -445,6 +445,16 @@
                     }
                     
                 $(".yu_ping").after(content);
+                 $('.jin').barIndicator({
+                    counterStep: 1,
+                    milestones: false,
+                    horBarHeight: 15,
+                    animTime: 1000,
+                    numType: 'absolute',
+                    numMin: 0.0,
+                    numMax: 5.0,
+                    horTitle: '综合评分:'
+        });
                 }
                 
             }
@@ -485,16 +495,7 @@
             lens: 1
         });
 
-        $('.jin').barIndicator({
-            counterStep: 1,
-            milestones: false,
-            horBarHeight: 15,
-            animTime: 1000,
-            numType: 'absolute',
-            numMin: 0.0,
-            numMax: 5.0,
-            horTitle: '综合评分:'
-        });
+       
         $('a.yuding').click(function() {
             alert('预订成功！');
         });
