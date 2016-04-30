@@ -448,7 +448,7 @@
                     
                 $(".yu_ping").after(content);
                 for(var j=0;j<i;j++){
-                $(".jin[index=j+'']").barIndicator('loadNewData',[data[j]]);
+                $(".jin[index=j]").barIndicator('loadNewData',[data[j]]);
                 }
                 }
                 
