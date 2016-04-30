@@ -434,6 +434,7 @@
 
                 var i=0;
                 while(obj.data[i]) {
+                    i=i%obj.(data.length-1);
                         var userid=obj.data[i].user_id;
                     $.post('http://42.96.148.66/hotel/user/query.php', {
                         user_nick: '',
