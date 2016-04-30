@@ -432,9 +432,9 @@
             var obj = $.parseJSON(data);
             if (obj.status == '200') {
 
-                var i;
-                for (i in obj.data) {
-                        alert(i.user_id);
+                
+                for (var i = 0; i < obj.data.length; i++) {
+                        alert(obj.data[i].user_id);
                     $.post('http://42.96.148.66/hotel/user/query.php', {
                         user_nick: '',
                         user_gender: '',
@@ -445,7 +445,7 @@
                         user_name: '',
                         user_img: '',
                         user_point: '',
-                        user_id: i.user_id,
+                        user_id: obj.data[i].user_id,
                         page: "0",
                         num_page: "999"
 
@@ -457,7 +457,7 @@
                         } else {
                             img_url = 'img/n1.png';
                         }
-                        content += '<div class="yu_pingscore"><ul><li>' + i.user_name + '</li><li><div class="bars"><span id="bar" class="jin">' + i.comment_star + '</span></div></li><li class="yu_pingscorem">点评时间：' + i.comment_time + '</li></ul><ul><li><img src="' + img_url + '"></li><li><p>' + i.comment_text + '</p></li></ul></div>';
+                        content += '<div class="yu_pingscore"><ul><li>' + obj.data[i].user_name + '</li><li><div class="bars"><span id="bar" class="jin">' + obj.data[i].comment_star + '</span></div></li><li class="yu_pingscorem">点评时间：' + obj.data[i].comment_time + '</li></ul><ul><li><img src="' + img_url + '"></li><li><p>' + obj.data[i].comment_text + '</p></li></ul></div>';
                     });
 
                 }
