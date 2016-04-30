@@ -441,13 +441,15 @@
                     
                         img_url='img/n'+comment.user_img+'.png';
                         content += '<div class="yu_pingscore"><ul><li>' + comment.user_name + '</li><li><div class="bars"><span id="bar" class="jin" index="'+i+'">' + comment.comment_star + '</span></div></li><li class="yu_pingscorem">点评时间：' + comment.comment_time + '</li></ul><ul><li><img src="' + img_url + '"></li><li><p>' + comment.comment_text + '</p></li></ul></div>';
-                        data.push(Number(comment.comment_star));
+                        data.push(parseInt(comment.comment_star));
                         i++;
                        
                     }
                     
                 $(".yu_ping").after(content);
-                $(".jin[index]").barIndicator('loadNewData',data);
+                for(var j=0;j<i;j++){
+                $(".jin[index=j+'']").barIndicator('loadNewData',[data[j]]);
+                }
                 }
                 
             }
